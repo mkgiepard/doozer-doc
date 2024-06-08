@@ -1,35 +1,55 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>doozerDocs - Documentation page for the doozer project</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation page for doozer project">
+    <meta name="author" content="softtest.dev">    
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+    <!-- Styles used initially in under-construction page -->
     <style>
-      span {
+      .uc-span {
         font-family: courier;
         font-size: 120px;
       }
-      .container {
+      .uc-container {
         display: grid;
         margin: auto;
         width: 100%;
         height: 90%;
       }
-      .box {
+      .uc-box {
         border: 2px dotted grey;
         border-radius: 25px;
-        margin: auto;
-        padding: 60 240 60 240;
+        margin: 240px auto;
+        padding: 20px 240px;
         text-align: center;
       }
-      .small {
+      .uc-small {
         font-family: courier;
         font-size: 16px;
       }
-      .progressbar {
+      .uc-progressbar {
         background-color: rgb(192, 192, 192);
         width: 100%;
         border-radius: 15px;
         margin-bottom: 12px;
       }
-      .progress {
-        background-color: rgb(116, 194, 92); 
+      .uc-progress {
+        background-color: #28b76b; 
         color: white; 
         padding: 1%; 
         text-align: right; 
@@ -38,17 +58,46 @@
         width: 70%; 
       }
     </style>
-    <title>doozer</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="box">
-        <span>doozer</span>
-        <div class="progressbar"> 
-            <div class="progress"></div> 
+</head>
+<body>
+  <header class="header fixed-top">	 
+     
+    <div class="branding docs-branding">
+      <div class="container-fluid position-relative py-2">
+        <div class="docs-logo-wrapper">
+          <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">doozer<span class="text-alt">Docs</span></span></a></div>    
+        </div><!--//docs-logo-wrapper-->
+        <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+
+          <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+            <li class="list-inline-item"><a href="https://x.com/softtest_dev"><i class="fab fa-twitter fa-fw"></i></a></li>
+            <li class="list-inline-item"><a id="mlink" href="#"><i class="fas fa-contact-card fa-fw"></i></a></li>
+          </ul><!--//social-list-->
+
+        </div><!--//docs-top-utilities-->
+
+      </div><!--//container-->
+    </div><!--//branding-->
+  </header><!--//header-->
+
+  <div class="page-content">
+    <div class="uc-container">
+      <div class="uc-box">
+        <span class="uc-span">doozer</span>
+        <div class="uc-progressbar"> 
+            <div class="uc-progress"></div> 
         </div> 
-        <div class="small">under construction</div>
+        <div class="uc-small">under construction</div>
       </div>
     </div>
+  </div><!--page-content-->
+
+  <script>
+    var who = "info";
+    var where = "softtest.dev";
+    var elink = document.getElementById("mlink");
+    elink.href = `mailto:${who}@${where}`;
+  </script>
+
   </body>
 </html>
