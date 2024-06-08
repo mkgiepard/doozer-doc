@@ -70,7 +70,7 @@
         <div class="docs-top-utilities d-flex justify-content-end align-items-center">
 
           <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-            <li class="list-inline-item"><a href="https://x.com/softtest_dev"><i class="fab fa-twitter fa-fw"></i></a></li>
+            <li class="list-inline-item"><a id="xlink" href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
             <li class="list-inline-item"><a id="mlink" href="#"><i class="fas fa-contact-card fa-fw"></i></a></li>
           </ul><!--//social-list-->
 
@@ -97,6 +97,10 @@
     var where = "softtest.dev";
     var elink = document.getElementById("mlink");
     elink.href = `mailto:${who}@${where}`;
+    var xwho = "softtest_dev";
+    var xwhere = "https://x.com/";
+    var xlink = document.getElementById("xlink");
+    xlink.href = `${xwhere}${xwho}`;
   </script>
 
   </body>
