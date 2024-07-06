@@ -29,10 +29,17 @@
 </div>
 
 <script>
+    function encodeHTML(s) {
+        return s.replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
+    }
     const urlParams = new URLSearchParams(window.location.search);
     const nameParam = urlParams.get('name');
     const name = document.getElementById("name");
-    name.textContent = nameParam;
+    name.textContent = encodeHTML(nameParam);
+
 </script>
 
 </body>
