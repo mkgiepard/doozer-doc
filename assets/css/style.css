@@ -1,0 +1,8 @@
+code .action {
+    color: #4285F4;
+}
+
+code .selector,
+code .args {
+    color: green;
+}
