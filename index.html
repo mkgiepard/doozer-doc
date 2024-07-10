@@ -33,9 +33,9 @@
 	
 					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
 						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a id="xlink" href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
 		                <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fas fa-contact-card fa-fw"></i></a></li>
+						<li class="list-inline-item"><a id="mlink" href="#"><i class="fas fa-contact-card fa-fw"></i></a></li>
 		            </ul><!--//social-list-->
 	            </div><!--//docs-top-utilities-->
             </div><!--//container-->
@@ -196,6 +196,16 @@
     <script src="assets/js/docs.js"></script> 
 
 	<script async src="https://cse.google.com/cse.js?cx=156375ebccecb4ff2"></script>
+	<script>
+		var who = "info";
+		var where = "softtest.dev";
+		var elink = document.getElementById("mlink");
+		elink.href = `mailto:${who}@${where}`;
+		var xwho = "softtest_dev";
+		var xwhere = "https://x.com/";
+		var xlink = document.getElementById("xlink");
+		xlink.href = `${xwhere}${xwho}`;
+	</script>
 
 </body>
 </html> 
