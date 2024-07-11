@@ -18,7 +18,7 @@
     <script defer src="assets/fontawesome/js/all.min.js"></script>
     
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/atom-one-light.min.css">
     <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
 
     <!-- Theme CSS -->  
@@ -45,8 +45,8 @@
 	
 					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
 						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a id="xlink" href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-						<li class="list-inline-item"><a id="mlink" href="#"><i class="fas fa-contact-card fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a class="xlink" href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+						<li class="list-inline-item"><a class="mlink" href="#"><i class="fas fa-contact-card fa-fw"></i></a></li>
 		            </ul><!--//social-list-->
 	            </div><!--//docs-top-utilities-->
             </div><!--//container-->
@@ -176,7 +176,7 @@
 							</ul>
    							
 							Order of the implementation is not decided yet and will depend on the interest shown by the Users.
-							Is one of them important to you? Feel free to drop us an email at: info [to be changed by a script] softtest.dev
+							Is one of them important to you? Feel free to drop us an <a class="mlink" href="#">email</a>.
 						</p>
 					</section><!--//section-->
 					
@@ -210,13 +210,11 @@
 						<p>.</p>
 						<div class="docs-code-block">
 							<pre class="shadow-lg rounded">
-								<code class="language-xml">
-	&lt;dependency&gt;
-		&lt;groupId&gt;dev.softtest&lt;/groupId&gt;
-		&lt;artifactId&gt;doozer&lt;/artifactId&gt;
-		&lt;version&gt;0.2.3&lt;/version&gt;
-	&lt;/dependency&gt;</code>
-							</pre>
+<code class="language-xml">&lt;dependency&gt;
+	&lt;groupId&gt;dev.softtest&lt;/groupId&gt;
+	&lt;artifactId&gt;doozer&lt;/artifactId&gt;
+	&lt;version&gt;0.2.3&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
 							<a href="#" class="btn btn-light">Copy to clipboard</a>
 						</div><!--//docs-code-block-->
 					</section><!--//section-->
@@ -252,12 +250,10 @@
 						</p>
 						<div class="docs-code-block">
 							<pre class="shadow-lg rounded">
-								<code class="language-python">
-	<span class="action">url</span> <span class="args">args:</span>”http://doozer.softtest.dev/firstscript”
-	<span class="action">type</span> <span class="selector">selector:</span>”SL({textbox ‘name’}) <span class="args">args:</span>”Doozer”
-	<span class="action">click</span> <span class="selector">selector:</span>”SL({button ‘submit’})
-	<span class="action">assertInnerTest</span> <span class="selector">selector:</span>”By.classname(‘greeting’)” <span class="args">args:</span>”Hello Doozer!”</code>
-							</pre>
+<code class="language-python"><span class="action">url</span> <span class="args">args:</span>”http://doozer.softtest.dev/firstscript”
+<span class="action">type</span> <span class="selector">selector:</span>”SL({textbox ‘name’}) <span class="args">args:</span>”Doozer”
+<span class="action">click</span> <span class="selector">selector:</span>”SL({button ‘submit’})
+<span class="action">assertInnerTest</span> <span class="selector">selector:</span>”By.classname(‘greeting’)” <span class="args">args:</span>”Hello Doozer!”</code></pre>
 							<a href="#" class="btn btn-light">Copy to clipboard</a>
 						</div><!--//docs-code-block-->
 						
@@ -363,9 +359,9 @@
 				    <div class="container text-center py-5">
 				        <ul class="social-list list-unstyled pt-4 mb-0">
 						    <li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li> 
-				            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a class="xlink" href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
 				            <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fas fa-contact-card fa-fw"></i></a></li>
+							<li class="list-inline-item"><a class="mlink" href="#"><i class="fas fa-contact-card fa-fw"></i></a></li>
 				        </ul><!--//social-list-->
 
 						<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
@@ -392,12 +388,16 @@
 	<script>
 		var who = "info";
 		var where = "softtest.dev";
-		var elink = document.getElementById("mlink");
-		elink.href = `mailto:${who}@${where}`;
+		var mlinks = document.getElementsByClassName("mlink");
+		for (var mlink in mlinks) {
+			mlinks[mlink].href = `mailto:${who}@${where}`;
+		}
 		var xwho = "softtest_dev";
 		var xwhere = "https://x.com/";
-		var xlink = document.getElementById("xlink");
-		xlink.href = `${xwhere}${xwho}`;
+		var xlinks = document.getElementsByClassName("xlink");
+		for (var xlink in xlinks) {
+			xlinks[xlink].href = `${xwhere}${xwho}`;
+		}
 	</script>
 
 
