@@ -89,6 +89,7 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-6">Running the tests</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-7">Golden images</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-8">Test execution logs</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-9">Variables</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span class="theme-icon-holder me-2"><i class="fas fa-info-circle"></i></span>About</a></li>
 			    </ul>
@@ -251,7 +252,7 @@
 						</p>
 						<div class="docs-code-block">
 							<pre class="shadow-lg rounded">
-<code class="language-python"><span class="action">url</span> <span class="args">args:</span>"http://doozer.softtest.dev/firstscript"
+<code class="language-shell"><span class="action">url</span> <span class="args">args:</span>"http://doozer.softtest.dev/firstscript"
 <span class="action">type</span> <span class="selector">selector:</span>"SL({textbox ‘name’})" <span class="args">args:</span>"Doozer"
 <span class="action">click</span> <span class="selector">selector:</span>"SL({button ‘submit’})"
 <span class="action">assertInnerTest</span> <span class="selector">selector:</span>"By.classname(‘greeting’)" <span class="args">args:</span>"Hello Doozer!"</code></pre>
@@ -302,52 +303,58 @@
 				    </header>
 				     <section class="docs-section" id="item-5-1">
 						<h2 class="section-heading">Actions</h2>
+						<p><ul>
+							<li>Action syntax</li>
+							<li>Optional execution</li>
+							<li>Escape characters</li>
+							<li>Default parameter</li>
+						</ul></p>
 						<p>
 							<h5>Assertions</h5>
 							<ul>
-								<li>assertCurrentUrl</li>
-								<li>assertInnerText</li>
-								<li>assertPageTitle</li>
+								<li><span class="green-font">assertCurrentUrl</span></li>
+								<li><span class="green-font">assertInnerText</span></li>
+								<li><span class="green-font">assertPageTitle</span></li>
 							</ul>
 							<h5>Interactions</h5>
 							<ul>
-								<li>alert</li>
-								<li>clear</li>
-								<li>click</li>
-								<li>contextClick</li>
-								<li>doubleClick</li>
-								<li>hover</li>
-								<li>hoverByOffset</li>
-								<li>keyDown</li>
-								<li>keyUp</li>
-								<li>select</li>
-								<li>sendKeys</li>
-								<li>type</li>
+								<li><span class="green-font">alert</span></li>
+								<li><span class="green-font">clear</span></li>
+								<li><span class="green-font">click</span></li>
+								<li><span class="green-font">contextClick</span></li>
+								<li><span class="green-font">doubleClick</span></li>
+								<li><span class="green-font">hover</span></li>
+								<li><span class="green-font">hoverByOffset</span></li>
+								<li><span class="green-font">keyDown</span></li>
+								<li><span class="green-font">keyUp</span></li>
+								<li><span class="green-font">select</span></li>
+								<li><span class="green-font">sendKeys</span></li>
+								<li><span class="green-font">type</span></li>
 							</ul>
 							<h5>Navigation</h5>
 							<ul>
-								<li>navigateBack - goes backwards
+								<li><span class="green-font">navigateBack</span> - goes backwards
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
-<code class="language-python">Parameters:
+<code class="language-shell">Parameters:
 - none
 
 Syntax:
 <span class="action">navigateBack</span></code></pre></div><!--//docs-code-block-->
 								</li>
-								<li>navigateForward - goes forwards
+								<li><span class="green-font">navigateForward</span> - goes forwards
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
-<code class="language-python">Parameters:
+<code class="language-shell">Parameters:
 - none
 
 Syntax:
 <span class="action">navigateForward</span></code></pre></div><!--//docs-code-block-->
 								</li>
-								<li>navigateTo - opens website at a given address
+								<li><span class="green-font">navigateTo</span> - opens website at a given address
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
-<code class="language-python">Parameters:
+<code class="language-shell">Parameters:
 - default: http address
 
 Syntax:
@@ -360,19 +367,19 @@ Position based parameters example:
 <span class="action">navigateTo</span> "" "http://doozer.softtest.dev/firstscript"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li>refresh - reloads current page
+								<li><span class="green-font">refresh</span> - reloads current page
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
-<code class="language-python">Parameters:
+<code class="language-shell">Parameters:
 - none
 
 Syntax:
 <span class="action">refresh</span></code></pre></div><!--//docs-code-block-->
 								</li>
-								<li>url - opens website at a given address
+								<li><span class="green-font">url</span> - opens website at a given address
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
-<code class="language-python">Parameters:
+<code class="language-shell">Parameters:
 - default: http address
 
 Syntax:
@@ -388,11 +395,11 @@ Position based parameters example:
 							</ul>
 							<h5>Generics</h5>
 							<ul>
-								<li>iframe - switch to an iframe. Order of execution: selector, parameter - name, parameter - index.
+								<li><span class="green-font">iframe</span> - switch to an iframe. Order of execution: selector, parameter - name, parameter - index.
 									If there is no selector nor parameter given then the action switches to the main iframe on the page.
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
-<code class="language-python">Parameters:
+<code class="language-shell">Parameters:
 - name: name of the iframe to switch to
 - index: index of the iframe to switch to
 
@@ -411,11 +418,83 @@ Position based parameters example:
 <span class="action">iframe</span> "" "index=2"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li>import</li>
-								<li>set</li>
-								<li>takeScreenshot</li>
-								<li>wait</li>
-								<li>waitForElement</li>
+								<li><span class="green-font">import</span> - includes all the actions from the imported file
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: path to a *.doozer file
+
+Syntax:
+<span class="action">import</span> <span class="args">args:</span>"FILE PATH"
+
+Named parameters example:
+<span class="action">import</span> <span class="args">args:</span>"src/test/java/com/example/commonSteps.doozer"
+
+Position based parameters example:
+<span class="action">import</span> "" "src/test/java/com/example/commonSteps.doozer"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><span class="green-font">set</span> - adds a variable to a test context
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Syntax:
+<span class="action">set</span> <span class="args">name:</span>"VARIABLE NAME" <span class="args">value:</span>"VARIABLE VALUE" 
+
+Named parameters example:
+<span class="action">set</span> <span class="args">name:</span>"google.url" <span class="args">value:</span>"https://www.google.com"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								</li>
+								<li><span class="green-font">takeScreenshot</span> - takes a screenshot of a current view and compares it to the stored reference file.
+									If a filename parameter is not given then the action create a file with "screenshot-LINE_NUMBER" prefix.
+									Each filename is suffixed with a browser string, like 'chrome' or 'chrome-headless'.
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: filename
+
+Syntax:
+<span class="action">takeScreenshot</span> <span class="args">args:</span>"FILENAME"
+
+Named parameters example:
+<span class="action">takeScreenshot</span> <span class="args">args:</span>"homepage" ==> will create 'homepage-chrome.png' file when running on Chrome
+
+Position based parameters example:
+<span class="action">takeScreenshot</span> "" "homepage"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><span class="green-font">wait</span> - stops test execution for 5 [s] by default
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: wait time in seconds
+
+Syntax:
+<span class="action">wait</span> <span class="args">args:</span>"WAIT TIME IN SECONDS"
+
+Named parameters example:
+<span class="action">wait</span> <span class="args">args:</span>"10"
+
+Position based parameters example:
+<span class="action">import</span> "" "10"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><span class="green-font">waitForElement</span> - waits for a given element to be displayed, by default it waits for 10 [s]
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- seconds: wait time in seconds
+
+Syntax:
+<span class="action">waitForElement</span> <span class="selector">selector:</span>"SELECTOR" <span class="args">args:</span>"seconds=WAIT TIME IN SECONDS"
+
+Named parameters example:
+<span class="action">waitForElement</span> <span class="selector">selector:</span>"By.tagName('button')" <span class="args">args:</span>"seconds=20"
+
+Position based parameters example:
+<span class="action">waitForElement</span> "By.tagName('button')" "seconds=20"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
 							</ul>
 
 						</p>
@@ -438,7 +517,7 @@ Position based parameters example:
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-5-4">
-							<h2 class="section-heading">Custom Actions</h2>
+						<h2 class="section-heading">Custom Actions</h2>
 						<p>.</p>
 					</section><!--//section-->
 										
@@ -459,6 +538,11 @@ Position based parameters example:
 										
 					<section class="docs-section" id="item-5-8">
 						<h2 class="section-heading">Test execution logs</h2>
+						<p>.</p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-5-9">
+						<h2 class="section-heading">Variables</h2>
 						<p>.</p>
 					</section><!--//section-->
 
