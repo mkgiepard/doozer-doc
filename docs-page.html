@@ -388,7 +388,29 @@ Position based parameters example:
 							</ul>
 							<h5>Generics</h5>
 							<ul>
-								<li>iframe</li>
+								<li>iframe - switch to an iframe. Order of execution: selector, parameter - name, parameter - index.
+									If there is no selector nor parameter given then the action switches to the main iframe on the page.
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-python">Parameters:
+- name: name of the iframe to switch to
+- index: index of the iframe to switch to
+
+Syntax:
+<span class="action">iframe</span> <span class="selector">selector:</span>"SELECTOR"
+<span class="action">iframe</span> <span class="args">args:</span>"name=IFRAME_NAME"
+<span class="action">iframe</span> <span class="args">args:</span>"index=IFRAME_INDEX"
+<span class="action">iframe</span>
+
+Named parameters example:
+<span class="action">iframe</span> <span class="selector">selector:</span>"By.tagName('button')"
+<span class="action">iframe</span> <span class="args">args:</span>"index=2"
+
+Position based parameters example:
+<span class="action">iframe</span> "By.tagName('button')"
+<span class="action">iframe</span> "" "index=2"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
 								<li>import</li>
 								<li>set</li>
 								<li>takeScreenshot</li>
