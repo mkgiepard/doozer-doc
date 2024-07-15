@@ -251,10 +251,10 @@
 						</p>
 						<div class="docs-code-block">
 							<pre class="shadow-lg rounded">
-<code class="language-python"><span class="action">url</span> <span class="args">args:</span>”http://doozer.softtest.dev/firstscript”
-<span class="action">type</span> <span class="selector">selector:</span>”SL({textbox ‘name’}) <span class="args">args:</span>”Doozer”
-<span class="action">click</span> <span class="selector">selector:</span>”SL({button ‘submit’})
-<span class="action">assertInnerTest</span> <span class="selector">selector:</span>”By.classname(‘greeting’)” <span class="args">args:</span>”Hello Doozer!”</code></pre>
+<code class="language-python"><span class="action">url</span> <span class="args">args:</span>"http://doozer.softtest.dev/firstscript"
+<span class="action">type</span> <span class="selector">selector:</span>"SL({textbox ‘name’})" <span class="args">args:</span>"Doozer"
+<span class="action">click</span> <span class="selector">selector:</span>"SL({button ‘submit’})"
+<span class="action">assertInnerTest</span> <span class="selector">selector:</span>"By.classname(‘greeting’)" <span class="args">args:</span>"Hello Doozer!"</code></pre>
 							<a href="#" class="btn btn-light">Copy to clipboard</a>
 						</div><!--//docs-code-block-->
 						
@@ -326,11 +326,65 @@
 							</ul>
 							<h5>Navigation</h5>
 							<ul>
-								<li>navigateBack</li>
-								<li>navigateForward</li>
-								<li>navigateTo</li>
-								<li>refresh</li>
-								<li>url</li>
+								<li>navigateBack - goes backwards
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-python">Parameters:
+- none
+
+Syntax:
+<span class="action">navigateBack</span></code></pre></div><!--//docs-code-block-->
+								</li>
+								<li>navigateForward - goes forwards
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-python">Parameters:
+- none
+
+Syntax:
+<span class="action">navigateForward</span></code></pre></div><!--//docs-code-block-->
+								</li>
+								<li>navigateTo - opens website at a given address
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-python">Parameters:
+- default: http address
+
+Syntax:
+<span class="action">navigateTo</span> <span class="args">args:</span>"HTTP ADDRESS"
+
+Named parameters example:
+<span class="action">navigateTo</span> <span class="args">args:</span>"http://doozer.softtest.dev/firstscript"
+
+Position based parameters example:
+<span class="action">navigateTo</span> "" "http://doozer.softtest.dev/firstscript"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li>refresh - reloads current page
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-python">Parameters:
+- none
+
+Syntax:
+<span class="action">refresh</span></code></pre></div><!--//docs-code-block-->
+								</li>
+								<li>url - opens website at a given address
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-python">Parameters:
+- default: http address
+
+Syntax:
+<span class="action">url</span> <span class="args">args:</span>"HTTP ADDRESS"
+
+Named parameters example:
+<span class="action">url</span> <span class="args">args:</span>"http://doozer.softtest.dev/firstscript"
+
+Position based parameters example:
+<span class="action">url</span> "" "http://doozer.softtest.dev/firstscript"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
 							</ul>
 							<h5>Generics</h5>
 							<ul>
