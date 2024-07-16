@@ -323,7 +323,23 @@
 								<li><span class="green-font">click</span></li>
 								<li><span class="green-font">contextClick</span></li>
 								<li><span class="green-font">doubleClick</span></li>
-								<li><span class="green-font">hover</span></li>
+								<li><span class="green-font">hover</span> - moves mouse pointer to an element.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#move-to-element">Move to element (aka hover)</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- none
+
+Syntax:
+<span class="action">hoverByOffset</span> <span class="selector">selector:</span>"SELECTOR"
+
+Named parameters example:
+<span class="action">hoverByOffset</span> <span class="selector">selector:</span>"By.id('my-element')"
+
+Position based parameters example:
+<span class="action">hoverByOffset</span> "By.id('my-element')"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
 								<li><span class="green-font">hoverByOffset</span> - moves mouse pointer to an element with given offset.
 									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#move-by-offset">Move to element by offset (aka hover by offset)</a>)
 									<div class="docs-code-block">
