@@ -325,9 +325,57 @@
 								<li><span class="green-font">doubleClick</span></li>
 								<li><span class="green-font">hover</span></li>
 								<li><span class="green-font">hoverByOffset</span></li>
-								<li><span class="green-font">keyDown</span></li>
-								<li><span class="green-font">keyUp</span></li>
-								<li><span class="green-font">select</span></li>
+								<li><span class="green-font">keyDown</span> - presses a key.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/keyboard/#key-down">Key down</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: Keys.NAME
+
+Syntax:
+<span class="action">keyDown</span> <span class="args">args:</span>"KEY"
+
+Named parameters example:
+<span class="action">keyDown</span> <span class="args">args:</span>"Keys.SHIFT"
+
+Position based parameters example:
+<span class="action">keyDown</span> "" "Keys.SHIFT"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><span class="green-font">keyUp</span> - releases a pressed key.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/keyboard/#key-up">Key up</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: Keys.NAME
+
+Syntax:
+<span class="action">keyUp</span> <span class="args">args:</span>"KEY"
+
+Named parameters example:
+<span class="action">keyUp</span> <span class="args">args:</span>"Keys.SHIFT"
+
+Position based parameters example:
+<span class="action">keyUp</span> "" "Keys.SHIFT"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><span class="green-font">select</span> - selects an element from a dropdown.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/support_features/select_lists/#text">Select by visible text</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: option with text to select
+
+Syntax:
+<span class="action">select</span> <span class="selector">selector:</span>"SELECTOR" <span class="args">args:</span>"OPTION TEXT"
+
+Named parameters example:
+<span class="action">select</span> <span class="selector">selector:</span>"By.id('my-dropdown')" <span class="args">args:</span>"option one"
+
+Position based parameters example:
+<span class="action">select</span> "By.id('my-dropdown')" "option one"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
 								<li><span class="green-font">sendKeys</span> - sends keys to the current window.
 									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#send-keys">Send Keys</a>)
 									<div class="docs-code-block">
