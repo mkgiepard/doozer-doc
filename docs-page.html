@@ -318,7 +318,30 @@
 							</ul>
 							<h5>Interactions</h5>
 							<ul>
-								<li><span class="green-font">alert</span></li>
+								<li><span class="green-font">alert</span>- interacts with an alert dialog.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/alerts">Alert</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: confirm | dismiss
+- prompt: a key sequence to send and confirm
+
+Syntax:
+<span class="action">alert</span> <span class="args">args:</span>"CONFIRM or DISMISS"
+<span class="action">alert</span> <span class="args">args:</span>"prompt=KEY_SEQUENCE"
+
+
+Named parameters example:
+<span class="action">alert</span> <span class="args">args:</span>"confirm"
+<span class="action">alert</span> <span class="args">args:</span>"dismiss"
+<span class="action">alert</span> <span class="args">args:</span>"prompt=my-text"
+
+Position based parameters example:
+<span class="action">alert</span> "" "confirm"
+<span class="action">alert</span> "" "dismiss"
+<span class="action">alert</span> "" "prompt=my-text"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
 								<li><span class="green-font">clear</span> - clears an input element.
 									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#clear">Clear</a>)
 									<div class="docs-code-block">
