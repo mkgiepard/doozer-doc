@@ -328,12 +328,45 @@
 								<li><span class="green-font">keyDown</span></li>
 								<li><span class="green-font">keyUp</span></li>
 								<li><span class="green-font">select</span></li>
-								<li><span class="green-font">sendKeys</span></li>
-								<li><span class="green-font">type</span></li>
+								<li><span class="green-font">sendKeys</span> - sends keys to the current window.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#send-keys">Send Keys</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: keys sequence
+
+Syntax:
+<span class="action">sendKeys</span> <span class="args">args:</span>"KEYS SEQUENCE"
+
+Named parameters example:
+<span class="action">sendKeys</span> <span class="args">args:</span>"testing text"
+
+Position based parameters example:
+<span class="action">sendKeys</span> "" "testing text"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><span class="green-font">type</span> - sends keys to the element defined by selector.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#send-keys">Send Keys</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: keys sequence
+
+Syntax:
+<span class="action">type</span> <span class="selector">selector:</span>"SELECTOR" <span class="args">args:</span>"KEYS SEQUENCE"
+
+Named parameters example:
+<span class="action">type</span> <span class="selector">selector:</span>"By.id('my-input')" <span class="args">args:</span>"testing text"
+
+Position based parameters example:
+<span class="action">type</span> "By.id('my-input')" "testing text"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
 							</ul>
 							<h5>Navigation</h5>
 							<ul>
-								<li><span class="green-font">navigateBack</span> - goes backwards
+								<li><span class="green-font">navigateBack</span> - goes backwards.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#back">Navigate Back</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -342,7 +375,8 @@
 Syntax:
 <span class="action">navigateBack</span></code></pre></div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">navigateForward</span> - goes forwards
+								<li><span class="green-font">navigateForward</span> - goes forwards.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#forward">Navigate Forward</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -351,7 +385,8 @@ Syntax:
 Syntax:
 <span class="action">navigateForward</span></code></pre></div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">navigateTo</span> - opens website at a given address
+								<li><span class="green-font">navigateTo</span> - opens website at a given address.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#navigate-to">Navigate To</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -367,7 +402,8 @@ Position based parameters example:
 <span class="action">navigateTo</span> "" "http://doozer.softtest.dev/firstscript"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">refresh</span> - reloads current page
+								<li><span class="green-font">refresh</span> - reloads current page.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#refresh">Refresh</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -376,7 +412,8 @@ Position based parameters example:
 Syntax:
 <span class="action">refresh</span></code></pre></div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">url</span> - opens website at a given address
+								<li><span class="green-font">url</span> - opens website at a given address.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#navigate-to">Navigate To</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -397,6 +434,7 @@ Position based parameters example:
 							<ul>
 								<li><span class="green-font">iframe</span> - switch to an iframe. Order of execution: selector, parameter - name, parameter - index.
 									If there is no selector nor parameter given then the action switches to the main iframe on the page.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/frames/">Iframes</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -448,6 +486,9 @@ Named parameters example:
 								<li><span class="green-font">takeScreenshot</span> - takes a screenshot of a current view and compares it to the stored reference file.
 									If a filename parameter is not given then the action create a file with "screenshot-LINE_NUMBER" prefix.
 									Each filename is suffixed with a browser string, like 'chrome' or 'chrome-headless'.
+									The action will fail if a system property 'doozer.failOnPixelDiff' is set to
+									'true' and the image comparison shows differences bigger than accepted threshold
+									(default value is set to 0.01%).
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -479,7 +520,8 @@ Position based parameters example:
 <span class="action">import</span> "" "10"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">waitForElement</span> - waits for a given element to be displayed, by default it waits for 10 [s]
+								<li><span class="green-font">waitForElement</span> - waits for a given element to be displayed, by default it waits for 10 [s].
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/waits/#explicit-waits">Explicit wait</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
