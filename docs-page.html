@@ -319,10 +319,74 @@
 							<h5>Interactions</h5>
 							<ul>
 								<li><span class="green-font">alert</span></li>
-								<li><span class="green-font">clear</span></li>
-								<li><span class="green-font">click</span></li>
-								<li><span class="green-font">contextClick</span></li>
-								<li><span class="green-font">doubleClick</span></li>
+								<li><span class="green-font">clear</span> - clears an input element.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#clear">Clear</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- none
+
+Syntax:
+<span class="action">clear</span> <span class="selector">selector:</span>"SELECTOR"
+
+Named parameters example:
+<span class="action">clear</span> <span class="selector">selector:</span>"By.id('my-input')"
+
+Position based parameters example:
+<span class="action">clear</span> "By.id('my-input')"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><span class="green-font">click</span> - clicks on an element.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#click">Click</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- none
+
+Syntax:
+<span class="action">click</span> <span class="selector">selector:</span>"SELECTOR"
+
+Named parameters example:
+<span class="action">click</span> <span class="selector">selector:</span>"By.id('my-button')"
+
+Position based parameters example:
+<span class="action">click</span> "By.id('my-button')"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><span class="green-font">contextClick</span> - right click on an element.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#context-click">Context click (aka right click)</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- none
+
+Syntax:
+<span class="action">contextClick</span> <span class="selector">selector:</span>"SELECTOR"
+
+Named parameters example:
+<span class="action">contextClick</span> <span class="selector">selector:</span>"By.id('my-element')"
+
+Position based parameters example:
+<span class="action">contextClick</span> "By.id('my-element')"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><span class="green-font">doubleClick</span> - double clicks on an element.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#double-click">Double click</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- none
+
+Syntax:
+<span class="action">doubleClick</span> <span class="selector">selector:</span>"SELECTOR"
+
+Named parameters example:
+<span class="action">doubleClick</span> <span class="selector">selector:</span>"By.id('my-element')"
+
+Position based parameters example:
+<span class="action">doubleClick</span> "By.id('my-element')"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
 								<li><span class="green-font">hover</span> - moves mouse pointer to an element.
 									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#move-to-element">Move to element (aka hover)</a>)
 									<div class="docs-code-block">
