@@ -303,12 +303,70 @@
 				    </header>
 				     <section class="docs-section" id="item-5-1">
 						<h2 class="section-heading">Actions</h2>
-						<p><ul>
-							<li>Action syntax</li>
-							<li>Optional execution</li>
-							<li>Escape characters</li>
-							<li>Default parameter</li>
-						</ul></p>
+						<p>
+							<h5>Syntax</h5>
+							<p></p>
+							<p>
+								actionName selector:"SELECTOR" args:"ARGS"
+								actionName "SELECTOR" "ARGS"
+								actionName "" "ARGS"
+
+								"ARGS" - is a list of KEY=VALUE pairs separated with ","
+								"arg1=value1,arg2=value2"
+							</p>
+							<h5>Optional execution - the magic of "?"</h5>
+							<p>If you want to ignore an action failure, for example because it is a click on a
+								some promo banner that appears randomly and there is no way in making it deterministic,
+								then an optional execution modifier is your friend. Optional execution modifier is a
+								<code>?</code> character following an action name. The action is still executed but the
+								test is not stopped in case of a failure. The failure will be logged with a notice that
+								it did not break the execution.
+							</p>
+							<p>
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
+<code class="language-shell"><span class="action">click?</span> <span class="selector">selector:</span>"SELECTOR"</code></pre>
+								</div><!--//docs-code-block-->
+								
+							</p>
+							<h5>Special characters in ARGS</h5>
+							<p>
+								There are two characters with special meaning in the ARGS string: equals char "<code>=</code>" and comma "<code>,</code>".
+								If you want to use them in your key=value pair then they need to be escaped by adding "<code>/</code>" before.
+								For example:
+							</p>
+							<p>
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
+<code class="language-shell">pass value with ',':
+<span class="args">args:</span>"arg1=value\,with_comma,arg2=value2"
+
+pass value with '='
+<span class="args">args:</span>"arg1=value\=with_equals,arg2=value2"</code></pre>
+								</div><!--//docs-code-block-->
+							</p>
+							<h5>Default parameter in ARGS</h5>
+							<p>If you want to pass only one parameter to an action then it can be done without
+								defining a <code>key=value</code> pair, the parameter will get a <code>default</code>
+								key instead and as such it will be treated by the framework. For example:
+							</p>
+							<p>
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
+<code class="language-shell"><span class="args">args:</span>"10" becomes <span class="args">args:</span>"default=10"</code></pre>
+								</div><!--//docs-code-block-->
+							</p>
+							<h5>Comments</h5>
+							<p>A comment in a doozer script is a line which starts with "//".
+							</p>
+							<p>
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
+<code class="language-shell">// exemplary comment</code></pre>
+								</div><!--//docs-code-block-->
+							</p>
+
+						</p>
 						<p>
 							<h5>Assertions</h5>
 							<ul>
