@@ -312,9 +312,56 @@
 						<p>
 							<h5>Assertions</h5>
 							<ul>
-								<li><span class="green-font">assertCurrentUrl</span></li>
-								<li><span class="green-font">assertInnerText</span></li>
-								<li><span class="green-font">assertPageTitle</span></li>
+								<li><span class="green-font">assertCurrentUrl</span> - asserts current URL.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/#get-current-url">Get current URL</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: expected URL
+
+Syntax:
+<span class="action">assertCurrentUrl</span> <span class="args">args:</span>"PAGE URL"
+
+Named parameters example:
+<span class="action">assertCurrentUrl</span> <span class="args">args:</span>"https://doozer.softtest.dev"
+
+Position based parameters example:
+<span class="action">assertCurrentUrl</span> "" "https://doozer.softtest.dev"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><span class="green-font">assertInnerText</span> - asserts element inner text.
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: expected text
+
+Syntax:
+<span class="action">assertInnerText</span> <span class="selector">selector:</span>"SELECTOR" <span class="args">args:</span>"EXPECTED TEXT"
+
+Named parameters example:
+<span class="action">assertInnerText</span> <span class="selector">selector:</span>"By.id('my-element')" <span class="args">args:</span>"some text"
+
+Position based parameters example:
+<span class="action">assertInnerText</span> "By.id('my-element')" "some text"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><span class="green-font">assertPageTitle</span> - asserts current page title.
+									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/#get-title">Get title</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: expected page title
+
+Syntax:
+<span class="action">assertPageTitle</span> <span class="args">args:</span>"PAGE TITLE"
+
+Named parameters example:
+<span class="action">assertPageTitle</span> <span class="args">args:</span>"doozer"
+
+Position based parameters example:
+<span class="action">assertPageTitle</span> "" "doozer"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
 							</ul>
 							<h5>Interactions</h5>
 							<ul>
