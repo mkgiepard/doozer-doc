@@ -305,14 +305,36 @@
 						<h2 class="section-heading">Actions</h2>
 						<p>
 							<h5>Syntax</h5>
-							<p></p>
+							<p>Each action is built with three parts separated with space character:
+								<ul>
+									<li>action name - case sensitive, list of available actions, with examples, can be find later in this section</li>
+									<li>element selector - optional, prefixed with "<code><span class="selector">selector:</span></code>", accepts <code>By</code> and <code>SemanticLocators</code> selectors</li>
+									<li>action arguments list - optional, prefixed with "<code><span class="args">args:</span></code>", a key=value pairs of arguments separated by comma, for example: <code>"arg1=value1,arg2=value2"</code></li>
+								</ul>
+								
+							</p>
 							<p>
-								actionName selector:"SELECTOR" args:"ARGS"
-								actionName "SELECTOR" "ARGS"
-								actionName "" "ARGS"
+								Selector and args can be passed in one of the two modes:
+								<ul>
+									<li>named parameters - with prefixes, allowing a user to skip a selector part when it is not required by an action</li>
+									<li>positional parameters - without prefixes, in this case each action has to have selector and args fields, in case
+										a selector is not required, user needs to put an empty string instead</li>
+								</ul>
+								In both modes, selector and args, have to be put inside double quotes.
+							</p>
+							<p>
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
+<code class="language-shell">Usage with named parameters:
+<span class="action">actionName</span> <span class="selector">selector:</span>"SELECTOR" <span class="args">args:</span>"ARGS"
+<span class="action">actionName</span> <span class="selector">selector:</span>"SELECTOR"
+<span class="action">actionName</span> <span class="args">args:</span>"ARGS"
 
-								"ARGS" - is a list of KEY=VALUE pairs separated with ","
-								"arg1=value1,arg2=value2"
+Usage with positional parameters:
+<span class="action">actionName</span> "SELECTOR" "ARGS"
+<span class="action">actionName</span> "SELECTOR"
+<span class="action">actionName</span> "" "ARGS"</code></pre>
+								</div><!--//docs-code-block-->
 							</p>
 							<h5>Optional execution - the magic of "?"</h5>
 							<p>If you want to ignore an action failure, for example because it is a click on a
