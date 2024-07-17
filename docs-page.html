@@ -841,10 +841,27 @@ Position based parameters example:
 						<h2 class="section-heading">Selectors</h2>
 						<p>
 							<ul>
-								<li>By. - By selectors</li>
-								<li>Sl. - Semantic locators</li>
-								<li>"" - empty selector, for actions that don't use it</li>
+								<li>By.*() - By selectors supported by <a href="https://www.selenium.dev/documentation/webdriver/elements/locators/">Selenium</a></li>
+								<li>Sl() - <a href="https://github.com/google/semantic-locators">Semantic locators</a></li>
+								<li>"" - empty selector, used in positional parameters mode for actions that don't need a selector</li>
 							</ul>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded">
+<code class="language-shell">By selectors:
+<span class="selector">selector:</span>"By.className('information')"
+<span class="selector">selector:</span>"By.cssSelector('#fname')"
+<span class="selector">selector:</span>"By.id('lname')"
+<span class="selector">selector:</span>"By.name('newsletter')"
+<span class="selector">selector:</span>"By.linkText('Doozer Official Page')"
+<span class="selector">selector:</span>"By.partialLinkText('Official Page')"
+<span class="selector">selector:</span>"By.tagName('a')"
+<span class="selector">selector:</span>"By.xpath('//input[@value=\"f\"]')"
+
+Sematic Locators:
+<span class="selector">selector:</span>"Sl({button 'OK'})"
+<span class="selector">selector:</span>"Sl({tab 'Meeting'})"
+<span class="selector">selector:</span>"Sl({button 'User id: *'})"</code></pre>
+							</div><!--//docs-code-block-->
 						</p>
 					</section><!--//section-->
 
@@ -855,7 +872,7 @@ Position based parameters example:
 					
 					<section class="docs-section" id="item-5-4">
 						<h2 class="section-heading">Custom Actions</h2>
-						<p>.</p>
+						<p>under development</p>
 					</section><!--//section-->
 										
 					<section class="docs-section" id="item-5-5">
