@@ -249,7 +249,7 @@
 						<h2 class="section-heading">Project setup</h2>
 						<p>
 							<ol>
-								<li>Create Maven project (<a href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html#creating-a-project">source</a>)
+								<li>Create a new <b>Maven project</b> (<a href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html#creating-a-project">source</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false</code></pre>
@@ -260,7 +260,7 @@
 									You will notice that the command created a directory with the same name given as the artifactId. Go to this directory and
 									if you are using VSCode open it in there.
 								</li>
-								<li>Update pom.xml with supported compiler version and check the setup.
+								<li>Update pom.xml with supported <b>compiler version</b> and check the setup.
 									<ul>
 										<li>Open pom.xml</li>
 										<li>Find line: <code>&lt;maven.compiler.source&gt;1.7&lt;/maven.compiler.source&gt;</code> and update it with 1.8 instead.</li>
@@ -288,10 +288,10 @@
 [INFO] ------------------------------------------------------------------------</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li>Add doozer dependency into pom.xml.<br>
+								<li>Add <b>doozer dependency</b> into pom.xml.<br>
 									Copy the content of <a href="#item-2-2">Maven dependency</a> into the dependencies section of your pom.xml file.
 								</li>
-								<li>Create a base test class - this will be an entry class for your tests, for now it will be empty but in the Codelabs
+								<li>Create a <b>base test class</b> - this will be an entry class for your tests, for now it will be empty but in the Codelabs
 									you will learn how to tweak the doozer setup with it. Create a <code>MyDoozerTest.java</code> file in <code>src/test/java/com/mycompany/app/</code> directory and update it
 									with the following content:
 									<div class="docs-code-block">
@@ -303,7 +303,7 @@ import dev.softtest.doozer.DoozerTest;
 public class MyDoozerTest extends DoozerTest {}</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li>Create directory for the tests in <code>src/test/java/com/mycompany/app/</code>, lets call it <code>scripts</code>. You folder
+								<li>Create <b>directory for the tests</b> in <code>src/test/java/com/mycompany/app/</code>, lets call it <code>scripts</code>. You folder
 									structure should look more or less like this now:
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
