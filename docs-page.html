@@ -867,7 +867,36 @@ Sematic Locators:
 
 					<section class="docs-section" id="item-5-3">
 						<h2 class="section-heading">Driver setup</h2>
-						<p>.</p>
+						<h5>Browser</h5>
+						<p>
+
+						</p>
+						<h5>Window dimensions</h5>
+						<p>
+							Required window size can by defined by overriding <code>setupWindow()</code> method
+							in the test class created at the setup stage. The default window size is set 
+							to 1280 x 700 pixels.
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded">
+<code class="language-java">@Override
+protected void setupWindow(WebDriver driver) {
+	driver.manage().window().setSize(new Dimension(X_DIMENSION_IN_PIXELS, Y_DIMENSION_IN_PIXELS));
+}</code></pre>
+							</div><!--//docs-code-block-->
+						</p>
+						<h5>Implicit timeout</h5>
+						<p>
+							Required <a href="https://www.selenium.dev/documentation/webdriver/waits/#implicit-waits">implicit timeout</a>
+							can be defined by overriding <code>setupTimeouts()</code> method in the test class
+							created at the setup stage. The default value is set to 2 [s].
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded">
+<code class="language-java">@Override
+protected void setupTimeouts(WebDriver driver) {
+    driver.manage().timeouts().implicitlyWait(Duration.ofMillis(WAIT_IN_MILLISECONDS));
+}</code></pre>
+							</div><!--//docs-code-block-->
+						</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-5-4">
