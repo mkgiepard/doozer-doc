@@ -868,14 +868,23 @@ Sematic Locators:
 					<section class="docs-section" id="item-5-3">
 						<h2 class="section-heading">Driver setup</h2>
 						<h5>Browser</h5>
-						<p>
-
+						<p> A browser to run a test can be chosen among: Chrome, Firefox, Edge and Safari.
+							First three can be run in headless mode. To select a browser for your test you
+							need to pass <code>-Ddoozer.browser=BROWSER</code> flag while running the tests.<br>
+							The default browser is set to <b>chrome-headless</b>.
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded">
+<code class="language-shell">Chrome: 	-Ddoozer.browser=chrome 	or 	-Ddoozer.browser=chrome-headless
+Firefox: 	-Ddoozer.browser=firefox 	or 	-Ddoozer.browser=firefox-headless
+Edge: 		-Ddoozer.browser=edge 		or 	-Ddoozer.browser=edge-headless
+Edge: 		-Ddoozer.browser=safari</code></pre>
+							</div><!--//docs-code-block-->
 						</p>
 						<h5>Window dimensions</h5>
 						<p>
 							Required window size can by defined by overriding <code>setupWindow()</code> method
-							in the test class created at the setup stage. The default window size is set 
-							to 1280 x 700 pixels.
+							in the test class created at the setup stage.<br>The default window size is set 
+							to <b>1280 x 700 pixels</b>.
 							<div class="docs-code-block">
 								<pre class="shadow-lg rounded">
 <code class="language-java">@Override
@@ -888,7 +897,7 @@ protected void setupWindow(WebDriver driver) {
 						<p>
 							Required <a href="https://www.selenium.dev/documentation/webdriver/waits/#implicit-waits">implicit timeout</a>
 							can be defined by overriding <code>setupTimeouts()</code> method in the test class
-							created at the setup stage. The default value is set to 2 [s].
+							created at the setup stage. <br>The default value is set to <b>2 [s]</b>.
 							<div class="docs-code-block">
 								<pre class="shadow-lg rounded">
 <code class="language-java">@Override
@@ -906,7 +915,7 @@ protected void setupTimeouts(WebDriver driver) {
 										
 					<section class="docs-section" id="item-5-5">
 						<h2 class="section-heading">Configuration flags</h2>
-						<p>.</p>
+						<p>under development</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-5-6">
@@ -916,17 +925,17 @@ protected void setupTimeouts(WebDriver driver) {
 										
 					<section class="docs-section" id="item-5-7">
 						<h2 class="section-heading">Golden images</h2>
-						<p>.</p>
+						<p>under development</p>
 					</section><!--//section-->
 										
 					<section class="docs-section" id="item-5-8">
 						<h2 class="section-heading">Test execution logs</h2>
-						<p>.</p>
+						<p>under development</p>
 					</section><!--//section-->
 
 					<section class="docs-section" id="item-5-9">
 						<h2 class="section-heading">Variables</h2>
-						<p>.</p>
+						<p>under development</p>
 					</section><!--//section-->
 
 			    </article><!--//docs-article-->
@@ -937,6 +946,7 @@ protected void setupTimeouts(WebDriver driver) {
 					    <h1 class="docs-heading">FAQs</h1>
 					    <section class="docs-intro">
 						    <p>All the: 'How can I ...?', 'Is ... supported?' etc.</p>
+							<p>under development</p>
 						</section><!--//docs-intro-->
 				    </header>
 			    </article><!--//docs-article-->
@@ -945,7 +955,7 @@ protected void setupTimeouts(WebDriver driver) {
 				    <header class="docs-header">
 					    <h1 class="docs-heading">About</h1>
 					    <section class="docs-intro">
-						    <p>.</p>
+						    <p>under development</p>
 						</section><!--//docs-intro-->
 				    </header>
 			    </article><!--//docs-article-->
