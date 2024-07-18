@@ -920,7 +920,25 @@ protected void setupTimeouts(WebDriver driver) {
 					
 					<section class="docs-section" id="item-5-6">
 						<h2 class="section-heading">Running the tests</h2>
-						<p>.</p>
+						<h5>Running a single test case</h5>
+						<p><div class="docs-code-block">
+							<pre class="shadow-lg rounded">
+<code class="language-shell">mvn test -Ddoozer.test=&lt;PATH_TO_THE_DIRECTORY_WITH_TESTS&gt;/TEST_CASE_DIRECTORY/TEST_CASE_FILE.doozer
+
+Example:
+mvn test -Ddoozer.test=src/test/java/dev/softtest/doozer/scripts/firstTest/firstTest.doozer</code></pre>
+							</div><!--//docs-code-block-->
+						</p>
+						<h5>Running all test cases in a directory</h5>
+						<p><div class="docs-code-block">
+							<pre class="shadow-lg rounded">
+<code class="language-shell">mvn test -Ddoozer.directory=&lt;PATH_TO_THE_DIRECTORY_WITH_TESTS&gt;/
+
+Example:
+mvn test -Ddoozer.directory=src/test/java/dev/softtest/doozer/scripts/</code></pre>
+							</div><!--//docs-code-block-->
+							It is important to keep the "/" at the end of the directory.
+						</p>
 					</section><!--//section-->
 										
 					<section class="docs-section" id="item-5-7">
