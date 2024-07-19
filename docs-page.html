@@ -109,9 +109,10 @@
 				    <section class="docs-section" id="item-1-1">
 						<h2 class="section-heading">What is doozer?</h2>
 						<h5>Dead simple UI testing framework.</h5>
-						<p><strong class="me-1">Doozer</strong> is a UI testing framework built by Testers for Testers. It removes the complexity
-							of writing complex testing code, with classes, page objects etc and lets you easily transform existing manual test scripts
-							into automated tests. It is meant to bring the same test automation experience across all the major platforms so that You
+						<p><strong class="me-1">Doozer</strong> is a UI testing framework built by Testers for Testers.
+							It removes the complexity of writing complex testing code, with classes, page objects etc
+							and lets you easily transform existing manual test scripts into automated tests. It is 
+							meant to bring the same test automation experience across all the major platforms so that You
 							and Your team can focus on more important aspects of your work.<br>
 							It brings basic script language, diff-based testing support and simple setup. Here is an example: 
 						</p>
@@ -122,16 +123,20 @@
 					
 					<section class="docs-section" id="item-1-2">
 						<h2 class="section-heading">Target audience</h2>
-						<p><strong class="me-1">Doozer</strong> was built primarily for <strong class="me-1">Testers</strong> / <strong class="me-1">Test Engineers</strong>
-							which would like to automate their work but struggle with coding principles - industry refers to them/us as
-							<strong class="me-1">Manual Testers</strong> / <strong class="me-1">QAs</strong>.
-							The framework removes most of the technicalities and leaves a User with a simple script language that can be used for a quick and
-							efficient translation of existing manual test cases into automated world.</p>
-						<p>If you are comfortable with <a class="theme-link" href="https://selenium.dev">Selenium Webdriver</a>,
-							<a class="theme-link" href="https://www.cypress.io/">Cypress</a>, <a class="theme-link" href="https://playwright.dev/">Playwright</a>
-							or <a class="theme-link" href="https://webdriver.io/">Webdriver.io</a> then doozer is, most
-							probably, not for you. It does not give you as much control as the others and quite fast you might feel limited. Nonetheless, if
-							you find your testing code too complex or you are lacking a simple way to do diff-based UI testing then feel free to give it a shoot.</p>
+						<p><strong class="me-1">Doozer</strong> is primarily designed for <strong class="me-1">Testers</strong> / <strong class="me-1">Test Engineers</strong> 
+							who want to automate their workflows but lack extensive experience with coding 
+							principles. The framework simplifies the automation process by minimizing technical
+							complexities. It provides a user-friendly scripting language that enables the 
+							efficient conversion of existing manual test cases into automated tests.</p>
+						<p>
+							If you are proficient in using <a class="theme-link" href="https://selenium.dev">Selenium Webdriver</a>,<a class="theme-link" href="https://www.cypress.io/">Cypress</a>,
+							or <a class="theme-link" href="https://playwright.dev/">Playwright</a>,
+							Doozer might not be the optimal choice. These frameworks offer a greater degree of control
+							over test structure compared to Doozer. Consequently, users familiar with these tools
+							might find Doozer's functionality limiting. However, Doozer can be a valuable asset if you
+							find your current testing code overly complex or require a straightforward approach for
+							diff-based UI testing.
+						</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-1-3">
@@ -181,8 +186,9 @@
 								<li>Extend SemanticLocators with Android and iOS implementation.</li>
 							</ul>
    							
-							Order of the implementation is not decided yet and will depend on the interest shown by the Users.
-							Is one of them important to you? Feel free to drop us an <a class="mlink" href="#">email</a>.
+							The prioritization for implementing these features has not yet been finalized.
+							The order will be determined based on user feedback. If you have a strong preference
+							for a particular feature, we encourage you to contact us by <a class="mlink" href="#">email</a>.
 						</p>
 					</section><!--//section-->
 					
@@ -192,13 +198,11 @@
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Installation</h1>
 					    <section class="docs-intro">
-						    <p>Doozer is built in <b>Java</b> and is distributed as <b>Maven</b> dependency. If you are not
-								familiar with Maven don't you worry, the <a href="#section-3">Get Started</a> section will
-								guide you through the required setup.
+						    <p>Doozer is built in <b>Java</b> and is distributed as <b>Maven</b> dependency.
+								The <a href="#section-3">Get Started</a> section will guide you through
+								the required setup.
 							</p>
-							<p>For writing doozer scripts we recommend using Visual Studio Code although you can use
-								any other IDE or text editor. With VSCode though you'll be getting an extra support
-								as there is a syntax highlight extension for the doozer script language.
+							<p>While Doozer scripts can be written using any IDE or text editor, we recommend <b>Visual Studio Code (VSCode)</b> for an enhanced development experience. VSCode offers a syntax highlighting extension specifically designed for the Doozer scripting language. This extension improves code readability and maintainability by visually differentiating keywords, variables, and other code elements.
 							</p>
 						</section><!--//docs-intro-->
 				    </header>
@@ -238,10 +242,10 @@
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Get Started</h1>
 					    <section class="docs-intro">
-						    <p>This section will guide your through the first steps in doozer tests development.
-								If you are familiar with Maven feel free to skip the part with new project creation.
-								We assume you have read the prerequisites section and Java SDK and Maven are already installed.
-								Let's start then!
+						    <p>This section guides you through the initial steps of developing Doozer tests.
+								Users familiar with Maven can skip the project setup section.
+								We assume you have reviewed the prerequisites section and have already installed the Java SDK and Maven.
+								Let's Begin!
 							</p>
 						</section><!--//docs-intro-->
 				    </header>
@@ -255,11 +259,9 @@
 <code class="language-shell" id="mvn-gen">mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false</code></pre>
 <button class="btn btn-light" onclick="copyToClipboard('mvn-gen')">Copy to clipboard</button>
 									</div><!--//docs-code-block-->
-									You can replace <code>com.mycompany.app</code> and <code>my-app</code> with your company and your application but for
-									the purpose of this guide lets use these values.<br>
-									If your are running on Windows then all the parameters must be surrounded by double quotes - "".<br>
-									You will notice that the command created a directory with the same name given as the artifactId. Go to this directory and
-									if you are using VSCode open it in there.
+									The placeholders <code>com.mycompany.app</code> and <code>my-app</code>represent your company's domain and application name, respectively. However, for the sake of this guide, we will use these examples.<br>
+									On Windows systems, all command-line parameters must be enclosed in double quotes (").<br>
+									The provided command will create a directory named after the artifactId (in this case, my-app). Navigate to this directory and open it in Visual Studio Code (VSCode) if that's your preferred IDE.
 								</li>
 								<li>Update pom.xml with supported <b>compiler version</b> and check the setup.
 									<ul>
@@ -268,7 +270,7 @@
 										<li>Find line: <code>&lt;maven.compiler.target&gt;1.7&lt;/maven.compiler.target&gt;</code> and also update it with 1.8.</li>
 										<li>Save the file and run <code>mvn test</code></li>
 									</ul>
-									If all went good you should see the following output in your console:
+									If the command executes successfully, you should observe the following output in your console:
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">[INFO] -------------------------------------------------------
@@ -336,7 +338,7 @@ public class MyDoozerTest extends DoozerTest {}</code></pre>
 						<h2 class="section-heading">Writing first script</h2>
 						<p>
 							<ul>
-								<li>Create <b>new test script</b>
+								<li>Create <b>new doozer test</b>
 									<ul>
 										<li>Create <code>firstTest</code> directory in <code>src/test/java/com/mycompany/app/scripts/</code></li>
 										<li>Create <code>goldens</code> directory in <code>src/test/java/com/mycompany/app/scripts/firstTest/</code></li>
@@ -376,13 +378,12 @@ touch src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer</code><
 					
 					<section class="docs-section" id="item-3-3">
 						<h2 class="section-heading">Running first script</h2>
-						<p>With the test ready it's time to run it. This is done with <code>mvn test</code> command with additional
-							doozer flags. Open terminal and run the following:
+						<p>Now that your test is set up, you can execute it using the <code>mvn test</code>ommand along with additional Doozer flags. Open terminal and run the following:
 							<div class="docs-code-block">
 								<pre class="shadow-lg rounded">
 <code class="language-shell">mvn test -Ddoozer.test=src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer -Ddoozer.browser=chrome</code></pre>
 							</div><!--//docs-code-block-->
-							Windows users need to pass the flags in double quotes, like this:
+							On Windows systems, you'll need to enclose the Doozer flags within double quotes, here's an example:
 							<div class="docs-code-block">
 								<pre class="shadow-lg rounded">
 <code class="language-shell">mvn test "-Ddoozer.test=src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer" "-Ddoozer.browser=chrome"</code></pre>
@@ -416,19 +417,17 @@ src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer              
 [INFO] Finished at: 2024-07-19T11:32:41+02:00
 [INFO] ------------------------------------------------------------------------</code></pre>
 						</div><!--//docs-code-block-->
-						The execution results are shown in the console but they are also stored in a test result
-						directory under <code>target/doozer-tests/firstTest</code>.
+						The execution results are displayed in your console window. Additionally, they are saved in a dedicated test results directory located at <code>target/doozer-tests/firstTest</code>. This directory contains the following files:
 						<ul>
-							<li>doozer-report.html - HTML report showing all the executed test steps with their status,
-								it will be especially useful while doing diff-based testing for screenshots.
+							<li>doozer-report.html - This HTML report provides a comprehensive overview of all executed test steps, including their status (pass/fail). It's particularly valuable for diff-based testing involving screenshots.
 							</li>
-							<li>doozer.log - detailed execution log</li>
+							<li>doozer.log - This file contains a detailed log of the test execution process.</li>
 						</ul>
 						</p>
 						<p>
-							That's it! You have your first doozer test, CONGRATS!<br>
-							Now it's time to explore more, in the next section you'll learn more on running multiple tests 
-							in parallel, using screenshots and investigating test failures.<br>
+							Congratulations! You've successfully created and executed your first Doozer test.<br>
+							Now it's time to explore a bit more, in the next sections you'll learn more on 
+							running multiple tests in parallel, using screenshots and investigating test failures.<br>
 							HAPPY TESTING!
 						</p>
 					</section><!--//section-->
@@ -473,22 +472,32 @@ src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer              
 						<h2 class="section-heading">Actions</h2>
 						<p>
 							<h5>Syntax</h5>
-							<p>Each action is built with three parts separated with space character:
+							<p>Each action within a Doozer script is constructed using three parts, separated by spaces:
 								<ul>
-									<li>action name - case sensitive, list of available actions, with examples, can be find later in this section</li>
-									<li>element selector - optional, prefixed with "<code><span class="selector">selector:</span></code>", accepts <code>By</code> and <code>SemanticLocators</code> selectors</li>
-									<li>action arguments list - optional, prefixed with "<code><span class="args">args:</span></code>", a key=value pairs of arguments separated by comma, for example: <code>"arg1=value1,arg2=value2"</code></li>
+									<li><b>action name</b> - case sensitive, specifies the operation you want to perform. A list of available actions, along with examples, will be provided later in this section.</li>
+									<li><b>element selector</b> (optional) - identifies the target element on the web page where the action should be applied. It's prefixed with "<code><span class="selector">selector:</span></code>" and supports both By and SemanticLocators selectors.</li>
+									<li><b>action arguments list</b> (optional) - allows you to define additional parameters for the action. It's prefixed with "<code><span class="args">args:</span></code>" and consists of key-value pairs separated by commas, for example: <code>"arg1=value1,arg2=value2"</code></li>
 								</ul>
 								
 							</p>
 							<p>
-								Selector and args can be passed in one of the two modes:
-								<ul>
-									<li>named parameters - with prefixes, allowing a user to skip a selector part when it is not required by an action</li>
-									<li>positional parameters - without prefixes, in this case each action has to have selector and args fields, in case
-										a selector is not required, user needs to put an empty string instead</li>
-								</ul>
-								In both modes, selector and args, have to be put inside double quotes.
+
+Doozer scripts support two primary modes for specifying selectors and arguments within actions:
+<div>
+<i>Named Parameters (with Prefixes):</i>
+<ul>
+	<li>This mode allows you to explicitly define the selector and arguments using prefixes.</li>
+	<li>It offers flexibility, as you can omit the selector part if an action doesn't require it.</li>
+</ul>
+</div>
+<div>
+<i>Positional Parameters (without Prefixes):</i>
+<ul>
+	<li>This mode expects both selector and arguments fields to be present, even if the selector is not mandatory for the action.</li>
+	<li>In cases where the selector is not needed, you must include an empty string ("") as a placeholder.</li>
+</ul>
+</div>
+In both modes, selector and args, have to be put inside double quotes.								
 							</p>
 							<p>
 								<div class="docs-code-block">
@@ -505,12 +514,7 @@ Usage with positional parameters:
 								</div><!--//docs-code-block-->
 							</p>
 							<h5>Optional execution - the magic of "?"</h5>
-							<p>If you want to ignore an action failure, for example because it is a click on a
-								some promo banner that appears randomly and there is no way in making it deterministic,
-								then an optional execution modifier is your friend. Optional execution modifier is a
-								<code>?</code> character following an action name. The action is still executed but the
-								test is not stopped in case of a failure. The failure will be logged with a notice that
-								it did not break the execution.
+							<p>Doozer actions provide an optional execution modifier to handle situations where an action might not always be successful. This is particularly useful for elements that appear randomly or are outside your control, such as promotional banners. By appending a question mark (?) to the end of an action name, you mark it as optional. The action will still be executed during the test, but the test will not fail if the action encounters an error. Any failures will be logged with a notice, indicating that the error did not halt the test execution.
 							</p>
 							<p>
 								<div class="docs-code-block">
