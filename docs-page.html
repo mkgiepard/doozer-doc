@@ -334,27 +334,99 @@ public class MyDoozerTest extends DoozerTest {}</code></pre>
 						<h2 class="section-heading">Writing first script</h2>
 						<p>
 							<ul>
-								<li>Create new test script</li>
-								<li>Add first actions</li>
+								<li>Create <b>new test script</b>
+									<ul>
+										<li>Create <code>firstTest</code> directory in <code>src/test/java/com/mycompany/app/scripts/</code></li>
+										<li>Create <code>goldens</code> directory in <code>src/test/java/com/mycompany/app/scripts/firstTest/</code></li>
+										<li>Create <code>firstTest.doozer</code> file in <code>src/test/java/com/mycompany/app/scripts/firstTest/</code></li>
+									</ul>
+									On linux or macOS this can be done with the following commands:
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-java">mkdir src/test/java/com/mycompany/app/scripts/firstTest
+mkdir src/test/java/com/mycompany/app/scripts/firstTest/goldens
+touch src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer</code></pre>
+									</div><!--//docs-code-block-->
+									The folder structure should look like this now:
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-java">(...)
+└── scripts
+	└── firstTest
+		├── firstTest.doozer
+		└── goldens</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li>Open <code>firstTest.doozer</code> in VSCode and <b>add your first actions</b>.
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell"><span class="action">url</span> <span class="args">args:</span>"https://doozer.softtest.dev/test-pages/webform.html"
+<span class="action">type</span> <span class="selector">selector:</span>"By.name('name')" <span class="args">args:</span>"Doozer"
+<span class="action">click</span> <span class="selector">selector:</span>"By.cssSelector('button')"
+<span class="action">assertInnerText</span> <span class="selector">selector:</span>"By.id('message')" <span class="args">args:</span>"Hello Doozer!"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li>Save the changes</li>
 							</ul>
 						</p>
-						<div class="docs-code-block">
-							<pre class="shadow-lg rounded">
-<code class="language-shell"><span class="action">url</span> <span class="args">args:</span>"http://doozer.softtest.dev/firstscript"
-<span class="action">type</span> <span class="selector">selector:</span>"SL({textbox ‘name’})" <span class="args">args:</span>"Doozer"
-<span class="action">click</span> <span class="selector">selector:</span>"SL({button ‘submit’})"
-<span class="action">assertInnerTest</span> <span class="selector">selector:</span>"By.className(‘greeting’)" <span class="args">args:</span>"Hello Doozer!"</code></pre>
-							<a href="#" class="btn btn-light">Copy to clipboard</a>
-						</div><!--//docs-code-block-->
-						
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-3-3">
 						<h2 class="section-heading">Running first script</h2>
+						<p>With the test ready it's time to run it. This is done with <code>mvn test</code> command with additional
+							doozer flags. Open terminal and run the following:
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded">
+<code class="language-shell">mvn test -Ddoozer.test=src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer -Ddoozer.browser=chrome</code></pre>
+							</div><!--//docs-code-block-->
+							Windows users need to pass the flags in double quotes, like this:
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded">
+<code class="language-shell">mvn test "-Ddoozer.test=src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer" "-Ddoozer.browser=chrome"</code></pre>
+							</div><!--//docs-code-block-->
+							The <code>mvn test</code> command starts your test that brings up a Chrome browser and executes the test steps.
+							If all went well you should see something like this:
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
+<code class="language-shell">(...)
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.mycompany.app.MyDoozerTest
+Running: [1] src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer
+
+TestCase                                                                                                 Result   Error
+--------                                                                                                 ------   -----
+src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer                                         PASS
+--------                                                                                                 ------   -----
+	
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.591 s - in com.mycompany.app.MyDoozerTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.441 s
+[INFO] Finished at: 2024-07-19T11:32:41+02:00
+[INFO] ------------------------------------------------------------------------</code></pre>
+						</div><!--//docs-code-block-->
+						The execution results are shown in the console but they are also stored in a test result
+						directory under <code>target/doozer-tests/firstTest</code>.
+						<ul>
+							<li>doozer-report.html - HTML report showing all the executed test steps with their status,
+								it will be especially useful while doing diff-based testing for screenshots.
+							</li>
+							<li>doozer.log - detailed execution log</li>
+						</ul>
+						</p>
 						<p>
-							<ul>
-								<li>Run the test!</li>
-							</ul>
+							That's it! You have your first doozer test, CONGRATS!<br>
+							Now it's time to explore more, in the next section you'll learn more on running multiple tests 
+							in parallel, using screenshots and investigating test failures.<br>
+							HAPPY TESTING!
 						</p>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
@@ -363,22 +435,22 @@ public class MyDoozerTest extends DoozerTest {}</code></pre>
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Codelabs</h1>
 					    <section class="docs-intro">
-						    <p>under development</p>
+						    <p><i class="fas fa-cogs"></i> under development</p>
 						</section><!--//docs-intro-->
 				    </header>
 				     <section class="docs-section" id="item-4-1">
 						<h2 class="section-heading">Test suite</h2>
-						<p>under development</p>
+						<p><i class="fas fa-cogs"></i> under development</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-4-2">
 						<h2 class="section-heading">Golden screenshots</h2>
-						<p>under development</p>
+						<p><i class="fas fa-cogs"></i> under development</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-4-3">
 						<h2 class="section-heading">Failures investigation</h2>
-						<p>under development</p>
+						<p><i class="fas fa-cogs"></i> under development</p>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
 			    
@@ -997,12 +1069,12 @@ protected void setupTimeouts(WebDriver driver) {
 					
 					<section class="docs-section" id="item-5-4">
 						<h2 class="section-heading">Custom Actions</h2>
-						<p>under development</p>
+						<p><i class="fas fa-cogs"></i> under development</p>
 					</section><!--//section-->
 										
 					<section class="docs-section" id="item-5-5">
 						<h2 class="section-heading">Configuration flags</h2>
-						<p>under development</p>
+						<p><i class="fas fa-cogs"></i> under development</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-5-6">
@@ -1030,17 +1102,17 @@ mvn test -Ddoozer.directory=src/test/java/dev/softtest/doozer/scripts/</code></p
 										
 					<section class="docs-section" id="item-5-7">
 						<h2 class="section-heading">Golden images</h2>
-						<p>under development</p>
+						<p><i class="fas fa-cogs"></i> under development</p>
 					</section><!--//section-->
 										
 					<section class="docs-section" id="item-5-8">
 						<h2 class="section-heading">Test execution logs</h2>
-						<p>under development</p>
+						<p><i class="fas fa-cogs"></i> under development</p>
 					</section><!--//section-->
 
 					<section class="docs-section" id="item-5-9">
 						<h2 class="section-heading">Variables</h2>
-						<p>under development</p>
+						<p><i class="fas fa-cogs"></i> under development</p>
 					</section><!--//section-->
 
 			    </article><!--//docs-article-->
@@ -1051,7 +1123,7 @@ mvn test -Ddoozer.directory=src/test/java/dev/softtest/doozer/scripts/</code></p
 					    <h1 class="docs-heading">FAQs</h1>
 					    <section class="docs-intro">
 						    <p>All the: 'How can I ...?', 'Is ... supported?' etc.</p>
-							<p>under development</p>
+							<p><i class="fas fa-cogs"></i> under development</p>
 						</section><!--//docs-intro-->
 				    </header>
 			    </article><!--//docs-article-->
