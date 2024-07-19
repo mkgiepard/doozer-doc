@@ -109,12 +109,15 @@
 				    <section class="docs-section" id="item-1-1">
 						<h2 class="section-heading">What is doozer?</h2>
 						<h5>Dead simple UI testing framework.</h5>
-						<p><strong class="me-1">Doozer</strong> is a UI testing framework built by Testers for Testers.
-							It removes the complexity of writing complex testing code, with classes, page objects etc
-							and lets you easily transform existing manual test scripts into automated tests. It is 
-							meant to bring the same test automation experience across all the major platforms so that You
-							and Your team can focus on more important aspects of your work.<br>
-							It brings basic script language, diff-based testing support and simple setup. Here is an example: 
+						<p><strong class="me-1">Doozer</strong> UI testing framework designed by testers, for testers. 
+							It simplifies UI test automation by removing the complexity of writing code with classes, page objects,
+							and other traditional elements. Doozer allows you to easily convert existing manual test scripts into automated tests.
+						</p>
+						<p>
+							This framework aims to provide a consistent test automation experience across all major platforms. This frees you and your team to focus on more strategic aspects of your work.
+						</p>
+						<p>
+							Doozer offers a basic scripting language, support for diff-based testing, and a straightforward setup process. Here is an example: 
 						</p>
 						<p>
 							<a href="assets/images/firstTest.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/firstTest.png" alt="" title="CoderPro Home Page"/></a>
@@ -484,14 +487,14 @@ src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer              
 
 Doozer scripts support two primary modes for specifying selectors and arguments within actions:
 <div>
-<i>Named Parameters (with Prefixes):</i>
+<h6>Named Parameters (with Prefixes):</h6>
 <ul>
 	<li>This mode allows you to explicitly define the selector and arguments using prefixes.</li>
 	<li>It offers flexibility, as you can omit the selector part if an action doesn't require it.</li>
 </ul>
 </div>
 <div>
-<i>Positional Parameters (without Prefixes):</i>
+<h6>Positional Parameters (without Prefixes):</h6>
 <ul>
 	<li>This mode expects both selector and arguments fields to be present, even if the selector is not mandatory for the action.</li>
 	<li>In cases where the selector is not needed, you must include an empty string ("") as a placeholder.</li>
@@ -524,9 +527,9 @@ Usage with positional parameters:
 								
 							</p>
 							<h5>Special characters in ARGS</h5>
-							<p>
-								There are two characters with special meaning in the ARGS string: equals char "<code>=</code>" and comma "<code>,</code>".
-								If you want to use them in your key=value pair then they need to be escaped by adding "<code>/</code>" before.
+							<p>In ARGS part, two characters have special meanings: the equals sign "<code>=</code>" and the comma "<code>,</code>".
+								If you want to include these characters within a key-value pair, you need to escape them using
+								 a backslash "<code>/</code>" before each character.
 								For example:
 							</p>
 							<p>
@@ -540,9 +543,9 @@ pass value with '='
 								</div><!--//docs-code-block-->
 							</p>
 							<h5>Default parameter in ARGS</h5>
-							<p>If you want to pass only one parameter to an action then it can be done without
-								defining a <code>key=value</code> pair, the parameter will get a <code>default</code>
-								key instead and as such it will be treated by the framework. For example:
+							<p>When you only need to pass a single parameter, you don't need to define a <code>key=value</code> pair.
+							The framework will automatically assign a <code>default</code> key to the parameter and handle it appropriately.
+							For example:
 							</p>
 							<p>
 								<div class="docs-code-block">
@@ -900,7 +903,7 @@ Position based parameters example:
 							<h5>Generics</h5>
 							<ul>
 								<li><span class="green-font">iframe</span> - switch to an iframe. Order of execution: selector, parameter - name, parameter - index.
-									If there is no selector nor parameter given then the action switches to the main iframe on the page.
+									If there is no selector nor parameter given, then the action switches to the main iframe on the page.
 									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/frames/">Iframes</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
@@ -950,12 +953,14 @@ Named parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 								</li>
-								<li><span class="green-font">takeScreenshot</span> - takes a screenshot of a current view and compares it to the stored reference file.
-									If a filename parameter is not given then the action create a file with "screenshot-LINE_NUMBER" prefix.
-									Each filename is suffixed with a browser string, like 'chrome' or 'chrome-headless'.
-									The action will fail if a system property 'doozer.failOnPixelDiff' is set to
-									'true' and the image comparison shows differences bigger than accepted threshold
-									(default value is set to 0.01%).
+								<li><span class="green-font">takeScreenshot</span> - captures a screenshot of the current browser view and compares it to a reference image.
+									<ul>
+										<li>If a filename parameter is not given then the action creates a file with "screenshot-LINE_NUMBER" prefix.</li>
+										<li>Each file with a screenshot is suffixed with a browser string, like 'chrome' or 'chrome-headless'.</li>
+										<li>The action will fail if a system property 'doozer.failOnPixelDiff' is set to
+											'true' and the image comparison shows differences bigger than accepted threshold
+											(default value is set to 0.01%).</li>
+									</ul>
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1040,10 +1045,25 @@ Sematic Locators:
 					<section class="docs-section" id="item-5-3">
 						<h2 class="section-heading">Driver setup</h2>
 						<h5>Browser</h5>
-						<p> A browser to run a test can be chosen among: Chrome, Firefox, Edge and Safari.
-							First three can be run in headless mode. To select a browser for your test you
-							need to pass <code>-Ddoozer.browser=BROWSER</code> flag while running the tests.<br>
-							The default browser is set to <b>chrome-headless</b>.
+						<p>Doozer allows you to choose from several browsers to run your automated tests:
+							<ul>
+								<li>Chrome</li>
+								<li>Firefox</li>
+								<li>Edge</li>
+								<li>Safari</li>
+							</ul>
+							<h6>Headless Mode Support:</h6>
+							<p>
+								The first three browsers (Chrome, Firefox, and Edge) can be run in headless mode. This means the browser window won't be visible during test execution, improving performance and resource usage.
+							</p>
+							<h6>Specifying a Browser:</h6>
+							<p>To select a browser for your tests, you can use the following command-line flag when running your tests:
+								<code>-Ddoozer.browser=BROWSER</code>
+								Replace BROWSER with the desired browser name (e.g., chrome, firefox, edge, or safari).
+							</p>
+							<h6>Default Browser:</h6>
+							<p>By default, Doozer tests will run in headless Chrome mode (chrome-headless).</p>
+							
 							<div class="docs-code-block">
 								<pre class="shadow-lg rounded">
 <code class="language-shell">Chrome: 	-Ddoozer.browser=chrome 	or 	-Ddoozer.browser=chrome-headless
