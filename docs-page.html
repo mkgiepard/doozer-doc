@@ -80,6 +80,7 @@
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Test suite</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Golden screenshots</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">Failures investigation</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-4">UI elements identification</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Documentation</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Actions</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Selectors</a></li>
@@ -222,18 +223,17 @@
 						<h2 class="section-heading">Maven dependency</h2>
 						<div class="docs-code-block">
 							<pre class="shadow-lg rounded">
-<code class="language-xml">&lt;dependency&gt;
+<code class="language-xml" id="mvn-dep">&lt;dependency&gt;
 	&lt;groupId&gt;dev.softtest&lt;/groupId&gt;
 	&lt;artifactId&gt;doozer&lt;/artifactId&gt;
 	&lt;version&gt;0.2.3&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
-							<a href="#" class="btn btn-light">Copy to clipboard</a>
+							<button class="btn btn-light" onclick="copyToClipboard('mvn-dep')">Copy to clipboard</button>
 						</div><!--//docs-code-block-->
 					</section><!--//section-->
 					
 			    </article><!--//docs-article-->
-			    
-			    
+ 
 			    <article class="docs-article" id="section-3">
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Get Started</h1>
@@ -252,7 +252,8 @@
 								<li>Create a new <b>Maven project</b> (<a href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html#creating-a-project">source</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
-<code class="language-shell">mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false</code></pre>
+<code class="language-shell" id="mvn-gen">mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false</code></pre>
+<button class="btn btn-light" onclick="copyToClipboard('mvn-gen')">Copy to clipboard</button>
 									</div><!--//docs-code-block-->
 									You can replace <code>com.mycompany.app</code> and <code>my-app</code> with your company and your application but for
 									the purpose of this guide lets use these values.<br>
@@ -296,11 +297,12 @@
 									with the following content:
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
-<code class="language-java">package com.mycompany.app;
+<code class="language-java" id="test-class">package com.mycompany.app;
 
 import dev.softtest.doozer.DoozerTest;
 
 public class MyDoozerTest extends DoozerTest {}</code></pre>
+<button class="btn btn-light" onclick="copyToClipboard('test-class')">Copy to clipboard</button>
 									</div><!--//docs-code-block-->
 								</li>
 								<li>Create <b>directory for the tests</b> in <code>src/test/java/com/mycompany/app/</code>, lets call it <code>scripts</code>. You folder
@@ -360,10 +362,11 @@ touch src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer</code><
 								<li>Open <code>firstTest.doozer</code> in VSCode and <b>add your first actions</b>.
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
-<code class="language-shell"><span class="action">url</span> <span class="args">args:</span>"https://doozer.softtest.dev/test-pages/webform.html"
+<code class="language-shell" id="test-first"><span class="action">url</span> <span class="args">args:</span>"https://doozer.softtest.dev/test-pages/webform.html"
 <span class="action">type</span> <span class="selector">selector:</span>"By.name('name')" <span class="args">args:</span>"Doozer"
 <span class="action">click</span> <span class="selector">selector:</span>"By.cssSelector('button')"
 <span class="action">assertInnerText</span> <span class="selector">selector:</span>"By.id('message')" <span class="args">args:</span>"Hello Doozer!"</code></pre>
+<button class="btn btn-light" onclick="copyToClipboard('test-first')">Copy to clipboard</button>
 									</div><!--//docs-code-block-->
 								</li>
 								<li>Save the changes</li>
@@ -452,6 +455,12 @@ src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer              
 						<h2 class="section-heading">Failures investigation</h2>
 						<p><i class="fas fa-cogs"></i> under development</p>
 					</section><!--//section-->
+
+					<section class="docs-section" id="item-4-4">
+						<h2 class="section-heading">UI elements identification</h2>
+						<p><i class="fas fa-cogs"></i> under development</p>
+					</section><!--//section-->
+
 			    </article><!--//docs-article-->
 			    
 			    <article class="docs-article" id="section-5">
@@ -1185,6 +1194,12 @@ mvn test -Ddoozer.directory=src/test/java/dev/softtest/doozer/scripts/</code></p
 		var xlinks = document.getElementsByClassName("xlink");
 		for (var xlink in xlinks) {
 			xlinks[xlink].href = `${xwhere}${xwho}`;
+		}
+	</script>
+	<script>
+		function copyToClipboard(id) {
+  			var cmdContainer = document.getElementById(id);
+  			navigator.clipboard.writeText(cmdContainer.textContent);
 		}
 	</script>
 
