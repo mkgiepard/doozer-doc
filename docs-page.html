@@ -27,6 +27,25 @@
 	<!-- Page CSS --> 
 	<link id="theme-style" rel="stylesheet" href="assets/css/style.css">
 
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16648171557"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16648171557');
+</script>
+
+<!-- Event snippet for Wyświetlenie strony conversion page -->
+<script>
+	gtag('event', 'conversion', {
+		'send_to': 'AW-16648171557/hP54CLL7l8QZEKXgu4I-',
+		'value': 1.0,
+		'currency': 'CHF'
+	});
+  </script>
+
 </head> 
 
 <body class="docs-page">    
@@ -1225,8 +1244,6 @@ mvn test -Ddoozer.directory=src/test/java/dev/softtest/doozer/scripts/</code></p
   			navigator.clipboard.writeText(cmdContainer.textContent);
 		}
 	</script>
-
-
 </body>
 </html> 
 
