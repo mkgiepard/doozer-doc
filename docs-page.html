@@ -912,10 +912,10 @@ Syntax:
 <span class="action">url</span> <span class="args">args:</span>"HTTP ADDRESS"
 
 Named parameters example:
-<span class="action">url</span> <span class="args">args:</span>"http://doozer.softtest.dev"
+<span class="action">url</span> <span class="args">args:</span>"http://doozer.softtest.dev/firstscript"
 
 Position based parameters example:
-<span class="action">url</span> "" "http://doozer.softtest.dev"</code></pre>
+<span class="action">url</span> "" "http://doozer.softtest.dev/firstscript"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
 							</ul>
@@ -1041,6 +1041,10 @@ Position based parameters example:
 								<li>Sl() - <a href="https://github.com/google/semantic-locators">Semantic locators</a></li>
 								<li>"" - empty selector, used in positional parameters mode for actions that don't need a selector</li>
 							</ul>
+							If if there is more than one element with the same selector you may choose
+							which one to work with by adding an index as a suffix to the selector string,
+							like this: <code>"By.className('information')[2]"</code> or <code>"Sl({button 'OK'})[0]"</code>.
+							The index is 0 based and has to be given in square brackets.
 							<div class="docs-code-block">
 								<pre class="shadow-lg rounded">
 <code class="language-shell">By selectors:
@@ -1053,10 +1057,16 @@ Position based parameters example:
 <span class="selector">selector:</span>"By.tagName('a')"
 <span class="selector">selector:</span>"By.xpath('//input[@value=\"f\"]')"
 
+with index:
+<span class="selector">selector:</span>"By.tagName('a')[2]"
+
 Sematic Locators:
 <span class="selector">selector:</span>"Sl({button 'OK'})"
 <span class="selector">selector:</span>"Sl({tab 'Meeting'})"
-<span class="selector">selector:</span>"Sl({button 'User id: *'})"</code></pre>
+<span class="selector">selector:</span>"Sl({button 'User id: *'})"
+
+with index:
+<span class="selector">selector:</span>"Sl({button 'OK'})[1]"</code></pre>
 							</div><!--//docs-code-block-->
 						</p>
 					</section><!--//section-->
