@@ -458,9 +458,6 @@ src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer              
 			    <article class="docs-article" id="section-4">
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Codelabs</h1>
-					    <section class="docs-intro">
-						    <p><i class="fas fa-cogs"></i> under development</p>
-						</section><!--//docs-intro-->
 				    </header>
 				     <section class="docs-section" id="item-4-1">
 						<h2 class="section-heading">Test suite</h2>
@@ -469,7 +466,152 @@ src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer              
 					
 					<section class="docs-section" id="item-4-2">
 						<h2 class="section-heading">Golden screenshots</h2>
-						<p><i class="fas fa-cogs"></i> under development</p>
+						<p>In this codelab you will learn <strong>how to take screenshots</strong> in a doozer test,
+							<strong>how to review the image comparison results</strong> and <strong>how to update golden files</strong>.
+							<div class="callout-block callout-block-info">
+                            
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Note
+									</h4>
+									<p>Prerequisites: Java and Maven installed; Project setup from <a href="#section-3">Get Started</a> section is completed.</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+							<ol>
+								<li><b>Create new doozer test.</b>
+									<ul>
+										<li>Create <code>screenshotTest</code> directory in <code>src/test/java/com/mycompany/app/scripts/</code></li>
+										<li>Create <code>goldens</code> directory in <code>src/test/java/com/mycompany/app/scripts/firstTest/</code></li>
+										<li>Create <code>screenshotTest.doozer</code> file in <code>src/test/java/com/mycompany/app/scripts/firstTest/</code></li>
+									</ul>
+									On linux or macOS this can be done with the following commands:
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-java">mkdir src/test/java/com/mycompany/app/scripts/screenshotTest
+mkdir src/test/java/com/mycompany/app/scripts/screenshotTest/goldens
+touch src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.doozer</code></pre>
+									</div><!--//docs-code-block-->
+									The folder structure should look like this now:
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-java">(...)
+└── scripts
+	└── screenshotTest
+		├── screenshotTest.doozer
+		└── goldens</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><b>Open <code>screenshotTest.doozer</code> in VSCode and add actions.</b>.
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell" id="codelab-screenshot-1"><span class="action">url</span> <span class="args">args:</span>"https://doozer.softtest.dev/test-pages/webform.html"
+<span class="action">takeScreenshot</span> <span class="args">args:</span>"empty-form"</code></pre>
+<button class="btn btn-light" onclick="copyToClipboard('codelab-screenshot-1')">Copy to clipboard</button>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><b>Run the test.</b>
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">mvn test -Ddoozer.test=src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.doozer -Ddoozer.browser=chrome</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><b>Check the results.</b> If everything went well then the test failed with the following error:
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell" style="color:red;">TEST CASE `screenshotTest` FAILED IN ACTION: `takeScreenshot args:"empty-form"` >>> Root cause: Image comparison failed!</code></pre>
+									</div>
+									Test execution generated a 'Doozer Test Report' at <code>&lt;WORKING_DIRECTORY&gt;/target/doozer-tests/screenshotTest/doozer-report.html</code>.
+									Open this file in a browser of your choice to review the test result, it should look like this:
+									<a href="assets/images/doozer-codelab-screenshot-1.png"><img class="figure-img img-fluid shadow rounded h450" src="assets/images/doozer-codelab-screenshot-1.png" alt="" title="Doozer Test Case Report page"/></a>
+									<p>The report shows all the executed test steps, their result and, in case of a <code>takeScreenshot</code> action,
+									a number of pixels the result image differs from the golden one. As we just started, and there is no 
+									golden image, we can see that the pixel difference number includes all the pixels in the result image.</p>
+								</li>
+								<li><b>Update golden images.</b> Let's assume we would like to use the result image as a golden one,
+									to do this we need to copy it into the <code>goldens</code> directory of the test. The 'Doozer
+									Test Report' page provides a handful functionality supporting this step, do the following:
+									<ul>
+										<li>Click APPROVE button, next to the <code>takeScreenshot</code> test step - this will populate
+										a text box at the bottom of the page with a copy command.</li>
+										<li>Click COPY TO CLIPBOARD button, below the text box with commands</li>
+										<li>Paste the clipboard content into the terminal you are running the tests from</li>
+										<li>Done, goldens are updated! You can verify this by checking the content of the <code>goldens</code> in your test case folder.</li>
+									</ul>
+								</li>
+								<li><b>Re-run the test</b> - this time the execution should be successful.
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">mvn test -Ddoozer.test=src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.doozer -Ddoozer.browser=chrome</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><b>Add more actions</b> - this time we'll introduce 3 new screenshots.
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell" id="codelab-screenshot-2"><span class="action">type</span> <span class="selector">selector:</span>"By.name('name')" <span class="args">args:</span>"Doozer"
+<span class="action">takeScreenshot</span> <span class="args">args:</span>"form-with-data"
+	
+<span class="action">click</span> <span class="selector">selector:</span>"By.cssSelector('button')"
+<span class="action">assertInnerText</span> <span class="selector">selector:</span>"By.id('message')" <span class="args">args:</span>"Hello Doozer!"
+<span class="action">takeScreenshot</span> <span class="args">args:</span>"form-submitted"
+	
+<span class="action">navigateBack</span>
+<span class="action">clear</span> <span class="selector">selector:</span>"By.name('name')"
+<span class="action">type</span> <span class="selector">selector:</span>"By.name('name')" <span class="args">args:</span>"Better Doozer"
+<span class="action">click</span> <span class="selector">selector:</span>"By.cssSelector('button')"
+<span class="action">takeScreenshot</span> <span class="args">args:</span>"form-resubmitted"</code></pre>
+<button class="btn btn-light" onclick="copyToClipboard('codelab-screenshot-2')">Copy to clipboard</button>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><b>Run the test with a <code>doozer.failOnPixelDiff</code>flag</b>
+									<p>
+										In step 7 we introduced 3 more <code>takeScreenshot</code> actions. We could
+										repeat the procedure from 5 but this can become cumbersome when we are creating
+										the test, there are no golden images and the test execution will stop after each image
+										comparison failure. Doozer comes with a handy solution for that problem, you can tell the
+										framework to execute all the test steps, ignoring failures due to image comparison, and then
+										approve the results all at once. To do this you need to run the tests with
+										<code>-Ddoozer.failOnPixelDiff=false</code> flag.
+									</p>
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">mvn test -Ddoozer.test=src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.doozer -Ddoozer.browser=chrome -Ddoozer.failOnPixelDiff=false</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><b>Check the results.</b>
+								<p>Test execution generated a 'Doozer Test Report' at <code>&lt;WORKING_DIRECTORY&gt;/target/doozer-tests/screenshotTest/doozer-report.html</code>.
+								This time you should see 4 takeScreenshot steps, 3 of which (all the added in step 7) have a non-zero pixel difference</p>
+								</li>
+								<li><b>Update golden images.</b>
+								<p>For each image follow the procedure, like in step 5. In short: click APPROVE button next to the step,
+									copy to clipboard the created command and execute it in your terminal.
+								</p></li>
+								<li><b>Re-run the test</b> - this time without the flag.
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">mvn test -Ddoozer.test=src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.doozer -Ddoozer.browser=chrome</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><b>Introduce a change causing a failure</b> - to ensure the image comparison mechanism really works.
+								<p>Replace "Better Doozer" with "Kermit the Frog"</p>
+								</li>
+								<li><b>Run the test.</b>
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">mvn test -Ddoozer.test=src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.doozer -Ddoozer.browser=chrome</code></pre>
+									</div><!--//docs-code-block--></li>
+								<li><b>Check the result</b> - this time the test should fail.
+								<p>Open the 'Doozer Test Report' and verify the failure root cause. If all
+									went well, the failure should be in step 15 and should look, more or less, like this:</p>
+									<a href="assets/images/doozer-codelab-screenshot-2.png"><img class="figure-img img-fluid shadow rounded h450" src="assets/images/doozer-codelab-screenshot-2.png" alt="" title="Doozer Test Case Report page"/></a>
+								</li>
+							</ol>
+							That's all! You've just learnt how to deal with the screenshots, how to
+							update the golden files, and how to review the results. Hope you've liked
+							this codelab, if you have questions feel free to DM us on X (Twitter).
+						</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-4-3">
