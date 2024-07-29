@@ -910,36 +910,38 @@ Position based parameters example:
 								</li>
 								<li><span class="green-font">keyDown</span> - presses a key.
 									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/keyboard/#key-down">Key down</a>)
+									<p>List of accepted key names can be obtained from <a href="https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/java/src/org/openqa/selenium/Keys.java#L28">Keys.java</a></p>
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
-- default: Keys.NAME
+- default: KEY_NAME
 
 Syntax:
-<span class="action">keyDown</span> <span class="args">args:</span>"KEY"
+<span class="action">keyDown</span> <span class="args">args:</span>"KEY_NAME"
 
 Named parameters example:
-<span class="action">keyDown</span> <span class="args">args:</span>"Keys.SHIFT"
+<span class="action">keyDown</span> <span class="args">args:</span>"SHIFT"
 
 Position based parameters example:
-<span class="action">keyDown</span> "" "Keys.SHIFT"</code></pre>
+<span class="action">keyDown</span> "" "SHIFT"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
 								<li><span class="green-font">keyUp</span> - releases a pressed key.
 									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/keyboard/#key-up">Key up</a>)
+									<p>List of accepted key names can be obtained from <a href="https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/java/src/org/openqa/selenium/Keys.java#L28">Keys.java</a></p>
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
-- default: Keys.NAME
+- default: KEY_NAME
 
 Syntax:
-<span class="action">keyUp</span> <span class="args">args:</span>"KEY"
+<span class="action">keyUp</span> <span class="args">args:</span>"KEY_NAME"
 
 Named parameters example:
-<span class="action">keyUp</span> <span class="args">args:</span>"Keys.SHIFT"
+<span class="action">keyUp</span> <span class="args">args:</span>"SHIFT"
 
 Position based parameters example:
-<span class="action">keyUp</span> "" "Keys.SHIFT"</code></pre>
+<span class="action">keyUp</span> "" "SHIFT"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
 								<li><span class="green-font">select</span> - selects an element from a dropdown.
