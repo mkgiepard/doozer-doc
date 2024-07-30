@@ -461,7 +461,106 @@ src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer              
 				    </header>
 				     <section class="docs-section" id="item-4-1">
 						<h2 class="section-heading">Test suite</h2>
-						<p><i class="fas fa-cogs"></i> under development</p>
+						<p>In this codelab you will learn <strong>how to run multiple tests together</strong>.
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Note
+									</h4>
+									<p>Prerequisites: Java and Maven installed; Project setup from <a href="#section-3">Get Started</a> section is completed.</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+							<ol>
+								<li><b>Create 3 doozer test cases</b> - let's call them <code>firstTest</code>, <code>secondTest</code> and <code>thirdTest</code>.
+									<p>Repeat the following steps to create all the three tests, just remember to use a correct name each time:</p>
+									<ul>
+										<li>Create <code>firstTest</code> directory in <code>src/test/java/com/mycompany/app/scripts/</code></li>
+										<li>Create <code>goldens</code> directory in <code>src/test/java/com/mycompany/app/scripts/firstTest/</code></li>
+										<li>Create <code>firstTest.doozer</code> file in <code>src/test/java/com/mycompany/app/scripts/firstTest/</code></li>
+									</ul>
+									On linux or macOS this can be done with the following commands:
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-java">mkdir src/test/java/com/mycompany/app/scripts/firstTest
+mkdir src/test/java/com/mycompany/app/scripts/screenshotTest/goldens
+touch src/test/java/com/mycompany/app/scripts/screenshotTest/firstTest.doozer</code></pre>
+									</div><!--//docs-code-block-->
+									The folder structure should look like this now:
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-java">(...)
+└── scripts
+	└── firstTest
+	│	├── firstTest.doozer
+	│	└── goldens
+	└── secondTest
+	│	├── secondTest.doozer
+	│	└── goldens
+	└── thirdTest
+	 	├── thirdTest.doozer
+	 	└── goldens</code></pre>
+									</div><!--//docs-code-block-->				
+								</li>
+								<li><b>Open <code>firstTest.doozer</code> in VSCode and add actions.</b>
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell" id="codelab-testsuite-1"><span class="action">url</span> <span class="args">args:</span>"https://doozer.softtest.dev/test-pages/webform.html"
+<span class="action">type</span> <span class="selector">selector:</span>"By.name('name')" <span class="args">args:</span>"Doozer One"
+<span class="action">click</span> <span class="selector">selector:</span>"By.cssSelector('button')"
+<span class="action">assertInnerText</span> <span class="selector">selector:</span>"By.id('message')" <span class="args">args:</span>"Hello Doozer One!"
+</code></pre>
+<button class="btn btn-light" onclick="copyToClipboard('codelab-testsuite-1')">Copy to clipboard</button>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><b>Open <code>secondTest.doozer</code> in VSCode and add actions.</b>
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell" id="codelab-testsuite-2"><span class="action">url</span> <span class="args">args:</span>"https://doozer.softtest.dev/test-pages/webform.html"
+<span class="action">type</span> <span class="selector">selector:</span>"By.name('name')" <span class="args">args:</span>"Doozer Two"
+<span class="action">click</span> <span class="selector">selector:</span>"By.cssSelector('button')"
+<span class="action">assertInnerText</span> <span class="selector">selector:</span>"By.id('message')" <span class="args">args:</span>"Hello Doozer Two!"
+</code></pre>
+<button class="btn btn-light" onclick="copyToClipboard('codelab-testsuite-2')">Copy to clipboard</button>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><b>Open <code>thirdTest.doozer</code> in VSCode and add actions.</b>
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell" id="codelab-testsuite-3"><span class="action">url</span> <span class="args">args:</span>"https://doozer.softtest.dev/test-pages/webform.html"
+<span class="action">type</span> <span class="selector">selector:</span>"By.name('name')" <span class="args">args:</span>"Doozer Three"
+<span class="action">click</span> <span class="selector">selector:</span>"By.cssSelector('button')"
+<span class="action">assertInnerText</span> <span class="selector">selector:</span>"By.id('message')" <span class="args">args:</span>"Hello Doozer Three!"
+</code></pre>
+<button class="btn btn-light" onclick="copyToClipboard('codelab-testsuite-3')">Copy to clipboard</button>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><b>Run the tests.</b>
+									<p>Now, with the test cases ready, you can tell the doozer to run all
+										the tests from a particular directory. This is done by passing
+										a test cases directory in a<code>-Ddoozer.directory</code> flag:</p>
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">mvn test -Ddoozer.directory=src/test/java/com/mycompany/app/scripts/ -Ddoozer.browser=chrome</code></pre>
+									</div><!--//docs-code-block-->
+									If everything went well, the tests should pass and you should see the following
+									summary in your console:
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">TestCase                                                                      Result   Error               
+--------                                                                      ------   -----               
+src/test/java/com/example/app/examples/firstTest/firstTest.doozer             PASS                       
+src/test/java/com/example/app/examples/secondTest/secondTest.doozer           PASS                       
+src/test/java/com/example/app/examples/thirdTest/thirdTest.doozer             PASS                       
+--------                                                                      ------   -----</code></pre>
+									</div><!--//docs-code-block--> 
+								</li>
+								In a <b>test suite</b> mode the tests are running in parallel with a <b>dynamic</b> execution
+								strategy. More on that topic you can read at <a href="https://junit.org/junit5/docs/snapshot/user-guide/#writing-tests-parallel-execution-config">junit doc page</a>.
+
+							</ol>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-4-2">
@@ -1400,4 +1499,3 @@ mvn test -Ddoozer.directory=src/test/java/dev/softtest/doozer/scripts/</code></p
 	</script>
 </body>
 </html> 
-
