@@ -1379,7 +1379,15 @@ protected void setupTimeouts(WebDriver driver) {
 										
 					<section class="docs-section" id="item-5-5">
 						<h2 class="section-heading">Configuration flags</h2>
-						<p><i class="fas fa-cogs"></i> under development</p>
+						<h5><code>-Ddoozer.browser</code></h5>
+						<p>Defines a browser for a test, default value is "chrome-headless". Read more on <a href="#item-5-3">Driver setup</a> section.</p>
+						<h5><code>-Ddoozer.failOnPixelDiff</code></h5>
+						<p>Controls if a <code>takeScreenshot</code> step fails if image comparison is failing, default value is "true".</p>
+						<h5><code>-Ddoozer.test</code></h5>
+						<p>Defines test case to run.</p>
+						<h5><code>-Ddoozer.directory</code></h5>
+						<p>Defines directory with test cases to run.</p>
+
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-5-6">
