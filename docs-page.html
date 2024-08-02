@@ -1,250 +1,339 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
-    <title>doozerDocs - Documentation page for the doozer project</title>
+	<title>doozerDocs - Documentation page for the doozer project</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="Documentation for the doozer project">
-    <meta name="author" content="Mariusz at softtest.dev">    
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome JS-->
-    <script defer src="assets/fontawesome/js/all.min.js"></script>
-    
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/atom-one-light.min.css">
-    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
 
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Documentation for the doozer project">
+	<meta name="author" content="Mariusz at softtest.dev">
 
-	<!-- Page CSS --> 
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap"
+		rel="stylesheet">
+
+	<!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/atom-one-light.min.css">
+	<link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+	<!-- Page CSS -->
 	<link id="page-style" rel="stylesheet" href="assets/css/style.css">
 
 	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16648171557"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16648171557"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-  gtag('config', 'AW-16648171557');
-</script>
+		gtag('config', 'AW-16648171557');
+	</script>
 
-<!-- Event snippet for Wyświetlenie strony conversion page -->
-<script>
-	gtag('event', 'conversion', {
-		'send_to': 'AW-16648171557/hP54CLL7l8QZEKXgu4I-',
-		'value': 1.0,
-		'currency': 'CHF'
-	});
-  </script>
+	<!-- Event snippet for Wyświetlenie strony conversion page -->
+	<script>
+		gtag('event', 'conversion', {
+			'send_to': 'AW-16648171557/hP54CLL7l8QZEKXgu4I-',
+			'value': 1.0,
+			'currency': 'CHF'
+		});
+	</script>
 
-</head> 
+</head>
 
-<body class="docs-page">    
-    <header class="header fixed-top">	    
-        <div class="branding docs-branding">
-            <div class="container-fluid position-relative py-2">
-                <div class="docs-logo-wrapper">
-					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
-	                    <span></span>
-	                    <span></span>
-	                    <span></span>
-	                </button>
-	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/doozer-logo.svg" alt="logo"><span class="logo-text">doozer<span class="text-alt">Docs</span></span></a></div>    
-                </div><!--//docs-logo-wrapper-->
-	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
-	
+<body class="docs-page">
+	<header class="header fixed-top">
+		<div class="branding docs-branding">
+			<div class="container-fluid position-relative py-2">
+				<div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler"
+						class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+						type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="site-logo"><a class="navbar-brand" href="index.html"><img
+								class="logo-icon me-2" src="assets/images/doozer-logo.svg"
+								alt="logo"><span class="logo-text">doozer<span
+									class="text-alt">Docs</span></span></a></div>
+				</div><!--//docs-logo-wrapper-->
+				<div class="docs-top-utilities d-flex justify-content-end align-items-center">
+
 					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-						<li class="list-inline-item"><a href="https://github.com/mkgiepard/doozer" target="_blank"><i class="fab fa-github fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a class="xlink" href="#" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
-						<li class="list-inline-item"><a class="mlink" href="#" target="_blank"><i class="fas fa-contact-card fa-fw"></i></a></li>
-		            </ul><!--//social-list-->
-	            </div><!--//docs-top-utilities-->
-            </div><!--//container-->
-        </div><!--//branding-->
-    </header><!--//header-->
-    
-    
-    <div class="docs-wrapper">
-	    <div id="docs-sidebar" class="docs-sidebar">
-		    <div class="top-search-box d-lg-none p-3">
-                <form class="search-form">
-		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
-		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
-		        </form>
-            </div>
-		    <nav id="docs-nav" class="docs-nav navbar">
-			    <ul class="section-items list-unstyled nav flex-column pb-3">
-				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">What is doozer?</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Target audience</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Feature set</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Doozer future</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Prerequisites</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Maven dependency</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-box"></i></span>Get Started</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Project setup</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Writing first script</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Running first script</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-cogs"></i></span>Codelabs</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Test suite</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Golden screenshots</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">Failures investigation</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-4">UI elements identification</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Documentation</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Actions</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Selectors</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">Driver setup</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-4">Custom Actions</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-5">Configuration flags</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-6">Running the tests</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-7">Golden images</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-8">Test execution logs</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-9">Variables</a></li>
-					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
-					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span class="theme-icon-holder me-2"><i class="fas fa-info-circle"></i></span>About</a></li>
-			    </ul>
+						<li class="list-inline-item"><a href="https://github.com/mkgiepard/doozer"
+								target="_blank"><i class="fab fa-github fa-fw"></i></a></li>
+						<li class="list-inline-item"><a class="xlink" href="#" target="_blank"><i
+									class="fab fa-twitter fa-fw"></i></a></li>
+						<li class="list-inline-item"><a class="mlink" href="#" target="_blank"><i
+									class="fas fa-contact-card fa-fw"></i></a></li>
+					</ul><!--//social-list-->
+				</div><!--//docs-top-utilities-->
+			</div><!--//container-->
+		</div><!--//branding-->
+	</header><!--//header-->
 
-		    </nav><!--//docs-nav-->
-	    </div><!--//docs-sidebar-->
-	    <div class="docs-content">
-		    <div class="container">
-			    <article class="docs-article" id="section-1">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2024-07-10</span></h1>
-					    <section class="docs-intro">
-						</section><!--//docs-intro-->						
-				    </header>
 
-				    <section class="docs-section" id="item-1-1">
+	<div class="docs-wrapper">
+		<div id="docs-sidebar" class="docs-sidebar">
+			<div class="top-search-box d-lg-none p-3">
+				<form class="search-form">
+					<input type="text" placeholder="Search the docs..." name="search"
+						class="form-control search-input">
+					<button type="submit" class="btn search-btn" value="Search"><i
+							class="fas fa-search"></i></button>
+				</form>
+			</div>
+			<nav id="docs-nav" class="docs-nav navbar">
+				<ul class="section-items list-unstyled nav flex-column pb-3">
+					<li class="nav-item section-title"><a class="nav-link scrollto active"
+							href="#section-1"><span class="theme-icon-holder me-2"><i
+									class="fas fa-map-signs"></i></span>Introduction</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">What is
+							doozer?</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Target
+							audience</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Feature
+							set</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Doozer
+							future</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto"
+							href="#section-2"><span class="theme-icon-holder me-2"><i
+									class="fas fa-arrow-down"></i></span>Installation</a></li>
+					<li class="nav-item"><a class="nav-link scrollto"
+							href="#item-2-1">Prerequisites</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Maven
+							dependency</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto"
+							href="#section-3"><span class="theme-icon-holder me-2"><i
+									class="fas fa-box"></i></span>Get Started</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Project
+							setup</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Writing first
+							script</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Running first
+							script</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto"
+							href="#section-4"><span class="theme-icon-holder me-2"><i
+									class="fas fa-cogs"></i></span>Codelabs</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Test
+							suite</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Golden
+							screenshots</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">Failures
+							investigation</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-4">UI elements
+							identification</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto"
+							href="#section-5"><span class="theme-icon-holder me-2"><i
+									class="fas fa-tools"></i></span>Documentation</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Actions</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Selectors</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">Driver
+							setup</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-4">Custom
+							Actions</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-5">Configuration
+							flags</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-6">Running the
+							tests</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-7">Golden
+							images</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-8">Test
+							execution logs</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-9">Variables</a>
+					</li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto"
+							href="#section-6"><span class="theme-icon-holder me-2"><i
+									class="fas fa-lightbulb"></i></span>FAQs</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto"
+							href="#section-7"><span class="theme-icon-holder me-2"><i
+									class="fas fa-info-circle"></i></span>About</a></li>
+				</ul>
+
+			</nav><!--//docs-nav-->
+		</div><!--//docs-sidebar-->
+		<div class="docs-content">
+			<div class="container">
+				<article class="docs-article" id="section-1">
+					<header class="docs-header">
+						<h1 class="docs-heading">Introduction <span class="docs-time">Last updated:
+								2024-07-10</span></h1>
+						<section class="docs-intro">
+						</section><!--//docs-intro-->
+					</header>
+
+					<section class="docs-section" id="item-1-1">
 						<h2 class="section-heading">What is doozer?</h2>
 						<h5>Dead simple UI testing framework.</h5>
-						<p><strong class="me-1">Doozer</strong> UI testing framework designed by testers, for testers. 
-							It simplifies UI test automation by removing the complexity of writing code with classes, page objects,
-							and other traditional elements. Doozer allows you to easily convert existing manual test scripts into automated tests.
+						<p><strong class="me-1">Doozer</strong> UI testing framework designed by
+							testers, for testers.
+							It simplifies UI test automation by removing the complexity of writing
+							code with classes, page objects,
+							and other traditional elements. Doozer allows you to easily convert
+							existing manual test scripts into automated tests.
 						</p>
 						<p>
-							This framework aims to provide a consistent test automation experience across all major platforms. This frees you and your team to focus on more strategic aspects of your work.
+							This framework aims to provide a consistent test automation experience
+							across all major platforms. This frees you and your team to focus on
+							more strategic aspects of your work.
 						</p>
 						<p>
-							Doozer offers a basic scripting language, support for diff-based testing, and a straightforward setup process. Here is an example: 
+							Doozer offers a basic scripting language, support for diff-based
+							testing, and a straightforward setup process. Here is an example:
 						</p>
 						<p>
-							<a href="assets/images/firstTest.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/firstTest.png" alt="" title="CoderPro Home Page"/></a>
+							<a href="assets/images/firstTest.png"><img
+									class="figure-img img-fluid shadow rounded"
+									src="assets/images/firstTest.png" alt=""
+									title="CoderPro Home Page" /></a>
 						</p>
 					</section><!--//section-->
-					
+
 					<section class="docs-section" id="item-1-2">
 						<h2 class="section-heading">Target audience</h2>
-						<p><strong class="me-1">Doozer</strong> is primarily designed for <strong class="me-1">Testers</strong> / <strong class="me-1">Test Engineers</strong> 
-							who want to automate their workflows but lack extensive experience with coding 
-							principles. The framework simplifies the automation process by minimizing technical
-							complexities. It provides a user-friendly scripting language that enables the 
-							efficient conversion of existing manual test cases into automated tests.</p>
+						<p><strong class="me-1">Doozer</strong> is primarily designed for <strong
+								class="me-1">Testers</strong> / <strong class="me-1">Test
+								Engineers</strong>
+							who want to automate their workflows but lack extensive experience with
+							coding
+							principles. The framework simplifies the automation process by
+							minimizing technical
+							complexities. It provides a user-friendly scripting language that
+							enables the
+							efficient conversion of existing manual test cases into automated tests.
+						</p>
 						<p>
-							If you are proficient in using <a class="theme-link" href="https://selenium.dev">Selenium Webdriver</a>,<a class="theme-link" href="https://www.cypress.io/">Cypress</a>,
+							If you are proficient in using <a class="theme-link"
+								href="https://selenium.dev">Selenium Webdriver</a>,<a
+								class="theme-link" href="https://www.cypress.io/">Cypress</a>,
 							or <a class="theme-link" href="https://playwright.dev/">Playwright</a>,
-							Doozer might not be the optimal choice. These frameworks offer a greater degree of control
-							over test structure compared to Doozer. Consequently, users familiar with these tools
-							might find Doozer's functionality limiting. However, Doozer can be a valuable asset if you
-							find your current testing code overly complex or require a straightforward approach for
+							Doozer might not be the optimal choice. These frameworks offer a greater
+							degree of control
+							over test structure compared to Doozer. Consequently, users familiar
+							with these tools
+							might find Doozer's functionality limiting. However, Doozer can be a
+							valuable asset if you
+							find your current testing code overly complex or require a
+							straightforward approach for
 							diff-based UI testing.
 						</p>
 					</section><!--//section-->
-					
+
 					<section class="docs-section" id="item-1-3">
 						<h2 class="section-heading">Feature set</h2>
 						<p>
-							<h5>First release</h5>
-							<ul>
-								<li>Simple, action based, script language.</li>
-								<li>Diff-based testing with screenshots comparison vs goldens.</li>
-								<li>Semantic Locators support.</li>
-								<li>UI elements assertions.</li>
-								<li>Multiple browsers support.</li>
-								<li>Parallel test execution by default.</li>
-								<li>Detailed logging with failures debugging helpers (window hierarchy + screenshot at fail).</li>
-								<li>Web based image comparison approvals.</li>
-								<li>Syntax highlight in VS Code.</li>
-							</ul>	
+						<h5>First release</h5>
+						<ul>
+							<li>Simple, action based, script language.</li>
+							<li>Diff-based testing with screenshots comparison vs goldens.</li>
+							<li>Semantic Locators support.</li>
+							<li>UI elements assertions.</li>
+							<li>Multiple browsers support.</li>
+							<li>Parallel test execution by default.</li>
+							<li>Detailed logging with failures debugging helpers (window hierarchy +
+								screenshot at fail).</li>
+							<li>Web based image comparison approvals.</li>
+							<li>Syntax highlight in VS Code.</li>
+						</ul>
 						</p>
 					</section><!--//section-->
-					
+
 					<section class="docs-section" id="item-1-4">
 						<h2 class="section-heading">Doozer future</h2>
 						<p>
-							<h5>Next steps</h5>
-							<ul>
-								<li>Support for the following platforms:
-									<ul>
-										<li>Android (based on UiAutomator)</li>
-									</ul>
-								</li>
-								<li>Custom actions.</li>
-								<li>Support for a11y, l10n and i18n verification.</li>
-								<li>Support for diff-based testing for logs.</li>
-								<li>VS Code code completion.</li>
-							</ul>
+						<h5>Next steps</h5>
+						<ul>
+							<li>Support for the following platforms:
+								<ul>
+									<li>Android (based on UiAutomator)</li>
+								</ul>
+							</li>
+							<li>Custom actions.</li>
+							<li>Support for a11y, l10n and i18n verification.</li>
+							<li>Support for diff-based testing for logs.</li>
+							<li>VS Code code completion.</li>
+						</ul>
 
-							<h5>and after that...</h5>
-							<ul>
-								<li>Support for the following platforms:
-									<ul>
-										<li>iOS (based on XCUITest)</li>
-										<li>Windows (based on WinAppDriver)</li>
-									</ul>
-								</li>
-								<li>VS Code debugger.</li>
-								<li>VS Code action recorded.</li>
-								<li>Extend SemanticLocators with Android and iOS implementation.</li>
-							</ul>
-   							
-							The prioritization for implementing these features has not yet been finalized.
-							The order will be determined based on user feedback. If you have a strong preference
-							for a particular feature, we encourage you to contact us by <a class="mlink" href="#">email</a>.
+						<h5>and after that...</h5>
+						<ul>
+							<li>Support for the following platforms:
+								<ul>
+									<li>iOS (based on XCUITest)</li>
+									<li>Windows (based on WinAppDriver)</li>
+								</ul>
+							</li>
+							<li>VS Code debugger.</li>
+							<li>VS Code action recorded.</li>
+							<li>Extend SemanticLocators with Android and iOS implementation.</li>
+						</ul>
+
+						The prioritization for implementing these features has not yet been
+						finalized.
+						The order will be determined based on user feedback. If you have a strong
+						preference
+						for a particular feature, we encourage you to contact us by <a class="mlink"
+							href="#">email</a>.
 						</p>
 					</section><!--//section-->
-					
-			    </article>
-			    
-			    <article class="docs-article" id="section-2">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">Installation</h1>
-					    <section class="docs-intro">
-						    <p>Doozer is built in <b>Java</b> and is distributed as <b>Maven</b> dependency.
-								The <a href="#section-3">Get Started</a> section will guide you through
+
+				</article>
+
+				<article class="docs-article" id="section-2">
+					<header class="docs-header">
+						<h1 class="docs-heading">Installation</h1>
+						<section class="docs-intro">
+							<p>Doozer is built in <b>Java</b> and is distributed as <b>Maven</b>
+								dependency.
+								The <a href="#section-3">Get Started</a> section will guide you
+								through
 								the required setup.
 							</p>
-							<p>While Doozer scripts can be written using any IDE or text editor, we recommend <b>Visual Studio Code (VSCode)</b> for an enhanced development experience. VSCode offers a syntax highlighting extension specifically designed for the Doozer scripting language. This extension improves code readability and maintainability by visually differentiating keywords, variables, and other code elements.
+							<p>While Doozer scripts can be written using any IDE or text editor, we
+								recommend <b>Visual Studio Code (VSCode)</b> for an enhanced
+								development experience. VSCode offers a syntax highlighting
+								extension specifically designed for the Doozer scripting language.
+								This extension improves code readability and maintainability by
+								visually differentiating keywords, variables, and other code
+								elements.
 							</p>
 						</section><!--//docs-intro-->
-				    </header>
-				     <section class="docs-section" id="item-2-1">
+					</header>
+					<section class="docs-section" id="item-2-1">
 						<h2 class="section-heading">Prerequisites</h2>
 						<p>Mandatory:
-							<ul>
-								<li><a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">Java SDK 17+</a></li>
-								<li><a href="https://maven.apache.org/download.cgi" target="_blank">Maven</a> (<a href="https://maven.apache.org/install.html">installation</a>)</li>
-							</ul>
+						<ul>
+							<li><a href="https://www.oracle.com/java/technologies/downloads/"
+									target="_blank">Java SDK 17+</a></li>
+							<li><a href="https://maven.apache.org/download.cgi"
+									target="_blank">Maven</a> (<a
+									href="https://maven.apache.org/install.html">installation</a>)
+							</li>
+						</ul>
 						</p>
 						<p>Optional:
-							<ul>
-								<li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
-								<li><a href="https://marketplace.visualstudio.com/items?itemName=softtest-dev.doozer-highlight" target="_blank">VSCode: Doozer extension</a>
+						<ul>
+							<li><a href="https://code.visualstudio.com/" target="_blank">Visual
+									Studio Code</a></li>
+							<li><a href="https://marketplace.visualstudio.com/items?itemName=softtest-dev.doozer-highlight"
+									target="_blank">VSCode: Doozer extension</a>
 								for syntax highlighting while creating doozer scripts.</li>
-							</ul>
+						</ul>
 						</p>
 					</section><!--//section-->
-					
+
 					<section class="docs-section" id="item-2-2">
 						<h2 class="section-heading">Maven dependency</h2>
 						<div class="docs-code-block">
@@ -254,47 +343,65 @@
 	&lt;artifactId&gt;doozer&lt;/artifactId&gt;
 	&lt;version&gt;0.2.4&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
-							<button class="btn btn-light" onclick="copyToClipboard('mvn-dep')">Copy to clipboard</button>
+							<button class="btn btn-light" onclick="copyToClipboard('mvn-dep')">Copy
+								to clipboard</button>
 						</div><!--//docs-code-block-->
 					</section><!--//section-->
-					
-			    </article><!--//docs-article-->
- 
-			    <article class="docs-article" id="section-3">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">Get Started</h1>
-					    <section class="docs-intro">
-						    <p>This section guides you through the initial steps of developing Doozer tests.
+
+				</article><!--//docs-article-->
+
+				<article class="docs-article" id="section-3">
+					<header class="docs-header">
+						<h1 class="docs-heading">Get Started</h1>
+						<section class="docs-intro">
+							<p>This section guides you through the initial steps of developing
+								Doozer tests.
 								Users familiar with Maven can skip the project setup section.
-								We assume you have reviewed the prerequisites section and have already installed the Java SDK and Maven.
+								We assume you have reviewed the prerequisites section and have
+								already installed the Java SDK and Maven.
 								Let's Begin!
 							</p>
 						</section><!--//docs-intro-->
-				    </header>
-				     <section class="docs-section" id="item-3-1">
+					</header>
+					<section class="docs-section" id="item-3-1">
 						<h2 class="section-heading">Project setup</h2>
 						<p>
-							<ol>
-								<li>Create a new <b>Maven project</b> (<a href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html#creating-a-project">source</a>)
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+						<ol>
+							<li>Create a new <b>Maven project</b> (<a
+									href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html#creating-a-project">source</a>)
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell" id="mvn-gen">mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false</code></pre>
-<button class="btn btn-light" onclick="copyToClipboard('mvn-gen')">Copy to clipboard</button>
-									</div><!--//docs-code-block-->
-									The placeholders <code>com.mycompany.app</code> and <code>my-app</code>represent your company's domain and application name, respectively. However, for the sake of this guide, we will use these examples.<br>
-									On Windows systems, all command-line parameters must be enclosed in double quotes (").<br>
-									The provided command will create a directory named after the artifactId (in this case, my-app). Navigate to this directory and open it in Visual Studio Code (VSCode) if that's your preferred IDE.
-								</li>
-								<li>Update pom.xml with supported <b>compiler version</b> and check the setup.
-									<ul>
-										<li>Open pom.xml</li>
-										<li>Find line: <code>&lt;maven.compiler.source&gt;1.7&lt;/maven.compiler.source&gt;</code> and update it with 1.8 instead.</li>
-										<li>Find line: <code>&lt;maven.compiler.target&gt;1.7&lt;/maven.compiler.target&gt;</code> and also update it with 1.8.</li>
-										<li>Save the file and run <code>mvn test</code></li>
-									</ul>
-									If the command executes successfully, you should observe the following output in your console:
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+									<button class="btn btn-light"
+										onclick="copyToClipboard('mvn-gen')">Copy to
+										clipboard</button>
+								</div><!--//docs-code-block-->
+								The placeholders <code>com.mycompany.app</code> and
+								<code>my-app</code>represent your company's domain and application
+								name, respectively. However, for the sake of this guide, we will use
+								these examples.<br>
+								On Windows systems, all command-line parameters must be enclosed in
+								double quotes (").<br>
+								The provided command will create a directory named after the
+								artifactId (in this case, my-app). Navigate to this directory and
+								open it in Visual Studio Code (VSCode) if that's your preferred IDE.
+							</li>
+							<li>Update pom.xml with supported <b>compiler version</b> and check the
+								setup.
+								<ul>
+									<li>Open pom.xml</li>
+									<li>Find line:
+										<code>&lt;maven.compiler.source&gt;1.7&lt;/maven.compiler.source&gt;</code>
+										and update it with 1.8 instead.</li>
+									<li>Find line:
+										<code>&lt;maven.compiler.target&gt;1.7&lt;/maven.compiler.target&gt;</code>
+										and also update it with 1.8.</li>
+									<li>Save the file and run <code>mvn test</code></li>
+								</ul>
+								If the command executes successfully, you should observe the
+								following output in your console:
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell">[INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
@@ -311,28 +418,37 @@
 [INFO] Total time:  1.856 s
 [INFO] Finished at: 2024-07-18T17:56:16+02:00
 [INFO] ------------------------------------------------------------------------</code></pre>
-									</div><!--//docs-code-block-->
-								</li>
-								<li>Add <b>doozer dependency</b> into pom.xml.<br>
-									Copy the content of <a href="#item-2-2">Maven dependency</a> into the dependencies section of your pom.xml file.
-								</li>
-								<li>Create a <b>base test class</b> - this will be an entry class for your tests, for now it will be empty but in the Codelabs
-									you will learn how to tweak the doozer setup with it. Create a <code>MyDoozerTest.java</code> file in <code>src/test/java/com/mycompany/app/</code> directory and update it
-									with the following content:
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+								</div><!--//docs-code-block-->
+							</li>
+							<li>Add <b>doozer dependency</b> into pom.xml.<br>
+								Copy the content of <a href="#item-2-2">Maven dependency</a> into
+								the dependencies section of your pom.xml file.
+							</li>
+							<li>Create a <b>base test class</b> - this will be an entry class for
+								your tests, for now it will be empty but in the Codelabs
+								you will learn how to tweak the doozer setup with it. Create a
+								<code>MyDoozerTest.java</code> file in
+								<code>src/test/java/com/mycompany/app/</code> directory and update
+								it
+								with the following content:
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-java" id="test-class">package com.mycompany.app;
 
 import dev.softtest.doozer.DoozerTest;
 
 public class MyDoozerTest extends DoozerTest {}</code></pre>
-<button class="btn btn-light" onclick="copyToClipboard('test-class')">Copy to clipboard</button>
-									</div><!--//docs-code-block-->
-								</li>
-								<li>Create <b>directory for the tests</b> in <code>src/test/java/com/mycompany/app/</code>, lets call it <code>scripts</code>. You folder
-									structure should look more or less like this now:
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+									<button class="btn btn-light"
+										onclick="copyToClipboard('test-class')">Copy to
+										clipboard</button>
+								</div><!--//docs-code-block-->
+							</li>
+							<li>Create <b>directory for the tests</b> in
+								<code>src/test/java/com/mycompany/app/</code>, lets call it
+								<code>scripts</code>. You folder
+								structure should look more or less like this now:
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell">├── pom.xml
 └── src
     ├── main
@@ -349,69 +465,82 @@ public class MyDoozerTest extends DoozerTest {}</code></pre>
     	                ├── AppTest.java
     	                ├── MyDoozerTest.java
     	                └── scripts</code></pre>
-									</div><!--//docs-code-block-->
-									App.java and AppTest.java were created by <code>mvn archetype:generate</code> and it is safe to remove them.
-								</li>
-							</ol>
+								</div><!--//docs-code-block-->
+								App.java and AppTest.java were created by
+								<code>mvn archetype:generate</code> and it is safe to remove them.
+							</li>
+						</ol>
 						</p>
 					</section><!--//section-->
-					
+
 					<section class="docs-section" id="item-3-2">
 						<h2 class="section-heading">Writing first script</h2>
 						<p>
-							<ul>
-								<li>Create <b>new doozer test</b>
-									<ul>
-										<li>Create <code>firstTest</code> directory in <code>src/test/java/com/mycompany/app/scripts/</code></li>
-										<li>Create <code>goldens</code> directory in <code>src/test/java/com/mycompany/app/scripts/firstTest/</code></li>
-										<li>Create <code>firstTest.doozer</code> file in <code>src/test/java/com/mycompany/app/scripts/firstTest/</code></li>
-									</ul>
-									On linux or macOS this can be done with the following commands:
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+						<ul>
+							<li>Create <b>new doozer test</b>
+								<ul>
+									<li>Create <code>firstTest</code> directory in
+										<code>src/test/java/com/mycompany/app/scripts/</code></li>
+									<li>Create <code>goldens</code> directory in
+										<code>src/test/java/com/mycompany/app/scripts/firstTest/</code>
+									</li>
+									<li>Create <code>firstTest.doozer</code> file in
+										<code>src/test/java/com/mycompany/app/scripts/firstTest/</code>
+									</li>
+								</ul>
+								On linux or macOS this can be done with the following commands:
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-java">mkdir src/test/java/com/mycompany/app/scripts/firstTest
 mkdir src/test/java/com/mycompany/app/scripts/firstTest/goldens
 touch src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer</code></pre>
-									</div><!--//docs-code-block-->
-									The folder structure should look like this now:
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+								</div><!--//docs-code-block-->
+								The folder structure should look like this now:
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-java">(...)
 └── scripts
 	└── firstTest
 		├── firstTest.doozer
 		└── goldens</code></pre>
-									</div><!--//docs-code-block-->
-								</li>
-								<li>Open <code>firstTest.doozer</code> in VSCode and <b>add your first actions</b>.
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+								</div><!--//docs-code-block-->
+							</li>
+							<li>Open <code>firstTest.doozer</code> in VSCode and <b>add your first
+									actions</b>.
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell" id="test-first"><span class="action">url</span> <span class="args">args:</span>"https://doozer.softtest.dev/test-pages/webform.html"
 <span class="action">type</span> <span class="selector">selector:</span>"By.name('name')" <span class="args">args:</span>"Doozer"
 <span class="action">click</span> <span class="selector">selector:</span>"By.cssSelector('button')"
 <span class="action">assertInnerText</span> <span class="selector">selector:</span>"By.id('message')" <span class="args">args:</span>"Hello Doozer!"</code></pre>
-<button class="btn btn-light" onclick="copyToClipboard('test-first')">Copy to clipboard</button>
-									</div><!--//docs-code-block-->
-								</li>
-								<li>Save the changes</li>
-							</ul>
+									<button class="btn btn-light"
+										onclick="copyToClipboard('test-first')">Copy to
+										clipboard</button>
+								</div><!--//docs-code-block-->
+							</li>
+							<li>Save the changes</li>
+						</ul>
 						</p>
 					</section><!--//section-->
-					
+
 					<section class="docs-section" id="item-3-3">
 						<h2 class="section-heading">Running first script</h2>
-						<p>Now that your test is set up, you can execute it using the <code>mvn test</code>ommand along with additional Doozer flags. Open terminal and run the following:
-							<div class="docs-code-block">
-								<pre class="shadow-lg rounded">
+						<p>Now that your test is set up, you can execute it using the
+							<code>mvn test</code>ommand along with additional Doozer flags. Open
+							terminal and run the following:
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
 <code class="language-shell">mvn test -Ddoozer.test=src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer -Ddoozer.browser=chrome</code></pre>
-							</div><!--//docs-code-block-->
-							On Windows systems, you'll need to enclose the Doozer flags within double quotes, here's an example:
-							<div class="docs-code-block">
-								<pre class="shadow-lg rounded">
+						</div><!--//docs-code-block-->
+						On Windows systems, you'll need to enclose the Doozer flags within double
+						quotes, here's an example:
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
 <code class="language-shell">mvn test "-Ddoozer.test=src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer" "-Ddoozer.browser=chrome"</code></pre>
-							</div><!--//docs-code-block-->
-							The <code>mvn test</code> command starts your test that brings up a Chrome browser and executes the test steps.
-							If all went well you should see something like this:
+						</div><!--//docs-code-block-->
+						The <code>mvn test</code> command starts your test that brings up a Chrome
+						browser and executes the test steps.
+						If all went well you should see something like this:
 						<div class="docs-code-block">
 							<pre class="shadow-lg rounded">
 <code class="language-shell">(...)
@@ -439,58 +568,78 @@ src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer              
 [INFO] Finished at: 2024-07-19T11:32:41+02:00
 [INFO] ------------------------------------------------------------------------</code></pre>
 						</div><!--//docs-code-block-->
-						The execution results are displayed in your console window. Additionally, they are saved in a dedicated test results directory located at <code>target/doozer-tests/firstTest</code>. This directory contains the following files:
+						The execution results are displayed in your console window. Additionally,
+						they are saved in a dedicated test results directory located at
+						<code>target/doozer-tests/firstTest</code>. This directory contains the
+						following files:
 						<ul>
-							<li>doozer-report.html - This HTML report provides a comprehensive overview of all executed test steps, including their status (pass/fail). It's particularly valuable for diff-based testing involving screenshots.
+							<li>doozer-report.html - This HTML report provides a comprehensive
+								overview of all executed test steps, including their status
+								(pass/fail). It's particularly valuable for diff-based testing
+								involving screenshots.
 							</li>
-							<li>doozer.log - This file contains a detailed log of the test execution process.</li>
+							<li>doozer.log - This file contains a detailed log of the test execution
+								process.</li>
 						</ul>
 						</p>
 						<p>
-							Congratulations! You've successfully created and executed your first Doozer test.<br>
-							Now it's time to explore a bit more, in the next sections you'll learn more on 
-							running multiple tests in parallel, using screenshots and investigating test failures.<br>
+							Congratulations! You've successfully created and executed your first
+							Doozer test.<br>
+							Now it's time to explore a bit more, in the next sections you'll learn
+							more on
+							running multiple tests in parallel, using screenshots and investigating
+							test failures.<br>
 							HAPPY TESTING!
 						</p>
 					</section><!--//section-->
-			    </article><!--//docs-article-->
-			    
-			    <article class="docs-article" id="section-4">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">Codelabs</h1>
-				    </header>
-				     <section class="docs-section" id="item-4-1">
+				</article><!--//docs-article-->
+
+				<article class="docs-article" id="section-4">
+					<header class="docs-header">
+						<h1 class="docs-heading">Codelabs</h1>
+					</header>
+					<section class="docs-section" id="item-4-1">
 						<h2 class="section-heading">Test suite</h2>
-						<p>In this codelab you will learn <strong>how to run multiple tests together</strong>.
-							<div class="callout-block callout-block-info">
-								<div class="content">
-									<h4 class="callout-title">
-										<span class="callout-icon-holder me-1">
-											<i class="fas fa-info-circle"></i>
-										</span><!--//icon-holder-->
-										Note
-									</h4>
-									<p>Prerequisites: Java and Maven installed; Project setup from <a href="#section-3">Get Started</a> section is completed.</p>
-								</div><!--//content-->
-							</div><!--//callout-block-->
-							<ol>
-								<li><b>Create 3 doozer test cases</b> - let's call them <code>firstTest</code>, <code>secondTest</code> and <code>thirdTest</code>.
-									<p>Repeat the following steps to create all the three tests, just remember to use a correct name each time:</p>
-									<ul>
-										<li>Create <code>firstTest</code> directory in <code>src/test/java/com/mycompany/app/scripts/</code></li>
-										<li>Create <code>goldens</code> directory in <code>src/test/java/com/mycompany/app/scripts/firstTest/</code></li>
-										<li>Create <code>firstTest.doozer</code> file in <code>src/test/java/com/mycompany/app/scripts/firstTest/</code></li>
-									</ul>
-									On linux or macOS this can be done with the following commands:
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+						<p>In this codelab you will learn <strong>how to run multiple tests
+								together</strong>.
+						<div class="callout-block callout-block-info">
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-info-circle"></i>
+									</span><!--//icon-holder-->
+									Note
+								</h4>
+								<p>Prerequisites: Java and Maven installed; Project setup from <a
+										href="#section-3">Get Started</a> section is completed.</p>
+							</div><!--//content-->
+						</div><!--//callout-block-->
+						<ol>
+							<li><b>Create 3 doozer test cases</b> - let's call them
+								<code>firstTest</code>, <code>secondTest</code> and
+								<code>thirdTest</code>.
+								<p>Repeat the following steps to create all the three tests, just
+									remember to use a correct name each time:</p>
+								<ul>
+									<li>Create <code>firstTest</code> directory in
+										<code>src/test/java/com/mycompany/app/scripts/</code></li>
+									<li>Create <code>goldens</code> directory in
+										<code>src/test/java/com/mycompany/app/scripts/firstTest/</code>
+									</li>
+									<li>Create <code>firstTest.doozer</code> file in
+										<code>src/test/java/com/mycompany/app/scripts/firstTest/</code>
+									</li>
+								</ul>
+								On linux or macOS this can be done with the following commands:
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-java">mkdir src/test/java/com/mycompany/app/scripts/firstTest
 mkdir src/test/java/com/mycompany/app/scripts/screenshotTest/goldens
 touch src/test/java/com/mycompany/app/scripts/screenshotTest/firstTest.doozer</code></pre>
-									</div><!--//docs-code-block-->
-									The folder structure should look like this now:
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+								</div><!--//docs-code-block-->
+								The folder structure should look like this now:
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-java">(...)
 └── scripts
 	└── firstTest
@@ -502,153 +651,197 @@ touch src/test/java/com/mycompany/app/scripts/screenshotTest/firstTest.doozer</c
 	└── thirdTest
 	 	├── thirdTest.doozer
 	 	└── goldens</code></pre>
-									</div><!--//docs-code-block-->				
-								</li>
-								<li><b>Open <code>firstTest.doozer</code> in VSCode and add actions.</b>
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+								</div><!--//docs-code-block-->
+							</li>
+							<li><b>Open <code>firstTest.doozer</code> in VSCode and add actions.</b>
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell" id="codelab-testsuite-1"><span class="action">url</span> <span class="args">args:</span>"https://doozer.softtest.dev/test-pages/webform.html"
 <span class="action">type</span> <span class="selector">selector:</span>"By.name('name')" <span class="args">args:</span>"Doozer One"
 <span class="action">click</span> <span class="selector">selector:</span>"By.cssSelector('button')"
 <span class="action">assertInnerText</span> <span class="selector">selector:</span>"By.id('message')" <span class="args">args:</span>"Hello Doozer One!"
 </code></pre>
-<button class="btn btn-light" onclick="copyToClipboard('codelab-testsuite-1')">Copy to clipboard</button>
-									</div><!--//docs-code-block-->
-								</li>
-								<li><b>Open <code>secondTest.doozer</code> in VSCode and add actions.</b>
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+									<button class="btn btn-light"
+										onclick="copyToClipboard('codelab-testsuite-1')">Copy to
+										clipboard</button>
+								</div><!--//docs-code-block-->
+							</li>
+							<li><b>Open <code>secondTest.doozer</code> in VSCode and add
+									actions.</b>
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell" id="codelab-testsuite-2"><span class="action">url</span> <span class="args">args:</span>"https://doozer.softtest.dev/test-pages/webform.html"
 <span class="action">type</span> <span class="selector">selector:</span>"By.name('name')" <span class="args">args:</span>"Doozer Two"
 <span class="action">click</span> <span class="selector">selector:</span>"By.cssSelector('button')"
 <span class="action">assertInnerText</span> <span class="selector">selector:</span>"By.id('message')" <span class="args">args:</span>"Hello Doozer Two!"
 </code></pre>
-<button class="btn btn-light" onclick="copyToClipboard('codelab-testsuite-2')">Copy to clipboard</button>
-									</div><!--//docs-code-block-->
-								</li>
-								<li><b>Open <code>thirdTest.doozer</code> in VSCode and add actions.</b>
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+									<button class="btn btn-light"
+										onclick="copyToClipboard('codelab-testsuite-2')">Copy to
+										clipboard</button>
+								</div><!--//docs-code-block-->
+							</li>
+							<li><b>Open <code>thirdTest.doozer</code> in VSCode and add actions.</b>
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell" id="codelab-testsuite-3"><span class="action">url</span> <span class="args">args:</span>"https://doozer.softtest.dev/test-pages/webform.html"
 <span class="action">type</span> <span class="selector">selector:</span>"By.name('name')" <span class="args">args:</span>"Doozer Three"
 <span class="action">click</span> <span class="selector">selector:</span>"By.cssSelector('button')"
 <span class="action">assertInnerText</span> <span class="selector">selector:</span>"By.id('message')" <span class="args">args:</span>"Hello Doozer Three!"
 </code></pre>
-<button class="btn btn-light" onclick="copyToClipboard('codelab-testsuite-3')">Copy to clipboard</button>
-									</div><!--//docs-code-block-->
-								</li>
-								<li><b>Run the tests.</b>
-									<p>Now, with the test cases ready, you can tell the doozer to run all
-										the tests from a particular directory. This is done by passing
-										a test cases directory in a<code>-Ddoozer.directory</code> flag:</p>
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+									<button class="btn btn-light"
+										onclick="copyToClipboard('codelab-testsuite-3')">Copy to
+										clipboard</button>
+								</div><!--//docs-code-block-->
+							</li>
+							<li><b>Run the tests.</b>
+								<p>Now, with the test cases ready, you can tell the doozer to run
+									all
+									the tests from a particular directory. This is done by passing
+									a test cases directory in a<code>-Ddoozer.directory</code> flag:
+								</p>
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell">mvn test -Ddoozer.directory=src/test/java/com/mycompany/app/scripts/ -Ddoozer.browser=chrome</code></pre>
-									</div><!--//docs-code-block-->
-									If everything went well, the tests should pass and you should see the following
-									summary in your console:
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+								</div><!--//docs-code-block-->
+								If everything went well, the tests should pass and you should see
+								the following
+								summary in your console:
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell">TestCase                                                                      Result   Error               
 --------                                                                      ------   -----               
 src/test/java/com/example/app/examples/firstTest/firstTest.doozer             PASS                       
 src/test/java/com/example/app/examples/secondTest/secondTest.doozer           PASS                       
 src/test/java/com/example/app/examples/thirdTest/thirdTest.doozer             PASS                       
 --------                                                                      ------   -----</code></pre>
-									</div><!--//docs-code-block--> 
-								</li>
-								In a <b>test suite</b> mode the tests are running in parallel with a <b>dynamic</b> execution
-								strategy. More on that topic you can read at <a href="https://junit.org/junit5/docs/snapshot/user-guide/#writing-tests-parallel-execution-config">junit doc page</a>.
+								</div><!--//docs-code-block-->
+							</li>
+							In a <b>test suite</b> mode the tests are running in parallel with a
+							<b>dynamic</b> execution
+							strategy. More on that topic you can read at <a
+								href="https://junit.org/junit5/docs/snapshot/user-guide/#writing-tests-parallel-execution-config">junit
+								doc page</a>.
 
-							</ol>
+						</ol>
 					</section><!--//section-->
-					
+
 					<section class="docs-section" id="item-4-2">
 						<h2 class="section-heading">Golden screenshots</h2>
-						<p>In this codelab you will learn <strong>how to take screenshots</strong> in a doozer test,
-							<strong>how to review the image comparison results</strong> and <strong>how to update golden files</strong>.
-							<div class="callout-block callout-block-info">
-                            
-								<div class="content">
-									<h4 class="callout-title">
-										<span class="callout-icon-holder me-1">
-											<i class="fas fa-info-circle"></i>
-										</span><!--//icon-holder-->
-										Note
-									</h4>
-									<p>Prerequisites: Java and Maven installed; Project setup from <a href="#section-3">Get Started</a> section is completed.</p>
-								</div><!--//content-->
-							</div><!--//callout-block-->
-							<ol>
-								<li><b>Create new doozer test.</b>
-									<ul>
-										<li>Create <code>screenshotTest</code> directory in <code>src/test/java/com/mycompany/app/scripts/</code></li>
-										<li>Create <code>goldens</code> directory in <code>src/test/java/com/mycompany/app/scripts/firstTest/</code></li>
-										<li>Create <code>screenshotTest.doozer</code> file in <code>src/test/java/com/mycompany/app/scripts/firstTest/</code></li>
-									</ul>
-									On linux or macOS this can be done with the following commands:
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+						<p>In this codelab you will learn <strong>how to take screenshots</strong>
+							in a doozer test,
+							<strong>how to review the image comparison results</strong> and
+							<strong>how to update golden files</strong>.
+						<div class="callout-block callout-block-info">
+
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-info-circle"></i>
+									</span><!--//icon-holder-->
+									Note
+								</h4>
+								<p>Prerequisites: Java and Maven installed; Project setup from <a
+										href="#section-3">Get Started</a> section is completed.</p>
+							</div><!--//content-->
+						</div><!--//callout-block-->
+						<ol>
+							<li><b>Create new doozer test.</b>
+								<ul>
+									<li>Create <code>screenshotTest</code> directory in
+										<code>src/test/java/com/mycompany/app/scripts/</code></li>
+									<li>Create <code>goldens</code> directory in
+										<code>src/test/java/com/mycompany/app/scripts/firstTest/</code>
+									</li>
+									<li>Create <code>screenshotTest.doozer</code> file in
+										<code>src/test/java/com/mycompany/app/scripts/firstTest/</code>
+									</li>
+								</ul>
+								On linux or macOS this can be done with the following commands:
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-java">mkdir src/test/java/com/mycompany/app/scripts/screenshotTest
 mkdir src/test/java/com/mycompany/app/scripts/screenshotTest/goldens
 touch src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.doozer</code></pre>
-									</div><!--//docs-code-block-->
-									The folder structure should look like this now:
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+								</div><!--//docs-code-block-->
+								The folder structure should look like this now:
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-java">(...)
 └── scripts
 	└── screenshotTest
 		├── screenshotTest.doozer
 		└── goldens</code></pre>
-									</div><!--//docs-code-block-->
-								</li>
-								<li><b>Open <code>screenshotTest.doozer</code> in VSCode and add actions.</b>.
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+								</div><!--//docs-code-block-->
+							</li>
+							<li><b>Open <code>screenshotTest.doozer</code> in VSCode and add
+									actions.</b>.
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell" id="codelab-screenshot-1"><span class="action">url</span> <span class="args">args:</span>"https://doozer.softtest.dev/test-pages/webform.html"
 <span class="action">takeScreenshot</span> <span class="args">args:</span>"empty-form"</code></pre>
-<button class="btn btn-light" onclick="copyToClipboard('codelab-screenshot-1')">Copy to clipboard</button>
-									</div><!--//docs-code-block-->
-								</li>
-								<li><b>Run the test.</b>
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+									<button class="btn btn-light"
+										onclick="copyToClipboard('codelab-screenshot-1')">Copy to
+										clipboard</button>
+								</div><!--//docs-code-block-->
+							</li>
+							<li><b>Run the test.</b>
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell">mvn test -Ddoozer.test=src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.doozer -Ddoozer.browser=chrome</code></pre>
-									</div><!--//docs-code-block-->
-								</li>
-								<li><b>Check the results.</b> If everything went well then the test failed with the following error:
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+								</div><!--//docs-code-block-->
+							</li>
+							<li><b>Check the results.</b> If everything went well then the test
+								failed with the following error:
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell" style="color:red;">TEST CASE `screenshotTest` FAILED IN ACTION: `takeScreenshot args:"empty-form"` >>> Root cause: Image comparison failed!</code></pre>
-									</div>
-									Test execution generated a 'Doozer Test Report' at <code>&lt;WORKING_DIRECTORY&gt;/target/doozer-tests/screenshotTest/doozer-report.html</code>.
-									Open this file in a browser of your choice to review the test result, it should look like this:
-									<a href="assets/images/doozer-codelab-screenshot-1.png"><img class="figure-img img-fluid shadow rounded h450" src="assets/images/doozer-codelab-screenshot-1.png" alt="" title="Doozer Test Case Report page"/></a>
-									<p>The report shows all the executed test steps, their result and, in case of a <code>takeScreenshot</code> action,
-									a number of pixels the result image differs from the golden one. As we just started, and there is no 
-									golden image, we can see that the pixel difference number includes all the pixels in the result image.</p>
-								</li>
-								<li><b>Update golden images.</b> Let's assume we would like to use the result image as a golden one,
-									to do this we need to copy it into the <code>goldens</code> directory of the test. The 'Doozer
-									Test Report' page provides a handful functionality supporting this step, do the following:
-									<ul>
-										<li>Click APPROVE button, next to the <code>takeScreenshot</code> test step - this will populate
-										a text box at the bottom of the page with a copy command.</li>
-										<li>Click COPY TO CLIPBOARD button, below the text box with commands</li>
-										<li>Paste the clipboard content into the terminal you are running the tests from</li>
-										<li>Done, goldens are updated! You can verify this by checking the content of the <code>goldens</code> in your test case folder.</li>
-									</ul>
-								</li>
-								<li><b>Re-run the test</b> - this time the execution should be successful.
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+								</div>
+								Test execution generated a 'Doozer Test Report' at
+								<code>&lt;WORKING_DIRECTORY&gt;/target/doozer-tests/screenshotTest/doozer-report.html</code>.
+								Open this file in a browser of your choice to review the test
+								result, it should look like this:
+								<a href="assets/images/doozer-codelab-screenshot-1.png"><img
+										class="figure-img img-fluid shadow rounded h450"
+										src="assets/images/doozer-codelab-screenshot-1.png" alt=""
+										title="Doozer Test Case Report page" /></a>
+								<p>The report shows all the executed test steps, their result and,
+									in case of a <code>takeScreenshot</code> action,
+									a number of pixels the result image differs from the golden one.
+									As we just started, and there is no
+									golden image, we can see that the pixel difference number
+									includes all the pixels in the result image.</p>
+							</li>
+							<li><b>Update golden images.</b> Let's assume we would like to use the
+								result image as a golden one,
+								to do this we need to copy it into the <code>goldens</code>
+								directory of the test. The 'Doozer
+								Test Report' page provides a handful functionality supporting this
+								step, do the following:
+								<ul>
+									<li>Click APPROVE button, next to the
+										<code>takeScreenshot</code> test step - this will populate
+										a text box at the bottom of the page with a copy command.
+									</li>
+									<li>Click COPY TO CLIPBOARD button, below the text box with
+										commands</li>
+									<li>Paste the clipboard content into the terminal you are
+										running the tests from</li>
+									<li>Done, goldens are updated! You can verify this by checking
+										the content of the <code>goldens</code> in your test case
+										folder.</li>
+								</ul>
+							</li>
+							<li><b>Re-run the test</b> - this time the execution should be
+								successful.
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell">mvn test -Ddoozer.test=src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.doozer -Ddoozer.browser=chrome</code></pre>
-									</div><!--//docs-code-block-->
-								</li>
-								<li><b>Add more actions</b> - this time we'll introduce 3 new screenshots.
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+								</div><!--//docs-code-block-->
+							</li>
+							<li><b>Add more actions</b> - this time we'll introduce 3 new
+								screenshots.
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell" id="codelab-screenshot-2"><span class="action">type</span> <span class="selector">selector:</span>"By.name('name')" <span class="args">args:</span>"Doozer"
 <span class="action">takeScreenshot</span> <span class="args">args:</span>"form-with-data"
 	
@@ -661,58 +854,80 @@ touch src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.dooz
 <span class="action">type</span> <span class="selector">selector:</span>"By.name('name')" <span class="args">args:</span>"Better Doozer"
 <span class="action">click</span> <span class="selector">selector:</span>"By.cssSelector('button')"
 <span class="action">takeScreenshot</span> <span class="args">args:</span>"form-resubmitted"</code></pre>
-<button class="btn btn-light" onclick="copyToClipboard('codelab-screenshot-2')">Copy to clipboard</button>
-									</div><!--//docs-code-block-->
-								</li>
-								<li><b>Run the test with a <code>doozer.failOnPixelDiff</code>flag</b>
-									<p>
-										In step 7 we introduced 3 more <code>takeScreenshot</code> actions. We could
-										repeat the procedure from 5 but this can become cumbersome when we are creating
-										the test, there are no golden images and the test execution will stop after each image
-										comparison failure. Doozer comes with a handy solution for that problem, you can tell the
-										framework to execute all the test steps, ignoring failures due to image comparison, and then
-										approve the results all at once. To do this you need to run the tests with
-										<code>-Ddoozer.failOnPixelDiff=false</code> flag.
-									</p>
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+									<button class="btn btn-light"
+										onclick="copyToClipboard('codelab-screenshot-2')">Copy to
+										clipboard</button>
+								</div><!--//docs-code-block-->
+							</li>
+							<li><b>Run the test with a <code>doozer.failOnPixelDiff</code>flag</b>
+								<p>
+									In step 7 we introduced 3 more <code>takeScreenshot</code>
+									actions. We could
+									repeat the procedure from 5 but this can become cumbersome when
+									we are creating
+									the test, there are no golden images and the test execution will
+									stop after each image
+									comparison failure. Doozer comes with a handy solution for that
+									problem, you can tell the
+									framework to execute all the test steps, ignoring failures due
+									to image comparison, and then
+									approve the results all at once. To do this you need to run the
+									tests with
+									<code>-Ddoozer.failOnPixelDiff=false</code> flag.
+								</p>
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell">mvn test -Ddoozer.test=src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.doozer -Ddoozer.browser=chrome -Ddoozer.failOnPixelDiff=false</code></pre>
-									</div><!--//docs-code-block-->
-								</li>
-								<li><b>Check the results.</b>
-								<p>Test execution generated a 'Doozer Test Report' at <code>&lt;WORKING_DIRECTORY&gt;/target/doozer-tests/screenshotTest/doozer-report.html</code>.
-								This time you should see 4 takeScreenshot steps, 3 of which (all the added in step 7) have a non-zero pixel difference</p>
-								</li>
-								<li><b>Update golden images.</b>
-								<p>For each image follow the procedure, like in step 5. In short: click APPROVE button next to the step,
-									copy to clipboard the created command and execute it in your terminal.
-								</p></li>
-								<li><b>Re-run the test</b> - this time without the flag.
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+								</div><!--//docs-code-block-->
+							</li>
+							<li><b>Check the results.</b>
+								<p>Test execution generated a 'Doozer Test Report' at
+									<code>&lt;WORKING_DIRECTORY&gt;/target/doozer-tests/screenshotTest/doozer-report.html</code>.
+									This time you should see 4 takeScreenshot steps, 3 of which (all
+									the added in step 7) have a non-zero pixel difference</p>
+							</li>
+							<li><b>Update golden images.</b>
+								<p>For each image follow the procedure, like in step 5. In short:
+									click APPROVE button next to the step,
+									copy to clipboard the created command and execute it in your
+									terminal.
+								</p>
+							</li>
+							<li><b>Re-run the test</b> - this time without the flag.
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell">mvn test -Ddoozer.test=src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.doozer -Ddoozer.browser=chrome</code></pre>
-									</div><!--//docs-code-block-->
-								</li>
-								<li><b>Introduce a change causing a failure</b> - to ensure the image comparison mechanism really works.
+								</div><!--//docs-code-block-->
+							</li>
+							<li><b>Introduce a change causing a failure</b> - to ensure the image
+								comparison mechanism really works.
 								<p>Replace "Better Doozer" with "Kermit the Frog"</p>
-								</li>
-								<li><b>Run the test.</b>
-									<div class="docs-code-block">
-										<pre class="shadow-lg rounded">
+							</li>
+							<li><b>Run the test.</b>
+								<div class="docs-code-block">
+									<pre class="shadow-lg rounded">
 <code class="language-shell">mvn test -Ddoozer.test=src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.doozer -Ddoozer.browser=chrome</code></pre>
-									</div><!--//docs-code-block--></li>
-								<li><b>Check the result</b> - this time the test should fail.
-								<p>Open the 'Doozer Test Report' and verify the failure root cause. If all
-									went well, the failure should be in step 15 and should look, more or less, like this:</p>
-									<a href="assets/images/doozer-codelab-screenshot-2.png"><img class="figure-img img-fluid shadow rounded h450" src="assets/images/doozer-codelab-screenshot-2.png" alt="" title="Doozer Test Case Report page"/></a>
-								</li>
-							</ol>
-							That's all! You've just learnt how to deal with the screenshots, how to
-							update the golden files, and how to review the results. Hope you've liked
-							this codelab, if you have questions feel free to DM us on X (Twitter) <a class="xlink" href="#" target="_blank">x.com/softtest_dev <i class="fab fa-twitter fa-fw"></i></a>.
+								</div><!--//docs-code-block-->
+							</li>
+							<li><b>Check the result</b> - this time the test should fail.
+								<p>Open the 'Doozer Test Report' and verify the failure root cause.
+									If all
+									went well, the failure should be in step 15 and should look,
+									more or less, like this:</p>
+								<a href="assets/images/doozer-codelab-screenshot-2.png"><img
+										class="figure-img img-fluid shadow rounded h450"
+										src="assets/images/doozer-codelab-screenshot-2.png" alt=""
+										title="Doozer Test Case Report page" /></a>
+							</li>
+						</ol>
+						That's all! You've just learnt how to deal with the screenshots, how to
+						update the golden files, and how to review the results. Hope you've liked
+						this codelab, if you have questions feel free to DM us on X (Twitter) <a
+							class="xlink" href="#" target="_blank">x.com/softtest_dev <i
+								class="fab fa-twitter fa-fw"></i></a>.
 						</p>
 					</section><!--//section-->
-					
+
 					<section class="docs-section" id="item-4-3">
 						<h2 class="section-heading">Failures investigation</h2>
 						<p><i class="fas fa-cogs"></i> under development</p>
@@ -723,97 +938,109 @@ touch src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.dooz
 						<p><i class="fas fa-cogs"></i> under development</p>
 					</section><!--//section-->
 
-			    </article><!--//docs-article-->
-			    
-			    <article class="docs-article" id="section-5">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">Documentation</h1>
-					    <section class="docs-intro">
-						</section><!--//docs-intro-->
-				    </header>
-				     <section class="docs-section" id="item-5-1">
+				</article><!--//docs-article-->
+
+				<article class="docs-article" id="section-5">
+					<header class="docs-header">
+						<h1 class="docs-heading">Documentation</h1>
+					</header>
+					<section class="docs-section" id="item-5-1">
 						<h2 class="section-heading">Actions</h2>
 						<p>
-							<h4>List of supported actions</h4>
-							<ul>
-								<li><a href="#assertions">Assertions</a>
-									<ul>
-										<li>assertCurrentUrl</li>
-										<li>assertInnerText</li>
-										<li>assertPageTitle</li>
-									</ul>
-								</li>
-								<li><a href="#interactions">Interactions</a>
-									<ul>
-										<li>alert</li>
-										<li>clear</li>
-										<li>click</li>
-										<li>contextClick</li>
-										<li>doubleClick</li>
-										<li>hover</li>
-										<li>hoverByOffset</li>
-										<li>keyDown</li>
-										<li>keyUp</li>
-										<li>select</li>
-										<li>sendKeys</li>
-										<li>type</li>
-									</ul>
-
-								</li>
-								<li><a href="#navigation">Navigation</a>
-									<ul>
-										<li>navigateBack</li>
-										<li>navigateForward</li>
-										<li>navigateTo</li>
-										<li>refresh</li>
-										<li>url</li>
-									</ul>
-
-								</li>
-								<li><a href="#generics">Generics</a>
-									<ul>
-										<li>iframe</li>
-										<li>import</li>
-										<li>set</li>
-										<li>takeScreenshot</li>
-										<li>wait</li>
-										<li>waitForElement</li>
-									</ul>
-								</li>	
-							</ul>
-
-
-							<h4>Syntax</h4>
-							<p>Each action within a Doozer script is constructed using three parts, separated by spaces:
+						<h4>List of supported actions</h4>
+						<ul>
+							<li><a href="#assertions">Assertions</a>
 								<ul>
-									<li><b>action name</b> - case sensitive, specifies the operation you want to perform. A list of available actions, along with examples, will be provided later in this section.</li>
-									<li><b>element selector</b> (optional) - identifies the target element on the web page where the action should be applied. It's prefixed with "<code><span class="selector">selector:</span></code>" and supports both By and SemanticLocators selectors.</li>
-									<li><b>action arguments list</b> (optional) - allows you to define additional parameters for the action. It's prefixed with "<code><span class="args">args:</span></code>" and consists of key-value pairs separated by commas, for example: <code>"arg1=value1,arg2=value2"</code></li>
+									<li>assertCurrentUrl</li>
+									<li>assertInnerText</li>
+									<li>assertPageTitle</li>
 								</ul>
-								
-							</p>
-							<p>
+							</li>
+							<li><a href="#interactions">Interactions</a>
+								<ul>
+									<li>alert</li>
+									<li>clear</li>
+									<li>click</li>
+									<li>contextClick</li>
+									<li>doubleClick</li>
+									<li>hover</li>
+									<li>hoverByOffset</li>
+									<li>keyDown</li>
+									<li>keyUp</li>
+									<li>select</li>
+									<li>sendKeys</li>
+									<li>type</li>
+								</ul>
 
-Doozer scripts support two primary modes for specifying selectors and arguments within actions:
-<div>
-<h6>Named Parameters (with Prefixes):</h6>
-<ul>
-	<li>This mode allows you to explicitly define the selector and arguments using prefixes.</li>
-	<li>It offers flexibility, as you can omit the selector part if an action doesn't require it.</li>
-</ul>
-</div>
-<div>
-<h6>Positional Parameters (without Prefixes):</h6>
-<ul>
-	<li>This mode expects both selector and arguments fields to be present, even if the selector is not mandatory for the action.</li>
-	<li>In cases where the selector is not needed, you must include an empty string ("") as a placeholder.</li>
-</ul>
-</div>
-In both modes, selector and args, have to be put inside double quotes.								
-							</p>
-							<p>
-								<div class="docs-code-block">
-									<pre class="shadow-lg rounded">
+							</li>
+							<li><a href="#navigation">Navigation</a>
+								<ul>
+									<li>navigateBack</li>
+									<li>navigateForward</li>
+									<li>navigateTo</li>
+									<li>refresh</li>
+									<li>url</li>
+								</ul>
+
+							</li>
+							<li><a href="#generics">Generics</a>
+								<ul>
+									<li>iframe</li>
+									<li>import</li>
+									<li>set</li>
+									<li>takeScreenshot</li>
+									<li>wait</li>
+									<li>waitForElement</li>
+								</ul>
+							</li>
+						</ul>
+
+						<h4>Syntax</h4>
+						<p>Each action within a Doozer script is constructed using three parts,
+							separated by spaces:
+						<ul>
+							<li><b>action name</b> - case sensitive, specifies the operation you
+								want to perform. A list of available actions, along with examples,
+								will be provided later in this section.</li>
+							<li><b>element selector</b> (optional) - identifies the target element
+								on the web page where the action should be applied. It's prefixed
+								with "<code><span class="selector">selector:</span></code>" and
+								supports both By and SemanticLocators selectors.</li>
+							<li><b>action arguments list</b> (optional) - allows you to define
+								additional parameters for the action. It's prefixed with
+								"<code><span class="args">args:</span></code>" and consists of
+								key-value pairs separated by commas, for example:
+								<code>"arg1=value1,arg2=value2"</code></li>
+						</ul>
+						</p>
+						<p>
+							Doozer scripts support two primary modes for specifying selectors and
+							arguments within actions:
+						<div>
+							<h6>Named Parameters (with Prefixes):</h6>
+							<ul>
+								<li>This mode allows you to explicitly define the selector and
+									arguments using prefixes.</li>
+								<li>It offers flexibility, as you can omit the selector part if an
+									action doesn't require it.</li>
+							</ul>
+						</div>
+						<div>
+							<h6>Positional Parameters (without Prefixes):</h6>
+							<ul>
+								<li>This mode expects both selector and arguments fields to be
+									present, even if the selector
+									is not mandatory for the action.</li>
+								<li>In cases where the selector is not needed, you must include an
+									empty string ("") as a
+									placeholder.</li>
+							</ul>
+						</div>
+						In both modes, selector and args, have to be put inside double quotes.
+						</p>
+						<p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
 <code class="language-shell">Usage with named parameters:
 <span class="action">actionName</span> <span class="selector">selector:</span>"SELECTOR" <span class="args">args:</span>"ARGS"
 <span class="action">actionName</span> <span class="selector">selector:</span>"SELECTOR"
@@ -823,63 +1050,77 @@ Usage with positional parameters:
 <span class="action">actionName</span> "SELECTOR" "ARGS"
 <span class="action">actionName</span> "SELECTOR"
 <span class="action">actionName</span> "" "ARGS"</code></pre>
-								</div><!--//docs-code-block-->
-							</p>
-							<h4>Optional execution - the magic of "?"</h4>
-							<p>Doozer actions provide an optional execution modifier to handle situations where an action might not always be successful. This is particularly useful for elements that appear randomly or are outside your control, such as promotional banners. By appending a question mark (?) to the end of an action name, you mark it as optional. The action will still be executed during the test, but the test will not fail if the action encounters an error. Any failures will be logged with a notice, indicating that the error did not halt the test execution.
-							</p>
-							<p>
-								<div class="docs-code-block">
-									<pre class="shadow-lg rounded">
+						</div><!--//docs-code-block-->
+						</p>
+						<h4>Optional execution - the magic of "?"</h4>
+						<p>Doozer actions provide an optional execution modifier to handle
+							situations where an action might not always be successful. This is
+							particularly useful for elements that appear randomly or are outside
+							your control, such as promotional banners. By appending a question mark
+							(?) to the end of an action name, you mark it as optional. The action
+							will still be executed during the test, but the test will not fail if
+							the action encounters an error. Any failures will be logged with a
+							notice, indicating that the error did not halt the test execution.
+						</p>
+						<p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
 <code class="language-shell"><span class="action">click?</span> <span class="selector">selector:</span>"SELECTOR"</code></pre>
-								</div><!--//docs-code-block-->
-								
-							</p>
-							<h4>Special characters in ARGS</h4>
-							<p>In ARGS part, two characters have special meanings: the equals sign "<code>=</code>" and the comma "<code>,</code>".
-								If you want to include these characters within a key-value pair, you need to escape them using
-								 a backslash "<code>/</code>" before each character.
-								For example:
-							</p>
-							<p>
-								<div class="docs-code-block">
-									<pre class="shadow-lg rounded">
+						</div><!--//docs-code-block-->
+
+						</p>
+						<h4>Special characters in ARGS</h4>
+						<p>In ARGS part, two characters have special meanings: the equals sign
+							"<code>=</code>" and the comma "<code>,</code>".
+							If you want to include these characters within a key-value pair, you
+							need to escape them using
+							a backslash "<code>/</code>" before each character.
+							For example:
+						</p>
+						<p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
 <code class="language-shell">pass value with ',':
 <span class="args">args:</span>"arg1=value\,with_comma,arg2=value2"
 
 pass value with '='
 <span class="args">args:</span>"arg1=value\=with_equals,arg2=value2"</code></pre>
-								</div><!--//docs-code-block-->
-							</p>
-							<h4>Default parameter in ARGS</h4>
-							<p>When you only need to pass a single parameter, you don't need to define a <code>key=value</code> pair.
-							The framework will automatically assign a <code>default</code> key to the parameter and handle it appropriately.
+						</div><!--//docs-code-block-->
+						</p>
+						<h4>Default parameter in ARGS</h4>
+						<p>When you only need to pass a single parameter, you don't need to define a
+							<code>key=value</code> pair.
+							The framework will automatically assign a <code>default</code> key to
+							the parameter and handle it appropriately.
 							For example:
-							</p>
-							<p>
-								<div class="docs-code-block">
-									<pre class="shadow-lg rounded">
+						</p>
+						<p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
 <code class="language-shell"><span class="args">args:</span>"10" becomes <span class="args">args:</span>"default=10"</code></pre>
-								</div><!--//docs-code-block-->
-							</p>
-							<h4>Comments</h4>
-							<p>A comment in a doozer script is a line which starts with "//".
-							</p>
-							<p>
-								<div class="docs-code-block">
-									<pre class="shadow-lg rounded">
+						</div><!--//docs-code-block-->
+						</p>
+						<h4>Comments</h4>
+						<p>A comment in a doozer script is a line which starts with "//".
+						</p>
+						<p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
 <code class="language-shell">// exemplary comment</code></pre>
-								</div><!--//docs-code-block-->
-							</p>
+						</div><!--//docs-code-block-->
+						</p>
 
 						</p>
 						<p>
-							<h4>Actions details</h4>
-							<section class="docs-section" id="assertions">
+						<h4>Actions details</h4>
+						<section class="docs-section" id="assertions">
 							<h5>Assertions</h5>
 							<ul>
-								<li><span class="green-font">assertCurrentUrl</span> - asserts current URL.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/#get-current-url">Get current URL</a>)
+								<li><span class="green-font">assertCurrentUrl</span> - asserts
+									current URL.
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/interactions/#get-current-url">Get
+										current URL</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -895,7 +1136,8 @@ Position based parameters example:
 <span class="action">assertCurrentUrl</span> "" "https://doozer.softtest.dev"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">assertInnerText</span> - asserts element inner text.
+								<li><span class="green-font">assertInnerText</span> - asserts
+									element inner text.
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -911,8 +1153,11 @@ Position based parameters example:
 <span class="action">assertInnerText</span> "By.id('my-element')" "some text"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">assertPageTitle</span> - asserts current page title.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/#get-title">Get title</a>)
+								<li><span class="green-font">assertPageTitle</span> - asserts
+									current page title.
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/interactions/#get-title">Get
+										title</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -929,12 +1174,14 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 							</ul>
-							</section>
-							<section class="docs-section" id="interactions">
+						</section>
+						<section class="docs-section" id="interactions">
 							<h5>Interactions</h5>
 							<ul>
-								<li><span class="green-font">alert</span>- interacts with an alert dialog.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/alerts">Alert</a>)
+								<li><span class="green-font">alert</span>- interacts with an alert
+									dialog.
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/interactions/alerts">Alert</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -958,7 +1205,8 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 								<li><span class="green-font">clear</span> - clears an input element.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#clear">Clear</a>)
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#clear">Clear</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -975,7 +1223,8 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 								<li><span class="green-font">click</span> - clicks on an element.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#click">Click</a>)
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#click">Click</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -991,8 +1240,11 @@ Position based parameters example:
 <span class="action">click</span> "By.id('my-button')"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">contextClick</span> - right click on an element.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#context-click">Context click (aka right click)</a>)
+								<li><span class="green-font">contextClick</span> - right click on an
+									element.
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#context-click">Context
+										click (aka right click)</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1008,8 +1260,11 @@ Position based parameters example:
 <span class="action">contextClick</span> "By.id('my-element')"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">doubleClick</span> - double clicks on an element.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#double-click">Double click</a>)
+								<li><span class="green-font">doubleClick</span> - double clicks on
+									an element.
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#double-click">Double
+										click</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1025,8 +1280,11 @@ Position based parameters example:
 <span class="action">doubleClick</span> "By.id('my-element')"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">hover</span> - moves mouse pointer to an element.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#move-to-element">Move to element (aka hover)</a>)
+								<li><span class="green-font">hover</span> - moves mouse pointer to
+									an element.
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#move-to-element">Move
+										to element (aka hover)</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1042,8 +1300,11 @@ Position based parameters example:
 <span class="action">hoverByOffset</span> "By.id('my-element')"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">hoverByOffset</span> - moves mouse pointer to an element with given offset.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#move-by-offset">Move to element by offset (aka hover by offset)</a>)
+								<li><span class="green-font">hoverByOffset</span> - moves mouse
+									pointer to an element with given offset.
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#move-by-offset">Move
+										to element by offset (aka hover by offset)</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1061,8 +1322,12 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 								<li><span class="green-font">keyDown</span> - presses a key.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/keyboard/#key-down">Key down</a>)
-									<p>List of accepted key names can be obtained from <a href="https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/java/src/org/openqa/selenium/Keys.java#L28">Keys.java</a></p>
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/actions_api/keyboard/#key-down">Key
+										down</a>)
+									<p>List of accepted key names can be obtained from <a
+											href="https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/java/src/org/openqa/selenium/Keys.java#L28">Keys.java</a>
+									</p>
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1079,8 +1344,12 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 								<li><span class="green-font">keyUp</span> - releases a pressed key.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/actions_api/keyboard/#key-up">Key up</a>)
-									<p>List of accepted key names can be obtained from <a href="https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/java/src/org/openqa/selenium/Keys.java#L28">Keys.java</a></p>
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/actions_api/keyboard/#key-up">Key
+										up</a>)
+									<p>List of accepted key names can be obtained from <a
+											href="https://github.com/SeleniumHQ/selenium/blob/selenium-4.2.0/java/src/org/openqa/selenium/Keys.java#L28">Keys.java</a>
+									</p>
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1096,8 +1365,11 @@ Position based parameters example:
 <span class="action">keyUp</span> "" "SHIFT"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">select</span> - selects an element from a dropdown.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/support_features/select_lists/#text">Select by visible text</a>)
+								<li><span class="green-font">select</span> - selects an element from
+									a dropdown.
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/support_features/select_lists/#text">Select
+										by visible text</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1113,8 +1385,11 @@ Position based parameters example:
 <span class="action">select</span> "By.id('my-dropdown')" "option one"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">sendKeys</span> - sends keys to the current window.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#send-keys">Send Keys</a>)
+								<li><span class="green-font">sendKeys</span> - sends keys to the
+									current window.
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#send-keys">Send
+										Keys</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1130,8 +1405,11 @@ Position based parameters example:
 <span class="action">sendKeys</span> "" "testing text"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">type</span> - sends keys to the element defined by selector.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#send-keys">Send Keys</a>)
+								<li><span class="green-font">type</span> - sends keys to the element
+									defined by selector.
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/elements/interactions/#send-keys">Send
+										Keys</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1148,32 +1426,41 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 							</ul>
-						</section>
+						</section><!--//section-->
 						<section class="docs-section" id="navigation">
 							<h5 id="navigation">Navigation</h5>
 							<ul>
 								<li><span class="green-font">navigateBack</span> - goes backwards.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#back">Navigate Back</a>)
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#back">Navigate
+										Back</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
 - none
 
 Syntax:
-<span class="action">navigateBack</span></code></pre></div><!--//docs-code-block-->
+<span class="action">navigateBack</span></code></pre>
+									</div><!--//docs-code-block-->
 								</li>
 								<li><span class="green-font">navigateForward</span> - goes forwards.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#forward">Navigate Forward</a>)
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#forward">Navigate
+										Forward</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
 - none
 
 Syntax:
-<span class="action">navigateForward</span></code></pre></div><!--//docs-code-block-->
+<span class="action">navigateForward</span></code></pre>
+									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">navigateTo</span> - opens website at a given address.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#navigate-to">Navigate To</a>)
+								<li><span class="green-font">navigateTo</span> - opens website at a
+									given address.
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#navigate-to">Navigate
+										To</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1190,17 +1477,22 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 								<li><span class="green-font">refresh</span> - reloads current page.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#refresh">Refresh</a>)
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#refresh">Refresh</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
 - none
 
 Syntax:
-<span class="action">refresh</span></code></pre></div><!--//docs-code-block-->
+<span class="action">refresh</span></code></pre>
+									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">url</span> - opens website at a given address.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#navigate-to">Navigate To</a>)
+								<li><span class="green-font">url</span> - opens website at a given
+									address.
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#navigate-to">Navigate
+										To</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1217,13 +1509,17 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 							</ul>
-						</section>
-						<section  class="docs-section" id="generics">
+						</section><!--//section-->
+						<section class="docs-section" id="generics">
 							<h5>Generics</h5>
 							<ul>
-								<li><span class="green-font">iframe</span> - switch to an iframe. Order of execution: selector, parameter - name, parameter - index.
-									If there is no selector nor parameter given, then the action switches to the main iframe on the page.
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/frames/">Iframes</a>)
+								<li><span class="green-font">iframe</span> - switch to an iframe.
+									Order of execution: selector, parameter - name, parameter -
+									index.
+									If there is no selector nor parameter given, then the action
+									switches to the main iframe on the page.
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/interactions/frames/">Iframes</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1245,7 +1541,8 @@ Position based parameters example:
 <span class="action">iframe</span> "" "index=2"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">import</span> - includes all the actions from the imported file
+								<li><span class="green-font">import</span> - includes all the
+									actions from the imported file
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1261,7 +1558,8 @@ Position based parameters example:
 <span class="action">import</span> "" "src/test/java/com/example/commonSteps.doozer"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">set</span> - adds a variable to a test context
+								<li><span class="green-font">set</span> - adds a variable to a test
+									context
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Syntax:
@@ -1271,13 +1569,19 @@ Named parameters example:
 <span class="action">set</span> <span class="args">name:</span>"google.url" <span class="args">value:</span>"https://www.google.com"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								</li>
-								<li><span class="green-font">takeScreenshot</span> - captures a screenshot of the current browser view and compares it to a reference image.
+								<li><span class="green-font">takeScreenshot</span> - captures a
+									screenshot of the current browser view and compares it to a
+									reference image.
 									<ul>
-										<li>If a filename parameter is not given then the action creates a file with "screenshot-LINE_NUMBER" prefix.</li>
-										<li>Each file with a screenshot is suffixed with a browser string, like 'chrome' or 'chrome-headless'.</li>
-										<li>The action will fail if a system property 'doozer.failOnPixelDiff' is set to
-											'true' and the image comparison shows differences bigger than accepted threshold
+										<li>If a filename parameter is not given then the action
+											creates a file with "screenshot-LINE_NUMBER" prefix.
+										</li>
+										<li>Each file with a screenshot is suffixed with a browser
+											string, like 'chrome' or 'chrome-headless'.</li>
+										<li>The action will fail if a system property
+											'doozer.failOnPixelDiff' is set to
+											'true' and the image comparison shows differences bigger
+											than accepted threshold
 											(default value is set to 0.01%).</li>
 									</ul>
 									<div class="docs-code-block">
@@ -1295,7 +1599,8 @@ Position based parameters example:
 <span class="action">takeScreenshot</span> "" "homepage"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">wait</span> - stops test execution for 5 [s] by default
+								<li><span class="green-font">wait</span> - stops test execution for
+									5 [s] by default
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1311,8 +1616,11 @@ Position based parameters example:
 <span class="action">import</span> "" "10"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
-								<li><span class="green-font">waitForElement</span> - waits for a given element to be displayed, by default it waits for 10 [s].
-									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/waits/#explicit-waits">Explicit wait</a>)
+								<li><span class="green-font">waitForElement</span> - waits for a
+									given element to be displayed, by default it waits for 10 [s].
+									(Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/waits/#explicit-waits">Explicit
+										wait</a>)
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
 <code class="language-shell">Parameters:
@@ -1329,25 +1637,31 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 							</ul>
-							</section>
-
+						</section><!--//section-->
 						</p>
 					</section><!--//section-->
-			
+
 					<section class="docs-section" id="item-5-2">
 						<h2 class="section-heading">Selectors</h2>
 						<p>
-							<ul>
-								<li>By.*() - By selectors supported by <a href="https://www.selenium.dev/documentation/webdriver/elements/locators/">Selenium</a></li>
-								<li>Sl() - <a href="https://github.com/google/semantic-locators">Semantic locators</a></li>
-								<li>"" - empty selector, used in positional parameters mode for actions that don't need a selector</li>
-							</ul>
-							If if there is more than one element with the same selector you may choose
-							which one to work with by adding an index as a suffix to the selector string,
-							like this: <code>"By.className('information')[2]"</code> or <code>"Sl({button 'OK'})[0]"</code>.
-							The index is 0 based and has to be given in square brackets.
-							<div class="docs-code-block">
-								<pre class="shadow-lg rounded">
+						<ul>
+							<li>By.*() - By selectors supported by <a
+									href="https://www.selenium.dev/documentation/webdriver/elements/locators/">Selenium</a>
+							</li>
+							<li>Sl() - <a
+									href="https://github.com/google/semantic-locators">Semantic
+									locators</a></li>
+							<li>"" - empty selector, used in positional parameters mode for actions
+								that don't need a selector</li>
+						</ul>
+						If if there is more than one element with the same selector you may choose
+						which one to work with by adding an index as a suffix to the selector
+						string,
+						like this: <code>"By.className('information')[2]"</code> or
+						<code>"Sl({button 'OK'})[0]"</code>.
+						The index is 0 based and has to be given in square brackets.
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
 <code class="language-shell">By selectors:
 <span class="selector">selector:</span>"By.className('information')"
 <span class="selector">selector:</span>"By.cssSelector('#fname')"
@@ -1368,114 +1682,130 @@ Sematic Locators:
 
 with index:
 <span class="selector">selector:</span>"Sl({button 'OK'})[1]"</code></pre>
-							</div><!--//docs-code-block-->
+						</div><!--//docs-code-block-->
 						</p>
 					</section><!--//section-->
 
 					<section class="docs-section" id="item-5-3">
 						<h2 class="section-heading">Driver setup</h2>
 						<h5>Browser</h5>
-						<p>Doozer allows you to choose from several browsers to run your automated tests:
-							<ul>
-								<li>Chrome</li>
-								<li>Firefox</li>
-								<li>Edge</li>
-								<li>Safari</li>
-							</ul>
-							<h6>Headless Mode Support:</h6>
-							<p>
-								The first three browsers (Chrome, Firefox, and Edge) can be run in headless mode. This means the browser window won't be visible during test execution, improving performance and resource usage.
-							</p>
-							<h6>Specifying a Browser:</h6>
-							<p>To select a browser for your tests, you can use the following command-line flag when running your tests:
-								<code>-Ddoozer.browser=BROWSER</code>
-								Replace BROWSER with the desired browser name (e.g., chrome, firefox, edge, or safari).
-							</p>
-							<h6>Default Browser:</h6>
-							<p>By default, Doozer tests will run in headless Chrome mode (chrome-headless).</p>
-							
-							<div class="docs-code-block">
-								<pre class="shadow-lg rounded">
+						<p>Doozer allows you to choose from several browsers to run your automated
+							tests:
+						<ul>
+							<li>Chrome</li>
+							<li>Firefox</li>
+							<li>Edge</li>
+							<li>Safari</li>
+						</ul>
+						<h6>Headless Mode Support:</h6>
+						<p>
+							The first three browsers (Chrome, Firefox, and Edge) can be run in
+							headless mode. This means the browser window won't be visible during
+							test execution, improving performance and resource usage.
+						</p>
+						<h6>Specifying a Browser:</h6>
+						<p>To select a browser for your tests, you can use the following
+							command-line flag when running your tests:
+							<code>-Ddoozer.browser=BROWSER</code>
+							Replace BROWSER with the desired browser name (e.g., chrome, firefox,
+							edge, or safari).
+						</p>
+						<h6>Default Browser:</h6>
+						<p>By default, Doozer tests will run in headless Chrome mode
+							(chrome-headless).</p>
+
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
 <code class="language-shell">Chrome: 	-Ddoozer.browser=chrome 	or 	-Ddoozer.browser=chrome-headless
 Firefox: 	-Ddoozer.browser=firefox 	or 	-Ddoozer.browser=firefox-headless
 Edge: 		-Ddoozer.browser=edge 		or 	-Ddoozer.browser=edge-headless
 Edge: 		-Ddoozer.browser=safari</code></pre>
-							</div><!--//docs-code-block-->
+						</div><!--//docs-code-block-->
 						</p>
 						<h5>Window dimensions</h5>
 						<p>
-							Required window size can by defined by overriding <code>setupWindow()</code> method
-							in the test class created at the setup stage.<br>The default window size is set 
+							Required window size can by defined by overriding
+							<code>setupWindow()</code> method
+							in the test class created at the setup stage.<br>The default window size
+							is set
 							to <b>1280 x 700 pixels</b>.
-							<div class="docs-code-block">
-								<pre class="shadow-lg rounded">
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
 <code class="language-java">@Override
 protected void setupWindow(WebDriver driver) {
 	driver.manage().window().setSize(new Dimension(X_DIMENSION_IN_PIXELS, Y_DIMENSION_IN_PIXELS));
 }</code></pre>
-							</div><!--//docs-code-block-->
+						</div><!--//docs-code-block-->
 						</p>
 						<h5>Implicit timeout</h5>
 						<p>
-							Required <a href="https://www.selenium.dev/documentation/webdriver/waits/#implicit-waits">implicit timeout</a>
-							can be defined by overriding <code>setupTimeouts()</code> method in the test class
-							created at the setup stage. <br>The default value is set to <b>2 [s]</b>.
-							<div class="docs-code-block">
-								<pre class="shadow-lg rounded">
+							Required <a
+								href="https://www.selenium.dev/documentation/webdriver/waits/#implicit-waits">implicit
+								timeout</a>
+							can be defined by overriding <code>setupTimeouts()</code> method in the
+							test class
+							created at the setup stage. <br>The default value is set to <b>2
+								[s]</b>.
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
 <code class="language-java">@Override
 protected void setupTimeouts(WebDriver driver) {
     driver.manage().timeouts().implicitlyWait(Duration.ofMillis(WAIT_IN_MILLISECONDS));
 }</code></pre>
-							</div><!--//docs-code-block-->
+						</div><!--//docs-code-block-->
 						</p>
 					</section><!--//section-->
-					
+
 					<section class="docs-section" id="item-5-4">
 						<h2 class="section-heading">Custom Actions</h2>
 						<p><i class="fas fa-cogs"></i> under development</p>
 					</section><!--//section-->
-										
+
 					<section class="docs-section" id="item-5-5">
 						<h2 class="section-heading">Configuration flags</h2>
 						<h5><code>-Ddoozer.browser</code></h5>
-						<p>Defines a browser for a test, default value is "chrome-headless". Read more on <a href="#item-5-3">Driver setup</a> section.</p>
+						<p>Defines a browser for a test, default value is "chrome-headless". Read
+							more on <a href="#item-5-3">Driver setup</a> section.</p>
 						<h5><code>-Ddoozer.failOnPixelDiff</code></h5>
-						<p>Controls if a <code>takeScreenshot</code> step fails if image comparison is failing, default value is "true".</p>
+						<p>Controls if a <code>takeScreenshot</code> step fails if image comparison
+							is failing, default value is "true".</p>
 						<h5><code>-Ddoozer.test</code></h5>
 						<p>Defines test case to run.</p>
 						<h5><code>-Ddoozer.directory</code></h5>
 						<p>Defines directory with test cases to run.</p>
 
 					</section><!--//section-->
-					
+
 					<section class="docs-section" id="item-5-6">
 						<h2 class="section-heading">Running the tests</h2>
 						<h5>Running a single test case</h5>
-						<p><div class="docs-code-block">
+						<p>
+						<div class="docs-code-block">
 							<pre class="shadow-lg rounded">
 <code class="language-shell">mvn test -Ddoozer.test=&lt;PATH_TO_THE_DIRECTORY_WITH_TESTS&gt;/TEST_CASE_DIRECTORY/TEST_CASE_FILE.doozer
 
 Example:
 mvn test -Ddoozer.test=src/test/java/dev/softtest/doozer/scripts/firstTest/firstTest.doozer</code></pre>
-							</div><!--//docs-code-block-->
+						</div><!--//docs-code-block-->
 						</p>
 						<h5>Running all test cases in a directory</h5>
-						<p><div class="docs-code-block">
+						<p>
+						<div class="docs-code-block">
 							<pre class="shadow-lg rounded">
 <code class="language-shell">mvn test -Ddoozer.directory=&lt;PATH_TO_THE_DIRECTORY_WITH_TESTS&gt;/
 
 Example:
 mvn test -Ddoozer.directory=src/test/java/dev/softtest/doozer/scripts/</code></pre>
-							</div><!--//docs-code-block-->
-							It is important to keep the "/" at the end of the directory.
+						</div><!--//docs-code-block-->
+						It is important to keep the "/" at the end of the directory.
 						</p>
 					</section><!--//section-->
-										
+
 					<section class="docs-section" id="item-5-7">
 						<h2 class="section-heading">Golden images</h2>
 						<p><i class="fas fa-cogs"></i> under development</p>
 					</section><!--//section-->
-										
+
 					<section class="docs-section" id="item-5-8">
 						<h2 class="section-heading">Test execution logs</h2>
 						<p><i class="fas fa-cogs"></i> under development</p>
@@ -1486,63 +1816,76 @@ mvn test -Ddoozer.directory=src/test/java/dev/softtest/doozer/scripts/</code></p
 						<p><i class="fas fa-cogs"></i> under development</p>
 					</section><!--//section-->
 
-			    </article><!--//docs-article-->
-			    
-			    
-		        <article class="docs-article" id="section-6">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">FAQs</h1>
-					    <section class="docs-intro">
-						    <p>All the: 'How can I ...?', 'Is ... supported?' etc.</p>
+				</article><!--//docs-article-->
+
+
+				<article class="docs-article" id="section-6">
+					<header class="docs-header">
+						<h1 class="docs-heading">FAQs</h1>
+						<section class="docs-intro">
+							<p>All the: 'How can I ...?', 'Is ... supported?' etc.</p>
 							<p><i class="fas fa-cogs"></i> under development</p>
 						</section><!--//docs-intro-->
-				    </header>
-			    </article><!--//docs-article-->
+					</header>
+				</article><!--//docs-article-->
 
 				<article class="docs-article" id="section-7">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">About</h1>
-					    <section class="docs-intro">
-						    <p>doozer is an open source project and you can find its repository on GitHub:
-								<ul>
-									<li><a href="https://github.com/mkgiepard/doozer" target="_blank">doozer</a></li>
-									<li><a href="https://github.com/mkgiepard/doozer-vscode-ext" target="_blank">doozer VSCode extension</a></li>
-								</ul>
-								It is distributed according to <a href="http://www.apache.org/licenses/LICENSE-2.0.txt" target="_blank">The Apache License, Version 2.0</a>
+					<header class="docs-header">
+						<h1 class="docs-heading">About</h1>
+						<section class="docs-intro">
+							<p>doozer is an open source project and you can find its repository on
+								GitHub:
+							<ul>
+								<li><a href="https://github.com/mkgiepard/doozer"
+										target="_blank">doozer</a></li>
+								<li><a href="https://github.com/mkgiepard/doozer-vscode-ext"
+										target="_blank">doozer VSCode extension</a></li>
+							</ul>
+							It is distributed according to <a
+								href="http://www.apache.org/licenses/LICENSE-2.0.txt"
+								target="_blank">The Apache License, Version 2.0</a>
 							</p>
 						</section><!--//docs-intro-->
-				    </header>
-			    </article><!--//docs-article-->
+					</header>
+				</article><!--//docs-article-->
 
-			    <footer class="footer">
-				    <div class="container text-center py-5">
-				        <ul class="social-list list-unstyled pt-4 mb-0">
-						    <li class="list-inline-item"><a href="https://github.com/mkgiepard/doozer" target="_blank"><i class="fab fa-github fa-fw"></i></a></li> 
-				            <li class="list-inline-item"><a class="xlink" href="#" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
-							<li class="list-inline-item"><a class="mlink" href="#" target="_blank"><i class="fas fa-contact-card fa-fw"></i></a></li>
-				        </ul><!--//social-list-->
+				<footer class="footer">
+					<div class="container text-center py-5">
+						<ul class="social-list list-unstyled pt-4 mb-0">
+							<li class="list-inline-item"><a
+									href="https://github.com/mkgiepard/doozer" target="_blank"><i
+										class="fab fa-github fa-fw"></i></a></li>
+							<li class="list-inline-item"><a class="xlink" href="#"
+									target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
+							<li class="list-inline-item"><a class="mlink" href="#"
+									target="_blank"><i class="fas fa-contact-card fa-fw"></i></a>
+							</li>
+						</ul><!--//social-list-->
 
 						<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-						<small class="copyright">Template designed by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-				    </div>
-			    </footer>
-		    </div> 
-	    </div>
-    </div><!--//docs-wrapper-->
-   
-       
-    <!-- Javascript -->          
-    <script src="assets/plugins/popper.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-    
-    
-    <!-- Page Specific JS -->
-    <script src="assets/plugins/smoothscroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-    <script src="assets/js/highlight-custom.js"></script> 
-    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
-    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
-    <script src="assets/js/docs.js"></script> 
+						<small class="copyright">Template designed by <a class="theme-link"
+								href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying
+								Riley</a> for developers</small>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div><!--//docs-wrapper-->
+
+
+	<!-- Javascript -->
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+	<!-- Page Specific JS -->
+	<script src="assets/plugins/smoothscroll.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+	<script src="assets/js/highlight-custom.js"></script>
+	<script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+	<script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+	<script src="assets/js/docs.js"></script>
 	<script>
 		var who = "info";
 		var where = "softtest.dev";
@@ -1559,9 +1902,10 @@ mvn test -Ddoozer.directory=src/test/java/dev/softtest/doozer/scripts/</code></p
 	</script>
 	<script>
 		function copyToClipboard(id) {
-  			var cmdContainer = document.getElementById(id);
-  			navigator.clipboard.writeText(cmdContainer.textContent);
+			var cmdContainer = document.getElementById(id);
+			navigator.clipboard.writeText(cmdContainer.textContent);
 		}
 	</script>
 </body>
-</html> 
+
+</html>
