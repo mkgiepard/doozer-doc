@@ -734,7 +734,56 @@ touch src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.dooz
 				     <section class="docs-section" id="item-5-1">
 						<h2 class="section-heading">Actions</h2>
 						<p>
-							<h5>Syntax</h5>
+							<h4>List of supported actions</h4>
+							<ul>
+								<li><a href="#assertions">Assertions</a>
+									<ul>
+										<li>assertCurrentUrl</li>
+										<li>assertInnerText</li>
+										<li>assertPageTitle</li>
+									</ul>
+								</li>
+								<li><a href="#interactions">Interactions</a>
+									<ul>
+										<li>alert</li>
+										<li>clear</li>
+										<li>click</li>
+										<li>contextClick</li>
+										<li>doubleClick</li>
+										<li>hover</li>
+										<li>hoverByOffset</li>
+										<li>keyDown</li>
+										<li>keyUp</li>
+										<li>select</li>
+										<li>sendKeys</li>
+										<li>type</li>
+									</ul>
+
+								</li>
+								<li><a href="#navigation">Navigation</a>
+									<ul>
+										<li>navigateBack</li>
+										<li>navigateForward</li>
+										<li>navigateTo</li>
+										<li>refresh</li>
+										<li>url</li>
+									</ul>
+
+								</li>
+								<li><a href="#generics">Generics</a>
+									<ul>
+										<li>iframe</li>
+										<li>import</li>
+										<li>set</li>
+										<li>takeScreenshot</li>
+										<li>wait</li>
+										<li>waitForElement</li>
+									</ul>
+								</li>	
+							</ul>
+
+
+							<h4>Syntax</h4>
 							<p>Each action within a Doozer script is constructed using three parts, separated by spaces:
 								<ul>
 									<li><b>action name</b> - case sensitive, specifies the operation you want to perform. A list of available actions, along with examples, will be provided later in this section.</li>
@@ -776,7 +825,7 @@ Usage with positional parameters:
 <span class="action">actionName</span> "" "ARGS"</code></pre>
 								</div><!--//docs-code-block-->
 							</p>
-							<h5>Optional execution - the magic of "?"</h5>
+							<h4>Optional execution - the magic of "?"</h4>
 							<p>Doozer actions provide an optional execution modifier to handle situations where an action might not always be successful. This is particularly useful for elements that appear randomly or are outside your control, such as promotional banners. By appending a question mark (?) to the end of an action name, you mark it as optional. The action will still be executed during the test, but the test will not fail if the action encounters an error. Any failures will be logged with a notice, indicating that the error did not halt the test execution.
 							</p>
 							<p>
@@ -786,7 +835,7 @@ Usage with positional parameters:
 								</div><!--//docs-code-block-->
 								
 							</p>
-							<h5>Special characters in ARGS</h5>
+							<h4>Special characters in ARGS</h4>
 							<p>In ARGS part, two characters have special meanings: the equals sign "<code>=</code>" and the comma "<code>,</code>".
 								If you want to include these characters within a key-value pair, you need to escape them using
 								 a backslash "<code>/</code>" before each character.
@@ -802,7 +851,7 @@ pass value with '='
 <span class="args">args:</span>"arg1=value\=with_equals,arg2=value2"</code></pre>
 								</div><!--//docs-code-block-->
 							</p>
-							<h5>Default parameter in ARGS</h5>
+							<h4>Default parameter in ARGS</h4>
 							<p>When you only need to pass a single parameter, you don't need to define a <code>key=value</code> pair.
 							The framework will automatically assign a <code>default</code> key to the parameter and handle it appropriately.
 							For example:
@@ -813,7 +862,7 @@ pass value with '='
 <code class="language-shell"><span class="args">args:</span>"10" becomes <span class="args">args:</span>"default=10"</code></pre>
 								</div><!--//docs-code-block-->
 							</p>
-							<h5>Comments</h5>
+							<h4>Comments</h4>
 							<p>A comment in a doozer script is a line which starts with "//".
 							</p>
 							<p>
@@ -825,6 +874,8 @@ pass value with '='
 
 						</p>
 						<p>
+							<h4>Actions details</h4>
+							<section class="docs-section" id="assertions">
 							<h5>Assertions</h5>
 							<ul>
 								<li><span class="green-font">assertCurrentUrl</span> - asserts current URL.
@@ -878,6 +929,8 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 							</ul>
+							</section>
+							<section class="docs-section" id="interactions">
 							<h5>Interactions</h5>
 							<ul>
 								<li><span class="green-font">alert</span>- interacts with an alert dialog.
@@ -1095,7 +1148,9 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 							</ul>
-							<h5>Navigation</h5>
+						</section>
+						<section class="docs-section" id="navigation">
+							<h5 id="navigation">Navigation</h5>
 							<ul>
 								<li><span class="green-font">navigateBack</span> - goes backwards.
 									(Selenium <a href="https://www.selenium.dev/documentation/webdriver/interactions/navigation/#back">Navigate Back</a>)
@@ -1162,6 +1217,8 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 							</ul>
+						</section>
+						<section  class="docs-section" id="generics">
 							<h5>Generics</h5>
 							<ul>
 								<li><span class="green-font">iframe</span> - switch to an iframe. Order of execution: selector, parameter - name, parameter - index.
@@ -1272,6 +1329,7 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 							</ul>
+							</section>
 
 						</p>
 					</section><!--//section-->
