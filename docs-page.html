@@ -392,10 +392,12 @@
 									<li>Open pom.xml</li>
 									<li>Find line:
 										<code>&lt;maven.compiler.source&gt;1.7&lt;/maven.compiler.source&gt;</code>
-										and update it with 1.8 instead.</li>
+										and update it with 1.8 instead.
+									</li>
 									<li>Find line:
 										<code>&lt;maven.compiler.target&gt;1.7&lt;/maven.compiler.target&gt;</code>
-										and also update it with 1.8.</li>
+										and also update it with 1.8.
+									</li>
 									<li>Save the file and run <code>mvn test</code></li>
 								</ul>
 								If the command executes successfully, you should observe the
@@ -480,7 +482,8 @@ public class MyDoozerTest extends DoozerTest {}</code></pre>
 							<li>Create <b>new doozer test</b>
 								<ul>
 									<li>Create <code>firstTest</code> directory in
-										<code>src/test/java/com/mycompany/app/scripts/</code></li>
+										<code>src/test/java/com/mycompany/app/scripts/</code>
+									</li>
 									<li>Create <code>goldens</code> directory in
 										<code>src/test/java/com/mycompany/app/scripts/firstTest/</code>
 									</li>
@@ -622,7 +625,8 @@ src/test/java/com/mycompany/app/scripts/firstTest/firstTest.doozer              
 									remember to use a correct name each time:</p>
 								<ul>
 									<li>Create <code>firstTest</code> directory in
-										<code>src/test/java/com/mycompany/app/scripts/</code></li>
+										<code>src/test/java/com/mycompany/app/scripts/</code>
+									</li>
 									<li>Create <code>goldens</code> directory in
 										<code>src/test/java/com/mycompany/app/scripts/firstTest/</code>
 									</li>
@@ -748,7 +752,8 @@ src/test/java/com/example/app/examples/thirdTest/thirdTest.doozer             PA
 							<li><b>Create new doozer test.</b>
 								<ul>
 									<li>Create <code>screenshotTest</code> directory in
-										<code>src/test/java/com/mycompany/app/scripts/</code></li>
+										<code>src/test/java/com/mycompany/app/scripts/</code>
+									</li>
 									<li>Create <code>goldens</code> directory in
 										<code>src/test/java/com/mycompany/app/scripts/firstTest/</code>
 									</li>
@@ -801,7 +806,7 @@ touch src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.dooz
 								Open this file in a browser of your choice to review the test
 								result, it should look like this:
 								<a href="assets/images/doozer-codelab-screenshot-1.png"><img
-										class="figure-img img-fluid shadow rounded h450"
+										class="figure-img img-fluid shadow rounded"
 										src="assets/images/doozer-codelab-screenshot-1.png" alt=""
 										title="Doozer Test Case Report page" /></a>
 								<p>The report shows all the executed test steps, their result and,
@@ -884,7 +889,8 @@ touch src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.dooz
 								<p>Test execution generated a 'Doozer Test Report' at
 									<code>&lt;WORKING_DIRECTORY&gt;/target/doozer-tests/screenshotTest/doozer-report.html</code>.
 									This time you should see 4 takeScreenshot steps, 3 of which (all
-									the added in step 7) have a non-zero pixel difference</p>
+									the added in step 7) have a non-zero pixel difference
+								</p>
 							</li>
 							<li><b>Update golden images.</b>
 								<p>For each image follow the procedure, like in step 5. In short:
@@ -915,7 +921,7 @@ touch src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.dooz
 									went well, the failure should be in step 15 and should look,
 									more or less, like this:</p>
 								<a href="assets/images/doozer-codelab-screenshot-2.png"><img
-										class="figure-img img-fluid shadow rounded h450"
+										class="figure-img img-fluid shadow rounded"
 										src="assets/images/doozer-codelab-screenshot-2.png" alt=""
 										title="Doozer Test Case Report page" /></a>
 							</li>
@@ -946,101 +952,113 @@ touch src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.dooz
 					</header>
 					<section class="docs-section" id="item-5-1">
 						<h2 class="section-heading">Actions</h2>
-						<p>
-						<h4>List of supported actions</h4>
-						<ul>
-							<li><a href="#assertions">Assertions</a>
-								<ul>
-									<li>assertCurrentUrl</li>
-									<li>assertInnerText</li>
-									<li>assertPageTitle</li>
-								</ul>
-							</li>
-							<li><a href="#interactions">Interactions</a>
-								<ul>
-									<li>alert</li>
-									<li>clear</li>
-									<li>click</li>
-									<li>contextClick</li>
-									<li>doubleClick</li>
-									<li>hover</li>
-									<li>hoverByOffset</li>
-									<li>keyDown</li>
-									<li>keyUp</li>
-									<li>select</li>
-									<li>sendKeys</li>
-									<li>type</li>
-								</ul>
+						<section class="docs-section" id="item-5-1-1">
+							<h3>List of supported actions</h3>
+							<div style="display: flex;">
+								<div class="column">
+									<ul>
+										<li><a href="#assertions">Assertions</a>
+											<ul>
+												<li>assertCurrentUrl</li>
+												<li>assertInnerText</li>
+												<li>assertPageTitle</li>
+											</ul>
+										</li>
+										<li><a href="#interactions">Interactions</a>
+											<ul>
+												<li>alert</li>
+												<li>clear</li>
+												<li>click</li>
+												<li>contextClick</li>
+												<li>doubleClick</li>
+												<li>hover</li>
+												<li>hoverByOffset</li>
+												<li>keyDown</li>
+												<li>keyUp</li>
+												<li>select</li>
+												<li>sendKeys</li>
+												<li>type</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="column">
+									<ul>
+										<li><a href="#navigation">Navigation</a>
+											<ul>
+												<li>navigateBack</li>
+												<li>navigateForward</li>
+												<li>navigateTo</li>
+												<li>refresh</li>
+												<li>url</li>
+											</ul>
+										</li>
+										<li><a href="#generics">Generics</a>
+											<ul>
+												<li>iframe</li>
+												<li>import</li>
+												<li>set</li>
+												<li>takeScreenshot</li>
+												<li>wait</li>
+												<li>waitForElement</li>
+											</ul>
+										</li>
+									</ul>
 
-							</li>
-							<li><a href="#navigation">Navigation</a>
-								<ul>
-									<li>navigateBack</li>
-									<li>navigateForward</li>
-									<li>navigateTo</li>
-									<li>refresh</li>
-									<li>url</li>
-								</ul>
+								</div>
+							</div>
+						</section><!--//section-->
 
-							</li>
-							<li><a href="#generics">Generics</a>
-								<ul>
-									<li>iframe</li>
-									<li>import</li>
-									<li>set</li>
-									<li>takeScreenshot</li>
-									<li>wait</li>
-									<li>waitForElement</li>
-								</ul>
-							</li>
-						</ul>
-
-						<h4>Syntax</h4>
-						<p>Each action within a Doozer script is constructed using three parts,
-							separated by spaces:
-						<ul>
-							<li><b>action name</b> - case sensitive, specifies the operation you
-								want to perform. A list of available actions, along with examples,
-								will be provided later in this section.</li>
-							<li><b>element selector</b> (optional) - identifies the target element
-								on the web page where the action should be applied. It's prefixed
-								with "<code><span class="selector">selector:</span></code>" and
-								supports both By and SemanticLocators selectors.</li>
-							<li><b>action arguments list</b> (optional) - allows you to define
-								additional parameters for the action. It's prefixed with
-								"<code><span class="args">args:</span></code>" and consists of
-								key-value pairs separated by commas, for example:
-								<code>"arg1=value1,arg2=value2"</code></li>
-						</ul>
-						</p>
-						<p>
-							Doozer scripts support two primary modes for specifying selectors and
-							arguments within actions:
-						<div>
-							<h6>Named Parameters (with Prefixes):</h6>
+						<section class="docs-section" id="item-5-1-2">
+							<h3>Syntax</h3>
+							<p>Each action within a Doozer script is constructed using three parts,
+								separated by spaces:</p>
 							<ul>
-								<li>This mode allows you to explicitly define the selector and
-									arguments using prefixes.</li>
-								<li>It offers flexibility, as you can omit the selector part if an
-									action doesn't require it.</li>
+								<li><b>action name</b> - case sensitive, specifies the operation you
+									want to perform. A list of available actions, along with
+									examples, will be provided later in this section.</li>
+								<li><b>element selector</b> (optional) - identifies the target
+									element
+									on the web page where the action should be applied. It's
+									prefixed
+									with "<code><span class="selector">selector:</span></code>" and
+									supports both By and SemanticLocators selectors.</li>
+								<li><b>action arguments list</b> (optional) - allows you to define
+									additional parameters for the action. It's prefixed with
+									"<code><span class="args">args:</span></code>" and consists of
+									key-value pairs separated by commas, for example:
+									<code>"arg1=value1,arg2=value2"</code>
+								</li>
 							</ul>
-						</div>
-						<div>
-							<h6>Positional Parameters (without Prefixes):</h6>
-							<ul>
-								<li>This mode expects both selector and arguments fields to be
-									present, even if the selector
-									is not mandatory for the action.</li>
-								<li>In cases where the selector is not needed, you must include an
-									empty string ("") as a
-									placeholder.</li>
-							</ul>
-						</div>
-						In both modes, selector and args, have to be put inside double quotes.
-						</p>
-						<p>
-						<div class="docs-code-block">
-							<pre class="shadow-lg rounded">
+							<p>
+								Doozer scripts support two primary modes for specifying selectors
+								and arguments within actions:</p>
+							<div>
+								<h4>Named Parameters (with Prefixes):</h4>
+								<ul>
+									<li>This mode allows you to explicitly define the selector and
+										arguments using prefixes.</li>
+									<li>It offers flexibility, as you can omit the selector part if
+										an
+										action doesn't require it.</li>
+								</ul>
+							</div>
+							<div>
+								<h4>Positional Parameters (without Prefixes):</h4>
+								<ul>
+									<li>This mode expects both selector and arguments fields to be
+										present, even if the selector
+										is not mandatory for the action.</li>
+									<li>In cases where the selector is not needed, you must include
+										an
+										empty string ("") as a
+										placeholder.</li>
+								</ul>
+							</div>
+							<p>In both modes, selector and args, have to be put inside double
+								quotes.</p>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded">
 <code class="language-shell">Usage with named parameters:
 <span class="action">actionName</span> <span class="selector">selector:</span>"SELECTOR" <span class="args">args:</span>"ARGS"
 <span class="action">actionName</span> <span class="selector">selector:</span>"SELECTOR"
@@ -1050,70 +1068,69 @@ Usage with positional parameters:
 <span class="action">actionName</span> "SELECTOR" "ARGS"
 <span class="action">actionName</span> "SELECTOR"
 <span class="action">actionName</span> "" "ARGS"</code></pre>
-						</div><!--//docs-code-block-->
-						</p>
-						<h4>Optional execution - the magic of "?"</h4>
-						<p>Doozer actions provide an optional execution modifier to handle
-							situations where an action might not always be successful. This is
-							particularly useful for elements that appear randomly or are outside
-							your control, such as promotional banners. By appending a question mark
-							(?) to the end of an action name, you mark it as optional. The action
-							will still be executed during the test, but the test will not fail if
-							the action encounters an error. Any failures will be logged with a
-							notice, indicating that the error did not halt the test execution.
-						</p>
-						<p>
-						<div class="docs-code-block">
-							<pre class="shadow-lg rounded">
-<code class="language-shell"><span class="action">click?</span> <span class="selector">selector:</span>"SELECTOR"</code></pre>
-						</div><!--//docs-code-block-->
+							</div><!--//docs-code-block-->
+						</section><!--//section-->
 
-						</p>
-						<h4>Special characters in ARGS</h4>
-						<p>In ARGS part, two characters have special meanings: the equals sign
-							"<code>=</code>" and the comma "<code>,</code>".
-							If you want to include these characters within a key-value pair, you
-							need to escape them using
-							a backslash "<code>/</code>" before each character.
-							For example:
-						</p>
-						<p>
-						<div class="docs-code-block">
-							<pre class="shadow-lg rounded">
+						<section class="docs-section" id="item-5-1-3">
+							<h3>Optional execution - the magic of "?"</h3>
+							<p>Doozer actions provide an optional execution modifier to handle
+								situations where an action might not always be successful. This is
+								particularly useful for elements that appear randomly or are outside
+								your control, such as promotional banners. By appending a question
+								mark (?) to the end of an action name, you mark it as optional. The
+								action will still be executed during the test, but the test will not
+								fail if the action encounters an error. Any failures will be logged with
+								a notice, indicating that the error did not halt the test execution.
+							</p>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded">
+<code class="language-shell"><span class="action">click?</span> <span class="selector">selector:</span>"SELECTOR"</code></pre>
+							</div><!--//docs-code-block-->
+						</section>
+
+						<section class="docs-section" id="item-5-1-4">
+							<h3>Special characters in ARGS</h3>
+							<p>In ARGS part, two characters have special meanings: the equals sign
+								"<code>=</code>" and the comma "<code>,</code>".
+								If you want to include these characters within a key-value pair, you
+								need to escape them using
+								a backslash "<code>/</code>" before each character.
+								For example:
+							</p>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded">
 <code class="language-shell">pass value with ',':
 <span class="args">args:</span>"arg1=value\,with_comma,arg2=value2"
 
 pass value with '='
 <span class="args">args:</span>"arg1=value\=with_equals,arg2=value2"</code></pre>
-						</div><!--//docs-code-block-->
-						</p>
-						<h4>Default parameter in ARGS</h4>
-						<p>When you only need to pass a single parameter, you don't need to define a
-							<code>key=value</code> pair.
-							The framework will automatically assign a <code>default</code> key to
-							the parameter and handle it appropriately.
-							For example:
-						</p>
-						<p>
-						<div class="docs-code-block">
-							<pre class="shadow-lg rounded">
-<code class="language-shell"><span class="args">args:</span>"10" becomes <span class="args">args:</span>"default=10"</code></pre>
-						</div><!--//docs-code-block-->
-						</p>
-						<h4>Comments</h4>
-						<p>A comment in a doozer script is a line which starts with "//".
-						</p>
-						<p>
-						<div class="docs-code-block">
-							<pre class="shadow-lg rounded">
-<code class="language-shell">// exemplary comment</code></pre>
-						</div><!--//docs-code-block-->
-						</p>
+							</div><!--//docs-code-block-->
+						</section><!--//section-->
 
-						</p>
-						<p>
-						<h4>Actions details</h4>
+						<section class="docs-section" id="item-5-1-5">
+							<h3>Default parameter in ARGS</h3>
+							<p>When you only need to pass a single parameter, you don't need to
+								define a <code>key=value</code> pair.
+								The framework will automatically assign a <code>default</code> key
+								to the parameter and handle it appropriately. For example:
+							</p>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded">
+<code class="language-shell"><span class="args">args:</span>"10" becomes <span class="args">args:</span>"default=10"</code></pre>
+							</div><!--//docs-code-block-->
+						</section><!--//section-->
+
+						<section class="docs-section" id="item-5-1-6">
+							<h3>Comments</h3>
+							<p>A comment in a doozer script is a line which starts with "//".</p>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded">
+<code class="language-shell">// exemplary comment</code></pre>
+							</div><!--//docs-code-block-->
+						</section><!--//section-->
+
 						<section class="docs-section" id="assertions">
+							<h3>Actions details</h3>
 							<h5>Assertions</h5>
 							<ul>
 								<li><span class="green-font">assertCurrentUrl</span> - asserts
@@ -1174,7 +1191,8 @@ Position based parameters example:
 									</div><!--//docs-code-block-->
 								</li>
 							</ul>
-						</section>
+						</section><!--//section-->
+
 						<section class="docs-section" id="interactions">
 							<h5>Interactions</h5>
 							<ul>
@@ -1427,6 +1445,7 @@ Position based parameters example:
 								</li>
 							</ul>
 						</section><!--//section-->
+
 						<section class="docs-section" id="navigation">
 							<h5 id="navigation">Navigation</h5>
 							<ul>
@@ -1510,6 +1529,7 @@ Position based parameters example:
 								</li>
 							</ul>
 						</section><!--//section-->
+
 						<section class="docs-section" id="generics">
 							<h5>Generics</h5>
 							<ul>
@@ -1638,7 +1658,7 @@ Position based parameters example:
 								</li>
 							</ul>
 						</section><!--//section-->
-						</p>
+
 					</section><!--//section-->
 
 					<section class="docs-section" id="item-5-2">

@@ -11,6 +11,6 @@ code .args {
     color: #28b76b;
 }
 
-.h450 {
-    height: 450px;
+.column {
+    width: 45%;
 }
