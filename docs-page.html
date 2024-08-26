@@ -1001,6 +1001,7 @@ touch src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.dooz
 										</li>
 										<li><a href="#generics">Generics</a>
 											<ul>
+												<li>executeScript</li>
 												<li>iframe</li>
 												<li>import</li>
 												<li>set</li>
@@ -1540,6 +1541,22 @@ Position based parameters example:
 						<section class="docs-section" id="generics">
 							<h5>Generics</h5>
 							<ul>
+								<li><span class="green-font">executeScript</span> - executes JS code in current view
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: JS code
+
+Syntax:
+<span class="action">executeScript</span> <span class="args">args:</span>"JavaScript code'"
+
+Named parameters example:
+<span class="action">executeScript</span> <span class="args">args:</span>"document.getElementsByClassName('date')[0].innerHTML\='2000/01/01 12:12'"
+
+Position based parameters example:
+<span class="action">executeScript</span> "" "document.getElementsByClassName('date')[0].innerHTML\='2000/01/01 12:12"</code></pre>
+									</div><!--//docs-code-block-->
+								</li> 
 								<li><span class="green-font">iframe</span> - switch to an iframe.
 									Order of execution: selector, parameter - name, parameter -
 									index.
