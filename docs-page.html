@@ -1001,6 +1001,7 @@ touch src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.dooz
 										</li>
 										<li><a href="#generics">Generics</a>
 											<ul>
+												<li>addMask</li>
 												<li>executeScript</li>
 												<li>iframe</li>
 												<li>import</li>
@@ -1541,6 +1542,23 @@ Position based parameters example:
 						<section class="docs-section" id="generics">
 							<h5>Generics</h5>
 							<ul>
+								<li><span class="green-font">addMask</span> - defines a mask to be used while doing image comparison.
+									The mask is applied to all the following <code>takeScreenshot</code> actions.
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: string to be put in place of the text element defined by selector
+
+Syntax:
+<span class="action">addMask</span> <span class="selector">selector:</span>"SELECTOR" <span class="args">args:</span>"MASK_TEXT"
+
+Named parameters example:
+<span class="action">addMask</span> <span class="selector">selector:</span>"By.className('date')[0]" <span class="args">args:</span>"2022/01/01 12:13"
+
+Position based parameters example:
+<span class="action">executeScript</span> "By.className('date')[0]" "2022/01/01 12:13"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
 								<li><span class="green-font">executeScript</span> - executes JS code in current view
 									<div class="docs-code-block">
 										<pre class="shadow-lg rounded">
