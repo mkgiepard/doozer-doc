@@ -976,6 +976,7 @@ touch src/test/java/com/mycompany/app/scripts/screenshotTest/screenshotTest.dooz
 												<li>clear</li>
 												<li>click</li>
 												<li>contextClick</li>
+												<li>deselect</li>
 												<li>doubleClick</li>
 												<li>hover</li>
 												<li>hoverByOffset</li>
@@ -1285,6 +1286,25 @@ Named parameters example:
 
 Position based parameters example:
 <span class="action">contextClick</span> "By.id('my-element')"</code></pre>
+									</div><!--//docs-code-block-->
+								</li>
+								<li><span class="green-font">deselect</span> - deselects an element from
+									a list. (Selenium <a
+										href="https://www.selenium.dev/documentation/webdriver/support_features/select_lists/#de-select-option">De-select
+										by visible text</a>)
+									<div class="docs-code-block">
+										<pre class="shadow-lg rounded">
+<code class="language-shell">Parameters:
+- default: option with text to select
+
+Syntax:
+<span class="action">deselect</span> <span class="selector">selector:</span>"SELECTOR" <span class="args">args:</span>"OPTION TEXT"
+
+Named parameters example:
+<span class="action">deselect</span> <span class="selector">selector:</span>"By.id('my-list')" <span class="args">args:</span>"option one"
+
+Position based parameters example:
+<span class="action">deselect</span> "By.id('my-list')" "option one"</code></pre>
 									</div><!--//docs-code-block-->
 								</li>
 								<li><span class="green-font">doubleClick</span> - double clicks on
