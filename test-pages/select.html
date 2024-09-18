@@ -31,13 +31,32 @@
     <h1>Doozer</h1>
     <h3>Select / De-select example</h3>
 
-    <select name="multi" id="multi" multiple="multiple">
+    <select name="multi" id="multi" multiple="multiple" onclick="checkSelection()">
         <option value="eggs">Eggs</option>
         <option value="ham">Ham</option>
         <option value="sausages">Sausages</option>
         <option value="onion gravy">Onion gravy</option>
     </select>
+    <div>
+        Selected options: 
+        <span id="selection"></span>
+    </div>
 </div>
+
+<script>
+    function checkSelection() {
+        const selectedOptions = document.getElementById("multi").selectedOptions;
+        let text = "";
+        for (let i = 0; i < selectedOptions.length; i++) {
+            if (selectedOptions[i].textContent != undefined) {
+                text += selectedOptions[i].textContent + ", ";
+            }
+        }
+        const selection = document.getElementById("selection");
+        selection.textContent = text;
+    }
+    checkSelection();
+</script>
 
 </body>
 </html>
