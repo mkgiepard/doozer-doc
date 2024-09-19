@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>doozerByExample - exemplary page to testing doozer actions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
             width: 80%;
             text-align: center;
         }
-        option {
+        option, select {
             font-size: xx-large;
             margin-left: 12px;
             margin-right: 12px;
@@ -30,7 +31,23 @@
 <div class="container">
     <h1>Doozer</h1>
     <h3>Select / De-select example</h3>
+    
+    <hr />
 
+    <select name="dropdown" id="dropdown">
+        <option value="">Select One …</option>
+        <option value="eggs">Eggs</option>
+        <option value="ham">Ham</option>
+        <option value="sausages">Sausages</option>
+        <option value="onion gravy">Onion gravy</option>
+    </select>
+    <div>
+        Selected options: 
+        <span id="selection-dropdown"></span>
+    </div>
+
+    <hr />
+    
     <select name="multi" id="multi" multiple="multiple" onclick="checkSelection()">
         <option value="eggs">Eggs</option>
         <option value="ham">Ham</option>
@@ -39,7 +56,7 @@
     </select>
     <div>
         Selected options: 
-        <span id="selection"></span>
+        <span id="selection-multi"></span>
     </div>
 </div>
 
@@ -52,10 +69,15 @@
                 text += selectedOptions[i].textContent + ", ";
             }
         }
-        const selection = document.getElementById("selection");
+        const selection = document.getElementById("selection-multi");
         selection.textContent = text;
     }
-    checkSelection();
+    //checkSelection();
+    const selectElement = document.getElementById('dropdown')
+    selectElement.addEventListener("change", (event) => {
+        const selection = document.getElementById("selection-dropdown");
+        selection.textContent = event.target.value;
+    });
 </script>
 
 </body>
