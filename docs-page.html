@@ -345,11 +345,26 @@
 						<div class="docs-code-block">
 							<pre class="shadow-lg rounded">
 <code class="language-xml" id="mvn-dep">&lt;dependency&gt;
-	&lt;groupId&gt;dev.softtest&lt;/groupId&gt;
-	&lt;artifactId&gt;doozer&lt;/artifactId&gt;
-	&lt;version&gt;1.0.0&lt;/version&gt;
+  &lt;groupId&gt;dev.softtest&lt;/groupId&gt;
+  &lt;artifactId&gt;doozer&lt;/artifactId&gt;
+  &lt;version&gt;1.0.1&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
-							<button class="btn btn-light" onclick="copyToClipboard('mvn-dep')">Copy
+<button class="btn btn-light" onclick="copyToClipboard('mvn-dep')">Copy
+								to clipboard</button>
+<p>With the latest updates in <i>junit-jupiter-engine</i> package you need to also add the following plugin into the
+plugins section to address the test discovery issue:</p>
+<pre class="shadow-lg rounded">
+<code class="language-xml" id="mvn-dep-plugin">
+&lt;plugin&gt;
+  &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+  &lt;version&gt;3.5.3&lt;/version&gt;
+  &lt;configuration&gt;
+    &lt;systemPropertyVariables&gt;
+      &lt;environment&gt;${test.folder}&lt;/environment&gt;
+          &lt;/systemPropertyVariables&gt;
+  &lt;/configuration&gt;
+&lt;/plugin&gt;</code></pre>
+							<button class="btn btn-light" onclick="copyToClipboard('mvn-dep-plugin')">Copy
 								to clipboard</button>
 						</div><!--//docs-code-block-->
 					</section><!--//section-->
